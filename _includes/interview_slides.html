@@ -1,0 +1,19 @@
+<h2 id="slides">Slides and overlays</h2>
+{% assign overlay_count = include.part.overlays | size %}
+{% if overlay_count > 0 %}
+  {% for overlay in include.part.overlays %}
+    {% if overlay.kind == "note" %}
+    <p class="overlay-note" id="slide-{{ forloop.index }}">{% if overlay.shown %}<span class="shown">{% if overlay.seek %}<a class="chapter-time" href="#t={{ overlay.seek }}" data-start="{{ overlay.seek }}">{{ overlay.shown }}</a>{% else %}{{ overlay.shown }}{% endif %}.</span> {% endif %}{{ overlay.caption }}</p>
+    {% else %}
+    <figure id="slide-{{ forloop.index }}">
+      <img src="{{ overlay.src | relative_url }}" alt="{{ overlay.alt }}" width="{{ overlay.width }}" height="{{ overlay.height }}"{% unless forloop.first %} loading="lazy"{% endunless %}>
+      <figcaption>
+        {% if overlay.shown %}<span class="shown">Shown at {% if overlay.seek %}<a class="chapter-time" href="#t={{ overlay.seek }}" data-start="{{ overlay.seek }}">{{ overlay.shown }}</a>{% else %}{{ overlay.shown }}{% endif %}.</span> {% endif %}{{ overlay.caption }}
+        {% if overlay.credit %}<span class="credit">{{ overlay.credit }}</span>{% endif %}
+      </figcaption>
+    </figure>
+    {% endif %}
+  {% endfor %}
+{% else %}
+<p>No separate slide images are published on this page.</p>
+{% endif %}

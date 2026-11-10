@@ -1,0 +1,2256 @@
+1
+00:00:01,120 --> 00:00:05,720
+Okay, so now we go into the third part
+here, that is more about the techniques
+
+2
+00:00:05,800 --> 00:00:09,360
+and technology underneath
+and semantics of this thing.
+
+3
+00:00:09,440 --> 00:00:15,600
+As we saw in the first part,
+you had ways of reducing the lists.
+
+4
+00:00:15,680 --> 00:00:18,480
+There were a lot of possibilities
+in the underlying terminology,
+
+5
+00:00:18,560 --> 00:00:21,160
+but you tried to show sensible things.
+
+6
+00:00:21,240 --> 00:00:25,000
+And I guess that's things that you can
+dive in a little bit deeper into,
+
+7
+00:00:25,080 --> 00:00:30,480
+and how you glue these different pieces
+together of the underlying technology.
+
+8
+00:00:32,080 --> 00:00:37,720
+Right. Our goal, as I said,
+and we started out with -
+
+9
+00:00:37,800 --> 00:00:41,960
+there were two things that came together.
+One was a goal that we needed to be able
+
+10
+00:00:42,040 --> 00:00:47,320
+to tailor this to a much greater degree
+than systems could be easily tailored.
+
+11
+00:00:47,400 --> 00:00:52,800
+It was obvious that tailoring things
+by hand programming and just wasn't going
+
+12
+00:00:52,880 --> 00:00:56,480
+to work, creating forms.
+This wasn't scalable.
+
+13
+00:00:56,560 --> 00:01:00,520
+We didn't have, there wasn't enough
+time in the universe to do so.
+
+14
+00:01:01,520 --> 00:01:04,960
+And at the same time,
+knowledge representation
+
+15
+00:01:06,000 --> 00:01:09,840
+and MYCIN had actually just,
+
+16
+00:01:12,040 --> 00:01:15,280
+well, this was about five
+years after MYCIN, UNITS,
+
+17
+00:01:15,360 --> 00:01:19,360
+which is the first frame system,
+which eventually became Protege,
+
+18
+00:01:19,440 --> 00:01:25,440
+or it was the ancestor of Protege,
+had been something that I'd seen earlier.
+
+19
+00:01:25,520 --> 00:01:32,520
+And we had built a frame system as part
+of some of the earlier systems. And the,
+
+20
+00:01:37,520 --> 00:01:40,440
+that was straightforward,
+but didn't solve our problem.
+
+21
+00:01:41,040 --> 00:01:45,840
+Because we could see no reason
+why we should have to put down
+
+22
+00:01:45,920 --> 00:01:49,160
+exactly the same thing
+for the right and left hand.
+
+23
+00:01:49,240 --> 00:01:55,200
+And for each of the five fingers.
+of the four fingers, fingers plus a thumb.
+
+24
+00:01:55,280 --> 00:01:56,360
+And we needed things,
+
+25
+00:01:56,440 --> 00:01:59,720
+that people needed things
+at different levels of generalization.
+
+26
+00:02:00,800 --> 00:02:04,240
+And the ideas were in the air,
+
+27
+00:02:04,320 --> 00:02:09,360
+but we put together what was first
+called SMK and became renamed
+
+28
+00:02:09,880 --> 00:02:16,400
+and developed as GRAIL as a language
+for gluing things together out of parts.
+
+29
+00:02:16,480 --> 00:02:18,720
+And basically for conceptual Lego.
+
+30
+00:02:19,920 --> 00:02:24,600
+And that is these have evolved
+
+31
+00:02:24,680 --> 00:02:31,200
+and were one of many branches that came
+together in the description logics.
+
+32
+00:02:32,560 --> 00:02:35,360
+They and the basic technology,
+
+33
+00:02:35,440 --> 00:02:39,760
+which we have, which we discovered
+very early and as an idea, idea,
+
+34
+00:02:39,840 --> 00:02:45,520
+which came that came
+about very naturally was
+
+35
+00:02:47,240 --> 00:02:52,960
+the way there was also had been a great
+deal of work on defaults and exceptions.
+
+36
+00:02:53,040 --> 00:02:57,440
+And the other problem in medicine
+is not almost nothing is absolute.
+
+37
+00:02:57,520 --> 00:03:01,920
+The exceptions to everything
+and anything that we put up
+
+38
+00:03:02,000 --> 00:03:07,280
+in something was was going to have
+to be added to or eliminated.
+
+39
+00:03:07,360 --> 00:03:14,240
+And the idea within a frame system
+
+40
+00:03:17,280 --> 00:03:23,480
+is that you take, things get
+inherited down and inheritance
+
+41
+00:03:23,560 --> 00:03:27,840
+sort of works, except you tend to get
+into a muddle and frame systems,
+
+42
+00:03:27,920 --> 00:03:31,080
+they very rapidly got into a tangle.
+
+43
+00:03:31,160 --> 00:03:32,160
+You had this,
+
+44
+00:03:32,240 --> 00:03:38,320
+I would, I looked very hard
+for this talk for an old
+
+45
+00:03:38,520 --> 00:03:45,120
+cartoon that I had that came
+from one of the early AISB journals
+
+46
+00:03:45,680 --> 00:03:48,160
+of, this is my semantic network,
+
+47
+00:03:48,240 --> 00:03:54,680
+showing this complete angle of lines
+that nobody knew what they meant.
+
+48
+00:03:56,080 --> 00:04:02,960
+So there are the work really
+that I did in a previous work,
+
+49
+00:04:03,040 --> 00:04:07,920
+some previous work in my PhD,
+other things that were around.
+
+50
+00:04:08,680 --> 00:04:14,120
+The thing that we realized
+was that if you were going to use this,
+
+51
+00:04:14,840 --> 00:04:18,160
+you had to have a much,
+on the one hand, a much more
+
+52
+00:04:19,440 --> 00:04:25,160
+assembled hierarchy and on the other hand,
+a much more regular one.
+
+53
+00:04:25,240 --> 00:04:27,720
+more systematic
+or it wasn't going to work.
+
+54
+00:04:28,960 --> 00:04:31,360
+And the thing we arrived at,
+
+55
+00:04:32,120 --> 00:04:37,800
+which has been less well-taken
+up than I would have liked,
+
+56
+00:04:38,680 --> 00:04:43,360
+is the idea of a normalized concept model
+
+57
+00:04:43,440 --> 00:04:47,120
+or the word ontology
+would usually be used.
+
+58
+00:04:47,200 --> 00:04:50,800
+I get worried about the word ontology
+because it's been used for so many
+
+59
+00:04:50,880 --> 00:04:53,440
+different things over
+a long period of time.
+
+60
+00:04:53,520 --> 00:04:56,440
+And furthermore,
+it's got philosophers involved
+
+61
+00:04:56,520 --> 00:05:03,120
+in raising issues which are probably
+not relevant to building IT systems.
+
+62
+00:05:05,280 --> 00:05:09,720
+But the critical thing
+
+63
+00:05:09,800 --> 00:05:16,320
+was that we wanted to be able
+to take and use inheritance.
+
+64
+00:05:16,840 --> 00:05:20,320
+And the, the idea was that we wanted
+to be able to inherit the most specific
+
+65
+00:05:20,400 --> 00:05:25,200
+thing and collect all the things
+from up and down along the tree,
+
+66
+00:05:25,280 --> 00:05:30,280
+put them together onto a form.
+
+67
+00:05:30,360 --> 00:05:37,360
+And that's basically the way the
+system worked. That, there we are.
+
+68
+00:05:39,720 --> 00:05:42,840
+We started out with our hierarchy
+
+69
+00:05:42,920 --> 00:05:47,200
+and this is a much simpler hierarchy
+than we would actually have had.
+
+70
+00:05:47,920 --> 00:05:51,800
+and you started, if you wanted to create
+
+71
+00:05:51,880 --> 00:05:56,760
+a highly specialized form
+for renin-dependent hypertension at St.
+
+72
+00:05:56,840 --> 00:06:02,760
+Stephen's National Hypertension Survey,
+which we did actually after PEN&PAD,
+
+73
+00:06:02,840 --> 00:06:06,360
+but that's one of the things
+that this was actually used for.
+
+74
+00:06:06,440 --> 00:06:09,880
+You had some things that were there
+because they had hypertension.
+
+75
+00:06:09,960 --> 00:06:14,400
+Whoops, that seems to have
+jumped all at once.
+
+76
+00:06:14,480 --> 00:06:17,800
+Some things that were there
+because it was renin-dependent.
+
+77
+00:06:17,880 --> 00:06:21,120
+Some things that were there because
+it was at St. Stephen's Hospital
+
+78
+00:06:21,200 --> 00:06:26,160
+in this particular survey that they wanted
+and that they always had to have.
+
+79
+00:06:26,720 --> 00:06:33,040
+And the National Hypertension Survey.
+
+80
+00:06:33,560 --> 00:06:40,040
+It was the same hierarchy and the same
+technology over on the left side
+
+81
+00:06:40,120 --> 00:06:45,160
+of that screen is actually the concepts
+that were being put into those boxes.
+
+82
+00:06:45,960 --> 00:06:50,120
+So there was systolic
+and diastolic blood pressure.
+
+83
+00:06:50,680 --> 00:06:56,400
+And we were using the same
+technology to classify the problem
+
+84
+00:06:57,000 --> 00:07:02,640
+and to provide the the terminology
+that went into the data structures.
+
+85
+00:07:03,960 --> 00:07:07,520
+And we found this, this became
+our Swiss Army knife.
+
+86
+00:07:08,440 --> 00:07:13,400
+The thing that we used had different
+blades on it that we used for everything.
+
+87
+00:07:13,480 --> 00:07:19,280
+In GALEN, we called the things
+that we hung on the hierarchy extrinsics,
+
+88
+00:07:20,200 --> 00:07:23,400
+meaning that they weren't
+part of the concept model.
+
+89
+00:07:23,480 --> 00:07:26,360
+I'd now call them generalizations
+
+90
+00:07:26,440 --> 00:07:29,360
+or might call them something
+else depending on the context.
+
+91
+00:07:29,440 --> 00:07:35,680
+The one thing that they're
+not is they're not the primary concepts
+
+92
+00:07:35,760 --> 00:07:37,920
+or axioms. when we would net
+
+93
+00:07:38,000 --> 00:07:44,680
+the thing that was critical
+to all of this was the idea
+
+94
+00:07:44,760 --> 00:07:48,120
+that you normalized the ontology
+
+95
+00:07:49,200 --> 00:07:56,040
+and the what that meant
+was that you build it out of primitives
+
+96
+00:07:56,120 --> 00:08:02,640
+which were those primitive
+hierarchies had to be trees
+
+97
+00:08:03,640 --> 00:08:07,080
+you had to reduce everything
+down to a collection of trees,
+
+98
+00:08:07,160 --> 00:08:09,680
+and then you put them
+together with the classifier.
+
+99
+00:08:10,360 --> 00:08:12,880
+You stuck the trees
+together with properties.
+
+100
+00:08:13,480 --> 00:08:18,320
+So you could have hypertension
+caused by renin-dependent,
+
+101
+00:08:22,400 --> 00:08:28,520
+by renin-dependency. You get high
+hypertension caused by pregnancy.
+
+102
+00:08:28,600 --> 00:08:32,320
+You could have hypertension
+caused by renal disease.
+
+103
+00:08:32,400 --> 00:08:37,960
+You could have hypertension
+caused by a hormonal disease,
+
+104
+00:08:38,040 --> 00:08:41,920
+or you could have hypertension
+caused by I don't know what.
+
+105
+00:08:42,000 --> 00:08:48,960
+And that's a problem.
+The gluing of these things together,
+
+106
+00:08:49,040 --> 00:08:53,600
+and we could have the form
+for hypertension, that's fine.
+
+107
+00:08:53,680 --> 00:08:58,520
+We could have the form
+for hypertension caused by,
+
+108
+00:08:59,120 --> 00:09:04,120
+We could have the form for hypertension
+as used at this hospital.
+
+109
+00:09:04,200 --> 00:09:06,760
+We could have the form for hypertension
+
+110
+00:09:06,840 --> 00:09:10,600
+for renin-dependent hypertension
+as used at this hospital.
+
+111
+00:09:10,680 --> 00:09:14,960
+We could have the form if we wanted
+for renin-dependent hypertension
+
+112
+00:09:15,480 --> 00:09:22,320
+as seen by Dr. Smith at this
+hospital. And on occasion.
+
+113
+00:09:22,400 --> 00:09:26,400
+Actually in that situation, you wouldn't
+because that's it was a clinical trial.
+
+114
+00:09:27,120 --> 00:09:31,040
+practical situations.
+This gave you enormous scope.
+
+115
+00:09:31,880 --> 00:09:34,160
+The problem is how do you break it up?
+
+116
+00:09:35,320 --> 00:09:41,280
+And how do you do the piece
+which is the breaking up of your
+
+117
+00:09:44,880 --> 00:09:50,480
+that we did of the of things.
+
+118
+00:09:50,560 --> 00:09:53,040
+The basic trick was you came up up,
+
+119
+00:09:55,520 --> 00:10:01,000
+you started out and an easy
+example is you have part, whole,
+
+120
+00:10:01,080 --> 00:10:07,960
+function and structure are actually
+you tied up together in many hierarchies
+
+121
+00:10:08,040 --> 00:10:12,880
+that you find about diseases
+and our job was to pull them apart.
+
+122
+00:10:15,720 --> 00:10:19,920
+That was really this essential
+thing was to say, well,
+
+123
+00:10:21,040 --> 00:10:24,720
+What sorts of things
+that you make primitive.
+
+124
+00:10:26,200 --> 00:10:32,440
+And that's the though
+
+125
+00:10:33,720 --> 00:10:36,720
+it's very hard not to get
+philosophical about this.
+
+126
+00:10:36,800 --> 00:10:43,640
+These are the only changes that You need
+to find one principle, be it function,
+
+127
+00:10:44,600 --> 00:10:49,320
+or parthood, or structure,
+for each hierarchy,
+
+128
+00:10:50,200 --> 00:10:52,040
+and you need to stick to that.
+
+129
+00:10:52,720 --> 00:10:55,800
+And it needs to be something
+which is essential
+
+130
+00:10:55,880 --> 00:10:57,720
+to the thing you're talking about.
+
+131
+00:10:58,440 --> 00:11:04,360
+That it really is true.
+It has to, the things
+
+132
+00:11:04,440 --> 00:11:08,680
+that go into the primitive hierarchy
+just can't have any exceptions at all.
+
+133
+00:11:09,800 --> 00:11:15,400
+And if you don't have multiple
+hierarchies, you won't have exceptions.
+
+134
+00:11:16,000 --> 00:11:20,080
+So you hang in there only the things,
+
+135
+00:11:20,160 --> 00:11:23,680
+We would now call them
+that are indefeasible,
+
+136
+00:11:23,760 --> 00:11:30,160
+horrible word from philosophy,
+but it just means without exceptions
+
+137
+00:11:31,560 --> 00:11:37,680
+within the scope of this study..
+And often this. This means normative.
+
+138
+00:11:37,760 --> 00:11:42,640
+So we can say that all hands
+have five fingers or five digits.
+
+139
+00:11:42,720 --> 00:11:46,680
+Now we know that's not actually 100% true.
+
+140
+00:11:47,680 --> 00:11:52,000
+There are a small number of people
+we'll have a supernumerary digit.
+
+141
+00:11:52,800 --> 00:11:59,040
+So we have to come up with various minor
+kludges so that we stick to the-rule
+
+142
+00:11:59,800 --> 00:12:06,360
+of always true with no exceptions.
+And how we deal with exceptions
+
+143
+00:12:06,440 --> 00:12:12,160
+is a big part of this that I don't
+really have time in this talk to go into.
+
+144
+00:12:12,720 --> 00:12:16,800
+But the fact is that most of the time
+you can come pretty close,
+
+145
+00:12:16,880 --> 00:12:23,480
+Provided you don't get hung
+up on the philosophy of it,
+
+146
+00:12:23,560 --> 00:12:27,920
+the biggest problem we had in teaching
+people to author this is they worry,
+
+147
+00:12:28,000 --> 00:12:32,360
+well, is that really necessary?
+There can be a supernumerary finger.
+
+148
+00:12:32,440 --> 00:12:36,680
+There can be a person
+who has dextrocardia,
+
+149
+00:12:36,760 --> 00:12:42,760
+who has their heart on the right side
+rather than the left. There can be, in.
+
+150
+00:12:43,520 --> 00:12:47,240
+in fact, almost anything, it's biology.
+
+151
+00:12:48,800 --> 00:12:53,800
+It's not physics, it's biology,
+and it's full of exceptions.
+
+152
+00:12:53,880 --> 00:12:56,200
+So the problem of how you deal with them,
+
+153
+00:12:56,280 --> 00:12:59,040
+but most of those you deal
+with, is special cases.
+
+154
+00:12:59,800 --> 00:13:06,440
+If you take the normative case,
+and you say always true within my system,
+
+155
+00:13:06,520 --> 00:13:12,040
+and don't argue about necessity,
+we argue about true within this system.
+
+156
+00:13:13,600 --> 00:13:16,960
+Not in the universe as a whole.
+
+157
+00:13:17,040 --> 00:13:20,240
+Within this system, good enough for this.
+
+158
+00:13:21,600 --> 00:13:24,840
+Then you can do it and it works.
+
+159
+00:13:25,560 --> 00:13:30,720
+And then you put together and you get, you
+may get an incredibly tangled hierarchy.
+
+160
+00:13:30,800 --> 00:13:35,560
+This is a terribly trivial
+version of going from, Well,
+
+161
+00:13:36,120 --> 00:13:39,600
+this is a, if you're trying
+to organize all animals,
+
+162
+00:13:39,680 --> 00:13:43,800
+you have carnivores and omnivores
+and herbivores and so forth.
+
+163
+00:13:43,880 --> 00:13:46,840
+You start out classification,
+
+164
+00:13:48,880 --> 00:13:51,440
+you start out with a nothing.
+
+165
+00:13:52,200 --> 00:13:57,120
+Another way of saying this is if you're
+using a classifier before classification,
+
+166
+00:13:57,200 --> 00:14:03,800
+nothing has more than one parent.
+Yet we didn't quite stick to that.
+
+167
+00:14:03,880 --> 00:14:09,840
+That's a good rule of thumb.
+The underlying rule of thumb
+
+168
+00:14:09,920 --> 00:14:14,360
+is that everything must be an axiom,
+nothing can have an exception.
+
+169
+00:14:15,400 --> 00:14:20,960
+But a good proxy for that. If you're
+going to have more than one parent
+
+170
+00:14:21,040 --> 00:14:23,600
+and it's never going to have an exception,
+
+171
+00:14:23,680 --> 00:14:28,080
+you're in quite unusual situations
+and you better be very careful and check
+
+172
+00:14:28,160 --> 00:14:32,360
+about that and check with your neighbor
+if that's really the best way of doing it.
+
+173
+00:14:33,040 --> 00:14:37,400
+and then you run the classifier
+and you see what's happened.
+
+174
+00:14:38,640 --> 00:14:42,760
+And so that's why classifiers
+are so important technology.
+
+175
+00:14:43,440 --> 00:14:46,280
+If you do that, then any one
+
+176
+00:14:47,520 --> 00:14:54,480
+interesting thing, any generalization
+like any bit of code or interface almost
+
+177
+00:14:54,560 --> 00:14:59,640
+always comes from one place and there's
+almost always one most specific one.
+
+178
+00:15:00,320 --> 00:15:03,680
+So you collect collecting the set,
+
+179
+00:15:04,240 --> 00:15:07,960
+what we would now call most
+specific general-izations
+
+180
+00:15:09,680 --> 00:15:12,960
+as a relatively compact
+way of saying this,
+
+181
+00:15:13,040 --> 00:15:17,400
+go down and just keep down
+and if it has an exception,
+
+182
+00:15:17,960 --> 00:15:21,480
+if you come to something and you come
+to something else, you take the lower one
+
+183
+00:15:22,200 --> 00:15:26,880
+or you look up and you see which are the
+ones you see before you see anything else.
+
+184
+00:15:26,960 --> 00:15:28,880
+You want to see what goes on this screen,
+
+185
+00:15:29,760 --> 00:15:34,360
+The fact that there are some other ones
+above there, if they've been overridden,
+
+186
+00:15:34,440 --> 00:15:39,960
+you ignore things that are overridden
+by things that have the same property
+
+187
+00:15:40,040 --> 00:15:44,320
+for their death. Things that have
+different properties you collect.
+
+188
+00:15:45,160 --> 00:15:47,560
+And this you've explained
+a little bit more in a paper
+
+189
+00:15:47,640 --> 00:15:49,160
+for those that want to dive deep.
+
+190
+00:15:49,240 --> 00:15:54,920
+Yeah, there are more details
+in paper, in several papers,
+
+191
+00:15:55,680 --> 00:15:59,080
+but most recently
+in the On Beyond Gruber paper,
+
+192
+00:16:00,080 --> 00:16:05,680
+but also in papers we've written.
+I could put together a list of them.
+
+193
+00:16:06,360 --> 00:16:11,760
+We'll put them in the description
+for the video for those that want to see.
+
+194
+00:16:11,840 --> 00:16:14,200
+It's the basic idea of you look up.
+
+195
+00:16:16,240 --> 00:16:21,400
+you sit in this complicated thing
+and you look up and for what you see,
+
+196
+00:16:22,440 --> 00:16:29,240
+it depends actually on the application.
+For forms, you usually collect everything.
+
+197
+00:16:29,880 --> 00:16:36,040
+For things like treatments,
+you collect the most specific one.
+
+198
+00:16:37,120 --> 00:16:43,480
+And it is, you actually
+collect the the set
+
+199
+00:16:43,560 --> 00:16:49,280
+of most specific ones, that you hope
+that's going to be a singleton.
+
+200
+00:16:50,280 --> 00:16:55,960
+And it almost always is. In fact,
+in practical purposes, it always is.
+
+201
+00:16:56,480 --> 00:16:58,960
+And that's also the way we collect codes.
+
+202
+00:16:59,840 --> 00:17:04,480
+We hang codes, the ICD codes,
+
+203
+00:17:04,560 --> 00:17:10,080
+for example, or the Read codes
+are hung on this complicated
+
+204
+00:17:12,440 --> 00:17:15,000
+technically speaking a directed acyclic
+
+205
+00:17:15,960 --> 00:17:21,160
+that is a something with a multiple
+inheritance hierarchy
+
+206
+00:17:22,320 --> 00:17:24,520
+and we take the lowest one.
+
+207
+00:17:25,360 --> 00:17:32,240
+So the hypertension in pregnancy
+
+208
+00:17:32,320 --> 00:17:37,720
+is lower than than hypertension
+more specific and, and,
+
+209
+00:17:37,800 --> 00:17:40,120
+but you have to do this with the query.
+
+210
+00:17:41,080 --> 00:17:48,080
+And because if you, the other problem
+with this is the description logic
+
+211
+00:17:48,480 --> 00:17:51,960
+negation and description logics is tricky.
+
+212
+00:17:53,360 --> 00:17:57,840
+And it actually doesn't mean what
+we mean in language most of the time,
+
+213
+00:17:57,920 --> 00:18:01,880
+or maybe you should say that our language
+around negation is tricky.
+
+214
+00:18:02,480 --> 00:18:05,600
+And it doesn't mean what
+people think it means.
+
+215
+00:18:07,440 --> 00:18:12,280
+The, excuse me.
+
+216
+00:18:13,720 --> 00:18:18,640
+So you have to think very carefully about
+
+217
+00:18:21,400 --> 00:18:23,720
+those cases. But usually,
+
+218
+00:18:27,600 --> 00:18:30,200
+picking the lowest one is a query.
+
+219
+00:18:32,480 --> 00:18:36,160
+It's not something that you can
+do within the description logic.
+
+220
+00:18:36,680 --> 00:18:40,120
+It's something you have to do
+with the query on the description.
+
+221
+00:18:40,200 --> 00:18:42,480
+A query about the description knowledge.
+
+222
+00:18:42,560 --> 00:18:48,560
+So if you're using an OWL ontology,
+what would you do for querying?
+
+223
+00:18:48,640 --> 00:18:54,080
+An OWL ontology, you would probably use
+SPARQL. You might use something else.
+
+224
+00:18:54,680 --> 00:18:58,920
+But if you take the classic
+example is pregnancy.
+
+225
+00:19:00,200 --> 00:19:05,680
+If you represent it in OWL and you take
+the ICD code for hypertension,
+
+226
+00:19:05,760 --> 00:19:09,000
+not called hypertension
+excluding pregnancy,
+
+227
+00:19:10,360 --> 00:19:15,040
+and you make the mistake
+of coding that in an OWL
+
+228
+00:19:15,120 --> 00:19:21,680
+as hypertension and not pregnancy,
+then if you use that code about a patient,
+
+229
+00:19:22,640 --> 00:19:27,520
+any code about that patient, patient. Now,
+essential hypertension comes under them.
+
+230
+00:19:28,240 --> 00:19:32,200
+That says every time you code a patient
+as having essential hypertension,
+
+231
+00:19:32,280 --> 00:19:38,720
+you're coding them is not being pregnant.
+That probably isn't what you want.
+
+232
+00:19:41,160 --> 00:19:44,360
+That's almost certainly
+not what you want to be saying.
+
+233
+00:19:45,400 --> 00:19:48,520
+What you want to do
+is you want to say every
+
+234
+00:19:50,320 --> 00:19:56,840
+case is not included in the hierarchy
+under pregnancy, and that's a query.
+
+235
+00:19:56,920 --> 00:20:03,600
+That's a query about the hierarchy
+that the classifier has made, whereas
+
+236
+00:20:06,080 --> 00:20:11,280
+the hypertension not caused
+by pregnancy is about the hypertension.
+
+237
+00:20:12,600 --> 00:20:16,840
+The things when you're trying
+to coordinate coding systems,
+
+238
+00:20:16,920 --> 00:20:21,840
+or about the coding systems,
+they're only about what's underneath
+
+239
+00:20:21,920 --> 00:20:25,440
+the reality underneath
+the coding systems indirectly.
+
+240
+00:20:26,000 --> 00:20:31,520
+And you have to be, description logic,
+semantics, makes it about the world,
+
+241
+00:20:31,600 --> 00:20:35,040
+rather than about
+your description of the world.
+
+242
+00:20:36,160 --> 00:20:39,160
+And your coding systems
+are descriptions of the world.
+
+243
+00:20:39,760 --> 00:20:44,760
+And you can coordinate two descriptions of
+the world by asking questions about them.
+
+244
+00:20:46,080 --> 00:20:50,360
+But you have to be careful
+that you don't accidentally
+
+245
+00:20:53,040 --> 00:20:54,640
+make statements about the world,
+
+246
+00:20:54,720 --> 00:20:59,880
+that you don't do it by asking
+questions, trying to say,
+
+247
+00:20:59,960 --> 00:21:04,840
+if you try and say the same thing about
+the world in the two systems directly,
+
+248
+00:21:04,920 --> 00:21:10,560
+you're likely to get mistakes,
+particularly if you do so,
+
+249
+00:21:14,760 --> 00:21:17,640
+it's particularly true if you,
+
+250
+00:21:17,720 --> 00:21:24,720
+if there's any sort of negation
+involved because of the way negation
+
+251
+00:21:25,240 --> 00:21:32,120
+in description logic doesn't usually mean
+what we mean by not in ordinary language.
+
+252
+00:21:32,840 --> 00:21:34,280
+That's just one example.
+
+253
+00:21:34,360 --> 00:21:39,320
+The other thing that was tremendously
+important to GALEN in particular,
+
+254
+00:21:39,400 --> 00:21:45,080
+and that came out of PEN&PAD,
+is very early on in GALEN, one,
+
+255
+00:21:46,920 --> 00:21:53,920
+one of the partners asked, well,, why do
+we have to check after classification?
+
+256
+00:21:54,040 --> 00:21:57,280
+If we say it right logically,
+won't it come out right?
+
+257
+00:22:00,600 --> 00:22:02,520
+And this is a little
+bit like saying, well,
+
+258
+00:22:02,600 --> 00:22:06,640
+if you think you've written the program
+correctly, won't it work correctly?
+
+259
+00:22:09,400 --> 00:22:16,400
+it's tricky. You have to look
+at what happens for two reasons.
+
+260
+00:22:16,640 --> 00:22:22,400
+One, you may just not real up.
+Two people may say things,
+
+261
+00:22:22,480 --> 00:22:24,240
+understand things slightly differently,
+
+262
+00:22:24,320 --> 00:22:27,960
+but they conflict in such a way
+that they have odd results.
+
+263
+00:22:28,040 --> 00:22:33,840
+And logic is relentlessly logical.
+Absolutely relentless.
+
+264
+00:22:33,920 --> 00:22:38,240
+And if we could follow it all in our
+heads, we wouldn't need these complicated
+
+265
+00:22:38,320 --> 00:22:41,840
+theorem provers and classifiers
+and everything to deal wit it..
+
+266
+00:22:42,480 --> 00:22:45,080
+And so you have to look at it afterwards.
+
+267
+00:22:45,880 --> 00:22:52,640
+And the other reason
+is that errors propagate,
+
+268
+00:22:53,760 --> 00:22:55,880
+make a little error in anatomy.
+
+269
+00:22:56,480 --> 00:23:00,840
+The title of the paper that we did
+of getting the foot out of the pelvis
+
+270
+00:23:00,920 --> 00:23:06,320
+from SNOMED was a slight
+error in the anatomy
+
+271
+00:23:06,400 --> 00:23:13,160
+of a blood vessel the a vessel
+in the blood vessel in the leg
+
+272
+00:23:14,080 --> 00:23:19,360
+on the lower in the lower leg,
+which are the foot,
+
+273
+00:23:19,440 --> 00:23:25,880
+which put it as a branch of the femoral
+artery rather, or some artery,
+
+274
+00:23:25,960 --> 00:23:30,000
+the inguinal artery, sorry, further up
+rather than where it should have been.
+
+275
+00:23:31,440 --> 00:23:35,160
+So a damage to that vessel
+became the damage
+
+276
+00:23:35,240 --> 00:23:37,880
+to a part of the inguinal
+artery and was located,
+
+277
+00:23:37,960 --> 00:23:41,880
+became, and the inguinal artery is part
+of the pelvis, located in the pelvis.
+
+278
+00:23:42,880 --> 00:23:49,840
+It all, the logic followed
+perfectly straightforwardly.
+
+279
+00:23:49,920 --> 00:23:51,920
+It actually is worse than that.
+
+280
+00:23:52,800 --> 00:23:56,360
+There was one case and it turned out
+
+281
+00:23:57,440 --> 00:24:02,840
+where somebody turned up the thrombus
+of one quadrant of the breast turned
+
+282
+00:24:02,920 --> 00:24:09,080
+out to be listed, appeared under leg
+injury for a similar kind of reason.
+
+283
+00:24:11,440 --> 00:24:13,880
+It just, a small error.
+
+284
+00:24:13,960 --> 00:24:17,760
+And both of those were undoubtedly
+typing errors or the equivalent.
+
+285
+00:24:17,840 --> 00:24:21,640
+They were just glitches
+and somebody doing something.
+
+286
+00:24:21,720 --> 00:24:28,320
+But they were so small in such
+a small corner. If you try
+
+287
+00:24:28,400 --> 00:24:33,360
+and quality-assure the anatomy on its own,
+on its own, you probably will miss them.
+
+288
+00:24:34,680 --> 00:24:38,600
+When it goes into this larger framework,
+it causes some other problem,
+
+289
+00:24:38,680 --> 00:24:45,040
+which put it on a user interface form
+and it jumps out, it jumps out at you.
+
+290
+00:24:47,160 --> 00:24:53,920
+So, we ran, GALEN was obsessive.
+At that time,
+
+291
+00:24:54,000 --> 00:24:57,800
+classification was expensive.
+We didn't wanna do it very often.
+
+292
+00:24:58,200 --> 00:24:59,200
+Time?
+
+293
+00:24:59,280 --> 00:25:00,520
+What?
+
+294
+00:25:00,600 --> 00:25:02,720
+It was time expensive?
+
+295
+00:25:02,800 --> 00:25:08,520
+Yeah, 12 hours to run
+
+296
+00:25:08,600 --> 00:25:13,920
+the classifier in full.
+Ian Horrocks got it down.
+
+297
+00:25:14,000 --> 00:25:20,280
+But at the time we were doing it,
+our fastest version was about 12 hours.
+
+298
+00:25:20,960 --> 00:25:25,280
+And so every time the classifier run,
+there was a set of queries
+
+299
+00:25:25,360 --> 00:25:30,640
+and we had a query language, no different
+from any other query, not seriously,.
+
+300
+00:25:31,280 --> 00:25:33,600
+different from any other
+query language, which ran,
+
+301
+00:25:33,680 --> 00:25:38,000
+which checked that every time
+somebody found an error like that,
+
+302
+00:25:38,080 --> 00:25:41,680
+particularly an error that had
+propagated from some place else,
+
+303
+00:25:42,200 --> 00:25:45,840
+or just any error that we checked
+to make sure it didn't recur.
+
+304
+00:25:46,440 --> 00:25:49,440
+So like software testing today, that you.
+
+305
+00:25:49,520 --> 00:25:51,200
+Just like software testing,
+
+306
+00:25:51,880 --> 00:25:58,000
+we found time and again
+that people would fix up,
+
+307
+00:25:58,080 --> 00:26:01,240
+people would find an error.
+They'd make a local fix to it,
+
+308
+00:26:01,320 --> 00:26:03,880
+but actually they wouldn't
+find the reason for the error.
+
+309
+00:26:05,000 --> 00:26:09,000
+They’d just see that something was
+classified in the wrong place and move it.
+
+310
+00:26:10,240 --> 00:26:13,680
+And then when the classifier
+was run again,
+
+311
+00:26:14,480 --> 00:26:17,800
+it would be a new place,
+but would also be in the old place,
+
+312
+00:26:20,360 --> 00:26:25,400
+and they might unhook
+it again and report it again,
+
+313
+00:26:25,480 --> 00:26:29,760
+but unless they fixed what the original
+problem was, it would keep coming up,
+
+314
+00:26:30,960 --> 00:26:36,320
+and SNOMED, any classifier based system,
+
+315
+00:26:36,400 --> 00:26:40,200
+is not always easy to see
+where an error is coming from.
+
+316
+00:26:40,760 --> 00:26:44,240
+It takes quite a bit …
+It's like debugging programs.
+
+317
+00:26:44,960 --> 00:26:48,080
+There are times when
+you get errors that occur
+
+318
+00:26:48,160 --> 00:26:51,640
+for reasons that just aren't
+obvious and aren't local.
+
+319
+00:26:52,760 --> 00:26:58,080
+And so we were very, very careful.
+And I think the thing that I would say
+
+320
+00:26:58,160 --> 00:27:03,720
+that anybody trying to build both
+the user interface is a useful way of QA.
+
+321
+00:27:04,480 --> 00:27:09,120
+Another useful way of QA
+is to generate language off
+
+322
+00:27:09,880 --> 00:27:13,440
+the descriptions that you get
+
+323
+00:27:13,520 --> 00:27:18,200
+like we saw in the demo in the corner
+there, they're automatically generated
+
+324
+00:27:19,360 --> 00:27:24,640
+In later things we did much more
+with taking any arbitrary expression
+
+325
+00:27:25,480 --> 00:27:28,360
+and building it up into a,
+
+326
+00:27:28,440 --> 00:27:32,280
+well actually know the stuff that's in
+the corner of Clinergy covers quite a bit,
+
+327
+00:27:35,720 --> 00:27:38,560
+those things show things up.
+
+328
+00:27:40,520 --> 00:27:44,800
+I think it's a very important
+thing if you're building systems
+
+329
+00:27:44,880 --> 00:27:48,120
+that for that section at least
+that you're concerned with,
+
+330
+00:27:48,200 --> 00:27:53,000
+and most systems will be about something
+a great deal less than all of medicine,
+
+331
+00:27:53,800 --> 00:27:59,400
+that you go over them
+because it’s software.
+
+332
+00:28:03,040 --> 00:28:05,560
+And once you start using a classifier,
+
+333
+00:28:06,240 --> 00:28:10,400
+whether it's the SNOMED constraint
+language or whether it's
+
+334
+00:28:11,560 --> 00:28:17,480
+a description logic classifier or whether
+it's a more powerful logic classifier,
+
+335
+00:28:17,560 --> 00:28:20,680
+you're essentially programming.
+
+336
+00:28:23,160 --> 00:28:28,840
+And if you could predict
+the outcome of your programming,
+
+337
+00:28:28,920 --> 00:28:34,960
+you wouldn't need the compiler,
+or the classifier, or whatever it is.
+
+338
+00:28:36,200 --> 00:28:42,280
+And so you do have to look for the errors.
+And that I think if there's one key thing
+
+339
+00:28:42,360 --> 00:28:48,680
+that I would say comes
+out of this, it's that.
+
+340
+00:28:49,800 --> 00:28:54,000
+Does that have any implications on how
+you should design things with a lot
+
+341
+00:28:54,080 --> 00:28:59,320
+of pre-coordination or smaller things
+that you post-coordinate at runtime?
+
+342
+00:28:59,400 --> 00:29:03,760
+As I say, we build things that mostly are,
+
+343
+00:29:05,240 --> 00:29:07,680
+well, whether it's pre-
+or post-coordinated,
+
+344
+00:29:09,800 --> 00:29:14,600
+what matters is that the hierarchies
+that you're coordinating are clean
+
+345
+00:29:16,080 --> 00:29:20,600
+and that it's normalized.
+So another distinction,
+
+346
+00:29:21,280 --> 00:29:26,680
+if we get technical, is to say that we
+have to distinguish the things which,
+
+347
+00:29:26,760 --> 00:29:30,120
+when we represent them,
+we represent them as axioms.
+
+348
+00:29:30,200 --> 00:29:37,160
+Everything in a description logic,
+whether it's a SNOMED statement or
+
+349
+00:29:37,760 --> 00:29:42,360
+SNOMED didn't think of it this way because
+really things both GALEN and SNOMED
+
+350
+00:29:43,280 --> 00:29:49,280
+were built before description logic,
+semantics was completely sorted out,
+
+351
+00:29:49,920 --> 00:29:54,640
+and people really quite understood
+what they were doing, including us.
+
+352
+00:29:54,720 --> 00:29:56,320
+I mean, we've learned a lot.
+
+353
+00:29:58,840 --> 00:30:03,880
+But the things that you put in, whether
+it's a hierarchical statement,
+
+354
+00:30:03,960 --> 00:30:06,560
+or whether it's a property statement,
+
+355
+00:30:06,640 --> 00:30:12,640
+are really axioms, saying it is always
+the case, it's an axiom of this system
+
+356
+00:30:12,720 --> 00:30:15,600
+that hands have five fingers,
+
+357
+00:30:16,120 --> 00:30:19,840
+or that the hand is part
+of the upper extremity, or that the,
+
+358
+00:30:23,520 --> 00:30:30,120
+the, excuse me, just a moment.
+
+359
+00:30:33,400 --> 00:30:37,360
+So those things, you have to be very
+careful about what you put there.
+
+360
+00:30:38,480 --> 00:30:43,520
+A classic example,
+the other things you say that
+
+361
+00:30:46,080 --> 00:30:51,000
+you treat that gram-positive
+
+362
+00:30:52,800 --> 00:30:57,600
+bacteria are likely to be sensitive
+to penicillin are generalizations.
+
+363
+00:30:57,680 --> 00:31:02,400
+The things that are usually true
+generally true or typically true,
+
+364
+00:31:02,480 --> 00:31:04,000
+but not always true.
+
+365
+00:31:05,200 --> 00:31:09,560
+And in fact,
+the penicillins are antibiotics.
+
+366
+00:31:10,120 --> 00:31:16,080
+Not every, if you define all penicillins
+have beta-lactam rings in them.
+
+367
+00:31:16,160 --> 00:31:18,080
+That really defines a penicillin.
+
+368
+00:31:19,120 --> 00:31:22,560
+Many of them have, most of them
+have antibiotic properties.
+
+369
+00:31:22,640 --> 00:31:24,400
+I don't know if they all do.
+
+370
+00:31:25,440 --> 00:31:32,160
+We, for our purposes, in the systems
+that we build, we usually say that they do
+
+371
+00:31:33,240 --> 00:31:38,760
+because within the penicillins that we're
+likely to come across, they won't turn up
+
+372
+00:31:39,440 --> 00:31:45,320
+in our system if they aren't
+antibiotics, almost certainly.
+
+373
+00:31:46,640 --> 00:31:50,160
+If we're building one, however,
+for a pharmaceutical company
+
+374
+00:31:51,480 --> 00:31:58,120
+or for a chemist, I'd want some expert
+opinion on that. I simply don't know.
+
+375
+00:31:59,240 --> 00:32:03,040
+And it may be that that should
+be treated as a generalization.
+
+376
+00:32:03,120 --> 00:32:07,640
+And we should say
+that generally penicillins
+
+377
+00:32:07,720 --> 00:32:14,360
+are active against gram-positive
+bacteria rather than absolutely.
+
+378
+00:32:16,160 --> 00:32:20,680
+And I can't, I don't know.
+The classic example
+
+379
+00:32:21,480 --> 00:32:25,680
+of these things in the knowledge
+representation of the world is bird's fly,
+
+380
+00:32:27,480 --> 00:32:30,040
+and most of you sure know about Tweety,
+
+381
+00:32:32,760 --> 00:32:38,440
+that in general birds fly,
+Tweety is a bird,
+
+382
+00:32:40,280 --> 00:32:41,760
+Tweety probably flies,
+
+383
+00:32:41,840 --> 00:32:44,840
+only I forgot to tell you that Tweety
+is actually an ostrich.
+
+384
+00:32:49,720 --> 00:32:51,400
+There are exceptions.
+
+385
+00:32:52,000 --> 00:32:54,960
+And so birds flying is a bad axiom.
+
+386
+00:32:55,800 --> 00:32:58,880
+It's a good generalization.
+It's usually true.
+
+387
+00:32:58,960 --> 00:33:01,640
+It's a good rule of thumb.
+It's a heuristic.
+
+388
+00:33:02,400 --> 00:33:04,000
+And this technique of take.
+
+389
+00:33:04,080 --> 00:33:07,480
+And if you're trying, if all
+you know about something is a bird
+
+390
+00:33:08,240 --> 00:33:11,440
+is that it's a bird,
+then it's a good bet that it flies.
+
+391
+00:33:12,320 --> 00:33:16,320
+And for that reason, taking
+the most specific thing you know
+
+392
+00:33:17,160 --> 00:33:21,160
+about something and taking
+the generalizations that are true
+
+393
+00:33:21,240 --> 00:33:25,600
+of the most specific thing you know works.
+It's a heuristic.
+
+394
+00:33:25,680 --> 00:33:29,760
+That is a good rule of thumb.
+Very efficient.
+
+395
+00:33:30,680 --> 00:33:35,480
+But it's not absolute.
+And in fact, we know that there isn't
+
+396
+00:33:36,640 --> 00:33:42,120
+a the log, logicians would
+love to have complete
+
+397
+00:33:42,200 --> 00:33:48,240
+and decidable algorithms for every,
+all the reasoning that they do.
+
+398
+00:33:48,840 --> 00:33:54,320
+Unfortunately, much of the reasoning
+that we need to do, they have also proved,
+
+399
+00:33:54,960 --> 00:33:58,240
+does not, cannot be done.
+For much of the reasoning
+
+400
+00:33:58,320 --> 00:34:02,720
+that we need to do, there There is no
+complete and decidable algorithm.
+
+401
+00:34:02,800 --> 00:34:05,560
+So we have to make do with heuristics.
+
+402
+00:34:05,640 --> 00:34:12,600
+And the one that we make do with is
+this building a good, clean hierarchy,
+
+403
+00:34:13,920 --> 00:34:15,440
+normalized ontology. The other
+
+404
+00:34:15,520 --> 00:34:20,440
+thing about normalized ontologies
+is that they're easy to modularize.
+
+405
+00:34:21,120 --> 00:34:24,520
+We've pulled them apart.
+Now we can maintain them separately.
+
+406
+00:34:25,600 --> 00:34:29,880
+And one of the things that we've
+made a big contribution to OWL in,
+
+407
+00:34:29,960 --> 00:34:35,560
+was how to modularize
+ontologies and how to use them.
+
+408
+00:34:36,920 --> 00:34:42,680
+The OWL committee put this in, but hadn't
+really figured out what to do with it.
+
+409
+00:34:42,760 --> 00:34:48,480
+I think we can take credit quite a bit
+of the work on how to break them up,
+
+410
+00:34:49,120 --> 00:34:52,160
+how sensibly to use them.
+
+411
+00:34:52,240 --> 00:34:56,200
+That's one of several things
+that came out of GALEN, technically,
+
+412
+00:34:56,280 --> 00:34:59,240
+that influenced OWL.
+there were things that didn't.
+
+413
+00:34:59,320 --> 00:35:02,360
+We'd like to have got
+some of the other things,
+
+414
+00:35:02,440 --> 00:35:07,120
+some of the non-axiomatic things
+into OWL other than as annotations.
+
+415
+00:35:07,200 --> 00:35:13,920
+But that came out and the notion
+of property patterns – the disease
+
+416
+00:35:14,440 --> 00:35:17,680
+of the ventricle is the disease
+of the heart, the disease
+
+417
+00:35:17,760 --> 00:35:22,880
+of a part is a disease of the whole.
+The mechanism for that, which is in OWL,
+
+418
+00:35:23,440 --> 00:35:27,240
+came out and the ability to say
+that the hand has five fingers
+
+419
+00:35:27,320 --> 00:35:32,920
+rather than just has part has cardinality
+five, which isn't much use to us...
+
+420
+00:35:33,000 --> 00:35:38,440
+Were all things that, places where
+we have some influence on the development,
+
+421
+00:35:38,520 --> 00:35:42,680
+but that's by the by for the, if you have
+some nerds in your audience
+
+422
+00:35:42,760 --> 00:35:45,640
+who are curious about
+such bits of history,
+
+423
+00:35:45,720 --> 00:35:48,920
+but probably not the most important
+thing to be talking about now.
+
+424
+00:35:49,000 --> 00:35:52,400
+- So thank, thank you very much.
+
+425
+00:35:52,480 --> 00:35:57,840
+This was a technical deep dive you can
+dive even further by reading the papers
+
+426
+00:35:57,920 --> 00:36:02,640
+you referred to that will also include
+in the descriptions for this video.
+
+427
+00:36:03,160 --> 00:36:07,640
+Is there any final things you want to
+pass along to techies? …thinking about?
+
+428
+00:36:07,720 --> 00:36:14,720
+Well, I think what we can say just
+to emphasize that this same technique
+
+429
+00:36:15,400 --> 00:36:20,360
+was what we used in the ICD-11
+project and that the…
+
+430
+00:36:22,800 --> 00:36:27,440
+There are papers both by Jean
+Marie Rodrigues on the proving
+
+431
+00:36:27,520 --> 00:36:30,000
+of this in the cardiovascular area,
+
+432
+00:36:30,080 --> 00:36:36,320
+that I am convinced that this is the best
+way to coordinate SNOMED
+
+433
+00:36:39,040 --> 00:36:41,400
+and ICD. It may take…
+
+434
+00:36:41,480 --> 00:36:45,400
+the other thing about queries
+is that they're quite flexible.
+
+435
+00:36:46,160 --> 00:36:53,160
+And it's easier to deal with weird
+corner cases and things that aren't,
+
+436
+00:36:53,280 --> 00:36:58,600
+both ICD and SNOMED, unless they've
+changed since I knew them 10 years ago,
+
+437
+00:36:59,840 --> 00:37:06,320
+contain some very odd things,
+which are there for historical reasons
+
+438
+00:37:06,400 --> 00:37:10,800
+or other reasons that don't really
+conform to the current standards.
+
+439
+00:37:10,880 --> 00:37:14,960
+They may all have been eliminated by
+now in SNOMED. I really don't know.
+
+440
+00:37:15,040 --> 00:37:19,840
+I know they haven't in ICD. ICD,
+
+441
+00:37:20,640 --> 00:37:27,440
+and you can craft your query
+to cope with weird
+
+442
+00:37:27,520 --> 00:37:34,320
+and wonderful circumstances.
+Your logic, your classifier is rigid.
+
+443
+00:37:35,840 --> 00:37:38,240
+It does what it does. It's logical,
+
+444
+00:37:39,320 --> 00:37:44,080
+logic is rigid, it doesn't bend.
+
+445
+00:37:45,400 --> 00:37:49,200
+And so the things that you do in logic
+have got to be things that aren't bent.
+
+446
+00:37:49,280 --> 00:37:55,840
+In fact, the Italians in describing
+the sort of properties
+
+447
+00:37:55,920 --> 00:38:02,240
+that you should use for your hierarchy,
+describe them as rigid properties.
+
+448
+00:38:04,240 --> 00:38:07,640
+that word somehow comes
+out oddly in English,
+
+449
+00:38:07,720 --> 00:38:11,960
+but it's, I actually very much like it.
+
+450
+00:38:12,040 --> 00:38:17,520
+It communicates very well about the things
+that are never going to have exceptions.
+
+451
+00:38:17,600 --> 00:38:19,760
+They're just rigidly true.
+
+452
+00:38:22,240 --> 00:38:26,000
+People aren't particularly good at it.
+It's really great to use it. But when?
+
+453
+00:38:26,080 --> 00:38:31,320
+The other thing is that language
+isn't logical and all the things
+
+454
+00:38:31,400 --> 00:38:36,360
+that come from language are very
+flexible and full of odd oddities.
+
+455
+00:38:36,880 --> 00:38:42,840
+And you could get around those with query
+languages and of various sorts
+
+456
+00:38:42,920 --> 00:38:47,840
+in a systematic way that is still
+transparent and understandable,
+
+457
+00:38:48,880 --> 00:38:53,960
+and is a great deal better than doing
+it one code to one code at a time.
+
+458
+00:38:54,840 --> 00:39:00,680
+That doing it through a set of queries
+to give you a lot of systematicity,
+
+459
+00:39:02,040 --> 00:39:08,120
+a lot of structure,
+without tying you to the rigidity
+
+460
+00:39:09,200 --> 00:39:15,720
+of the logic. And you'll never get
+ICD logical because a logical ICD
+
+461
+00:39:16,360 --> 00:39:21,240
+would produce results that would
+be so different from the current ones
+
+462
+00:39:21,320 --> 00:39:28,320
+that the ministers of health in various
+countries would go berserk. They just…
+
+463
+00:39:29,120 --> 00:39:34,680
+and it wouldn't serve that purpose.
+It wouldn't actually fit the task.
+
+464
+00:39:35,320 --> 00:39:38,000
+There are good reasons for the oddities.
+
+465
+00:39:38,600 --> 00:39:43,320
+So I think that's a very important thing
+is the distinction between the things
+
+466
+00:39:43,400 --> 00:39:47,840
+which are rigid, which are can
+be represented in logic.
+
+467
+00:39:48,960 --> 00:39:53,120
+And that, that's one thing.
+
+468
+00:39:53,200 --> 00:39:58,040
+And that the other thing is that the
+technique taking the most specific
+
+469
+00:39:58,120 --> 00:40:03,960
+example from a normalized ontology
+works well for all sorts of things.
+
+470
+00:40:04,600 --> 00:40:10,200
+So I'd like to leave that bit, and I think
+that's probably what I have to say on it.
+
+471
+00:40:10,280 --> 00:40:14,000
+Thank you very much, and then
+we'll soon go into the fourth part,
+
+472
+00:40:14,080 --> 00:40:16,240
+which is more about
+how we do things today.

@@ -1,0 +1,2783 @@
+WEBVTT
+
+NOTE PEN&PAD interview with Alan Rector, part 4 of 4 (recorded 21 Oct 2021). English subtitles from the proofread transcript (Doc read 2026-11-10). CC BY 4.0.
+
+1
+00:00:01.520 --> 00:00:04.280
+Okay, thank you very much
+for the previous part, Alan.
+
+2
+00:00:04.360 --> 00:00:08.200
+Now we're going to the fourth part
+where we'll discuss a little bit about
+
+3
+00:00:08.840 --> 00:00:13.960
+how would you be doing this today
+if you had a chance and how do we fit
+
+4
+00:00:14.040 --> 00:00:18.960
+these things in with concepts that people
+are familiar with like SNOMED CT,
+
+5
+00:00:19.040 --> 00:00:22.680
+where does that fit in the part
+openEHR archetypes etc.
+
+6
+00:00:23.280 --> 00:00:27.760
+HL7 FHIR these things and the glue
+things you were talking about,
+
+7
+00:00:27.840 --> 00:00:34.840
+queries in the ontologies and a number
+of years ago you had something called
+
+8
+00:00:36.200 --> 00:00:40.240
+the "propeller" paper, a very classic
+paper about what should go where?
+
+9
+00:00:40.320 --> 00:00:43.320
+I think we can get a picture of that up
+
+10
+00:00:43.400 --> 00:00:46.480
+in a while also if you would
+like to explain.
+
+11
+00:00:48.800 --> 00:00:53.080
+Right, well I think one
+of the things that we took away,
+
+12
+00:00:53.160 --> 00:00:57.560
+which perhaps I should have
+emphasized in the technical bit,
+
+13
+00:00:57.640 --> 00:01:02.280
+because the technical bit, we were talking
+mostly about the user interface
+
+14
+00:01:02.360 --> 00:01:07.480
+and that's mostly about the concept
+model of the terminology.
+
+15
+00:01:08.080 --> 00:01:12.160
+but that if we talk about that,
+that's just one part of the system.
+
+16
+00:01:12.960 --> 00:01:17.120
+That's not a whole system.
+The other thing,
+
+17
+00:01:17.800 --> 00:01:23.080
+where we make mistakes was in trying
+to use that for too much of the system.
+
+18
+00:01:26.480 --> 00:01:29.840
+Where this came from and where we,
+
+19
+00:01:29.920 --> 00:01:35.360
+we get it right and actually where
+some of the ideas originally came from
+
+20
+00:01:35.920 --> 00:01:42.440
+is that what dealing with data is very
+different than dealing with terminology.
+
+21
+00:01:44.680 --> 00:01:48.600
+And. Where I have information
+model here or EHR model,
+
+22
+00:01:48.680 --> 00:01:52.480
+I'm talking about data,
+things about individual patients,
+
+23
+00:01:53.160 --> 00:01:56.280
+what they're like
+at a particular place and time
+
+24
+00:01:57.200 --> 00:02:01.800
+or have been like at other places
+and times In the concept model,
+
+25
+00:02:01.880 --> 00:02:05.480
+I'm talking about the sorts things
+that can happen to patients,
+
+26
+00:02:05.560 --> 00:02:12.560
+that we can say about patients,
+that's a completely different level.
+
+27
+00:02:12.640 --> 00:02:18.080
+And these are different things. the data
+
+28
+00:02:22.160 --> 00:02:26.680
+model carries information
+from the concepts model,
+
+29
+00:02:26.760 --> 00:02:31.040
+which it's probably got by,
+we were talking about query languages,
+
+30
+00:02:31.120 --> 00:02:35.240
+probably a lot of those, probably
+each of those interface lines
+
+31
+00:02:36.280 --> 00:02:39.800
+might well be implemented
+as a query level.
+
+32
+00:02:40.600 --> 00:02:46.440
+The other side is what sort of other
+implementations inference do you have?
+
+33
+00:02:46.520 --> 00:02:50.520
+There's all sorts of things besides
+terminology that you might want to have,
+
+34
+00:02:50.600 --> 00:02:56.760
+whether it be drug dosage checking,
+interaction checking,
+
+35
+00:02:57.440 --> 00:03:00.480
+various clinical algorithms,
+all sorts of other things.
+
+36
+00:03:00.560 --> 00:03:03.080
+Those are still something different.
+
+37
+00:03:04.160 --> 00:03:08.400
+And it works much better.
+
+38
+00:03:09.200 --> 00:03:12.760
+And we would argue very
+strongly that these things,
+
+39
+00:03:12.840 --> 00:03:16.360
+these things need to be coordinated,
+but they're not the same thing.
+
+40
+00:03:17.920 --> 00:03:23.720
+And for separating them out,
+and this diagram we drew a long time ago,
+
+41
+00:03:23.800 --> 00:03:28.640
+there are lots of different versions
+of this, with slightly labels on them,
+
+42
+00:03:28.720 --> 00:03:32.840
+But they tend to come out as threes.
+I'm not quite sure why this is.
+
+43
+00:03:35.560 --> 00:03:40.840
+But the concept model provides the things
+that you store in the data model
+
+44
+00:03:40.920 --> 00:03:43.840
+or they're the potential description
+
+45
+00:03:44.480 --> 00:03:50.720
+or they provide the fragments that we put
+in and they provide one of the tools.
+
+46
+00:03:51.880 --> 00:03:55.080
+This method, they also provide an index.
+
+47
+00:03:56.280 --> 00:04:00.080
+And the concept model for us
+provides two functions.
+
+48
+00:04:00.960 --> 00:04:03.400
+It provides an index to things,
+
+49
+00:04:04.200 --> 00:04:08.120
+either in the inference model
+or in the information model
+
+50
+00:04:09.000 --> 00:04:12.360
+or indeed to other things,
+and it provides content.
+
+51
+00:04:13.840 --> 00:04:20.840
+But it's the index. It's not for,
+if I were going, I might well,
+
+52
+00:04:21.960 --> 00:04:27.520
+if I were doing this today,
+take EHR archetypes.
+
+53
+00:04:27.600 --> 00:04:32.440
+I'm not quite sure if what
+granularity of GEHR
+
+54
+00:04:33.120 --> 00:04:36.640
+currently is the right
+level of granularity.
+
+55
+00:04:36.720 --> 00:04:41.160
+And that's my ignorance,
+not a comment in principle.
+
+56
+00:04:41.960 --> 00:04:45.920
+But if you were trying
+to do things like this,
+
+57
+00:04:47.040 --> 00:04:52.240
+one of the things that I would look into
+would be if you need to assemble things
+
+58
+00:04:52.320 --> 00:04:58.080
+and you need a more flexible way
+of having pieces put together,
+
+59
+00:04:58.720 --> 00:05:04.480
+is hanging them on a concept model useful?
+
+60
+00:05:04.560 --> 00:05:10.200
+[Is it] the extensions
+to what you can say?
+
+61
+00:05:10.960 --> 00:05:16.840
+A place where we used it in a recent
+project that actually did go live
+
+62
+00:05:17.880 --> 00:05:20.080
+and was used in cancer trial.
+
+63
+00:05:20.720 --> 00:05:27.400
+we use exactly this mechanism
+for the staging and
+
+64
+00:05:32.200 --> 00:05:38.240
+the, I'm totally blanking now on the exact
+terminology that was used in that trial.
+
+65
+00:05:38.320 --> 00:05:41.040
+But different cancers have different,
+
+66
+00:05:41.120 --> 00:05:45.640
+the grading and staging of the cancers
+depends very much on the cancer.
+
+67
+00:05:45.720 --> 00:05:50.160
+Breast cancer is very different
+from melanoma, from liver cancer, etc.
+
+68
+00:05:50.240 --> 00:05:52.720
+They all have grades and stages,
+
+69
+00:05:52.800 --> 00:05:56.440
+but the criteria are different,
+the forms you need,
+
+70
+00:05:56.520 --> 00:06:00.240
+the data structures that they wanted
+to store them were different.
+
+71
+00:06:01.040 --> 00:06:06.720
+And I might well use the sorts
+of techniques I've been talking about here
+
+72
+00:06:06.800 --> 00:06:11.880
+to organize a classification of the
+cancers, in fact that's what we did do,
+
+73
+00:06:13.120 --> 00:06:16.560
+and of the trials
+that were were being done on them.
+
+74
+00:06:17.440 --> 00:06:22.240
+And then of the data structures
+that were needed to capture the staging
+
+75
+00:06:23.080 --> 00:06:27.080
+and grading of those cancers.
+They all needed a stage and grade.
+
+76
+00:06:27.160 --> 00:06:33.720
+They all had in the user interface, a big
+box that the stage and grade or a section.
+
+77
+00:06:33.800 --> 00:06:39.480
+But what went into that box was very
+different for the different cancers.
+
+78
+00:06:39.560 --> 00:06:44.000
+And that sort of thing is the sort of
+thing that I might well try and capture.
+
+79
+00:06:44.680 --> 00:06:47.240
+and I think is eminently doable today.
+
+80
+00:06:47.320 --> 00:06:53.560
+Much easier to do today
+with fragments of web tools,
+
+81
+00:06:53.640 --> 00:06:58.160
+with SNOMED, SNOMED is actually
+very good in its oncology section.
+
+82
+00:06:58.240 --> 00:07:01.840
+We were using SNOMED for that entirely.
+
+83
+00:07:03.160 --> 00:07:06.120
+We were, in that particular project,
+
+84
+00:07:08.640 --> 00:07:15.640
+we were handed a set of forms
+by the agency agency that was doing it.
+
+85
+00:07:15.960 --> 00:07:21.640
+So they were given and we cut
+them up into pieces
+
+86
+00:07:21.720 --> 00:07:25.560
+and put them back together again.
+But the original source was given
+
+87
+00:07:25.640 --> 00:07:29.960
+to us from outside in a rather
+peculiar way that I wouldn't repeat
+
+88
+00:07:30.040 --> 00:07:34.160
+that direct experience again if I could
+certainly wouldn't generalize it.
+
+89
+00:07:34.240 --> 00:07:36.200
+That was a particular event.
+
+90
+00:07:37.640 --> 00:07:43.000
+I hope openEHR would be a sensible source.
+I have no idea about FHIR
+
+91
+00:07:43.080 --> 00:07:48.160
+and what HL7 is doing, I'm over 10
+years out of date on these things.
+
+92
+00:07:48.760 --> 00:07:50.360
+But the basic principle
+
+93
+00:07:50.960 --> 00:07:57.280
+that everybody seems to be trying
+to solve is finding the right granularity
+
+94
+00:07:58.760 --> 00:08:05.760
+at which to assemble things and how much
+to make standard and how to pull together.
+
+95
+00:08:07.200 --> 00:08:10.680
+And I would certainly look
+at using those techniques.
+
+96
+00:08:10.760 --> 00:08:14.480
+And if you want the flexibility
+of something like PEN&PAD,
+
+97
+00:08:14.560 --> 00:08:21.560
+I think the notion that we used
+of the most specific generalization
+
+98
+00:08:21.840 --> 00:08:24.880
+of looking up and grabbing
+the lowest hanging fruit
+
+99
+00:08:25.720 --> 00:08:29.440
+is probably going to be useful.
+
+100
+00:08:33.160 --> 00:08:37.280
+I'd certainly use SNOMED
+if I were starting today.
+
+101
+00:08:38.680 --> 00:08:43.920
+It's a huge amount of work effort.
+I would be careful.
+
+102
+00:08:45.160 --> 00:08:49.800
+I don't know what
+the standard of QA has got to.
+
+103
+00:08:49.880 --> 00:08:52.760
+It was improving the last
+time we looked at it.
+
+104
+00:08:54.280 --> 00:08:59.200
+But there have been problems
+in the past in places.
+
+105
+00:09:00.640 --> 00:09:03.480
+And so I would be reasonably careful.
+
+106
+00:09:04.360 --> 00:09:11.000
+I would be very careful not to create
+SNOMED concepts for things
+
+107
+00:09:11.080 --> 00:09:16.520
+that should be queries on SNOMED, to make
+this distinction between querying SNOMED
+
+108
+00:09:16.600 --> 00:09:19.800
+and creating a new concept in SNOMED.
+
+109
+00:09:19.880 --> 00:09:25.480
+I think most of the time when you're
+getting between the data structure,
+
+110
+00:09:25.560 --> 00:09:30.720
+I might select I would use a query,
+
+111
+00:09:31.520 --> 00:09:35.920
+use the query constraint language
+in SNOMED, it makes no difference.
+
+112
+00:09:36.000 --> 00:09:40.320
+I don't think what query language
+you make makes a difference in principle.
+
+113
+00:09:40.400 --> 00:09:42.280
+It may make a difference in practice.
+
+114
+00:09:45.400 --> 00:09:51.840
+But to select the terms that go
+into a particular field,
+
+115
+00:09:51.920 --> 00:09:54.480
+maybe to select the fields that you need,
+
+116
+00:09:57.240 --> 00:10:02.520
+those things I think are all things
+selection technique works for
+
+117
+00:10:03.120 --> 00:10:08.560
+and I would certainly keep them separate
+and keep this distinction between them.
+
+118
+00:10:08.640 --> 00:10:14.320
+I'd be very careful to understand
+and I think the thing that we really
+
+119
+00:10:14.400 --> 00:10:20.480
+learned in the ICD-11 project
+is to look at what what I was doing
+
+120
+00:10:21.240 --> 00:10:25.800
+or the different things that I've
+got to deal with, MeSH headings,
+
+121
+00:10:27.040 --> 00:10:32.240
+ICD, SNOMED, the actual medical record.
+
+122
+00:10:33.680 --> 00:10:38.480
+If it's a clinical trial, the things that
+are important to the clinical trialists.
+
+123
+00:10:38.560 --> 00:10:43.880
+Clinical trialists are terribly concerned
+about being sure that the criteria
+
+124
+00:10:44.520 --> 00:10:50.000
+for a particular data point are correct.
+
+125
+00:10:54.200 --> 00:10:55.920
+What are their requirements?
+
+126
+00:10:58.760 --> 00:11:00.800
+Which ones of those fit
+
+127
+00:11:02.400 --> 00:11:08.720
+into a logical framework and which fit
+into other kinds of frameworks?
+
+128
+00:11:09.640 --> 00:11:16.080
+I think it's worth saying a lot of people
+have criticized ICD and the thing
+
+129
+00:11:16.160 --> 00:11:21.440
+that I I learned above all and sitting
+for a great many hours in Geneva
+
+130
+00:11:22.560 --> 00:11:27.960
+was their requirement really is to,
+
+131
+00:11:29.200 --> 00:11:32.560
+they're collecting international
+statistics and they want to compare
+
+132
+00:11:32.640 --> 00:11:38.120
+them year on year and country to country
+and stability is vital to them.
+
+133
+00:11:38.200 --> 00:11:42.400
+So moving something is a big deal.
+
+134
+00:11:43.200 --> 00:11:46.280
+If you're collecting things
+for clinical purposes,
+
+135
+00:11:46.360 --> 00:11:51.040
+getting a good description of what's
+going on and the best description
+
+136
+00:11:51.120 --> 00:11:57.160
+you have according to current knowledge
+critical and that may not fit with,
+
+137
+00:11:57.240 --> 00:11:59.560
+that may not actually any long,
+
+138
+00:11:59.640 --> 00:12:04.720
+it's quite likely that ICD will
+deliberately be slightly out of step
+
+139
+00:12:05.560 --> 00:12:06.880
+and wanna be careful.
+
+140
+00:12:07.440 --> 00:12:11.880
+In addition to which they'll create
+all sorts of things which SNOMED
+
+141
+00:12:11.960 --> 00:12:15.000
+wouldn't want to make a class
+
+142
+00:12:16.080 --> 00:12:22.400
+or because it's using a description logic
+and because things like hypertension,
+
+143
+00:12:22.480 --> 00:12:28.520
+not in pregnancy don't
+make sense in SNOMED.
+
+144
+00:12:28.600 --> 00:12:32.960
+They don't make sense, in a logical
+framework because the negation,
+
+145
+00:12:33.520 --> 00:12:37.920
+A), you can't represent
+it in SNOMED notation,
+
+146
+00:12:38.000 --> 00:12:40.840
+but even if you could,
+it wouldn't be the right answer.
+
+147
+00:12:42.000 --> 00:12:45.120
+But if you want to do the PEN&PAD part,
+
+148
+00:12:45.200 --> 00:12:50.200
+then the SNOMED-ish thing would be more
+interesting than the ICD-ish things.
+
+149
+00:12:50.280 --> 00:12:54.880
+Oh, absolutely.
+ICD wouldn't work for PEN&PAD at all.
+
+150
+00:12:58.760 --> 00:13:00.320
+Very very vaguely.
+
+151
+00:13:01.360 --> 00:13:05.280
+Because of all the things that they've
+done, some of them for good reasons
+
+152
+00:13:05.360 --> 00:13:11.440
+and some of them just because
+of history, it isn't logical.
+
+153
+00:13:15.240 --> 00:13:20.960
+Its logic has to do with the issues
+about classifying things for internet
+
+154
+00:13:21.040 --> 00:13:26.240
+for the purposes of international
+statistics not about describing patients.
+
+155
+00:13:26.800 --> 00:13:30.440
+If I was going to do a PEN&PAD kind
+of thing I want to describe patients
+
+156
+00:13:30.520 --> 00:13:33.800
+and The SNOMEDs are basically
+about describing patients.
+
+157
+00:13:33.880 --> 00:13:40.120
+What I might do is look
+carefully and make sure
+
+158
+00:13:40.200 --> 00:13:44.480
+that there weren't corners of SNOMED,
+and then you have problems in SNOMED,
+
+159
+00:13:45.400 --> 00:13:48.640
+that you have to deal with the situation,
+
+160
+00:13:50.680 --> 00:13:55.400
+the situation in the specific context axis
+
+161
+00:13:56.320 --> 00:13:59.200
+and the things that are in that category,
+
+162
+00:13:59.280 --> 00:14:04.440
+which are a kludge. They're perfectly
+willing to admit that they're a kludge.
+
+163
+00:14:04.960 --> 00:14:10.160
+They're probably, they're
+there for historical reasons,
+
+164
+00:14:10.240 --> 00:14:14.480
+whether they're necessary,
+whether you would do it the same way,
+
+165
+00:14:14.560 --> 00:14:19.560
+starting from scratch today is another
+question, but they're there.
+
+166
+00:14:20.160 --> 00:14:24.360
+But you're not forced to use them, I
+guess, if you do a new PEN&PAD-ish thing.
+
+167
+00:14:24.440 --> 00:14:27.920
+You described that you split
+things into smaller trees,
+
+168
+00:14:28.000 --> 00:14:32.000
+which were a little bit more axiomatic,
+would you pick things from SNOMED
+
+169
+00:14:32.520 --> 00:14:36.840
+subtrees then and then compose them using
+post-coordination or things like that,
+
+170
+00:14:36.920 --> 00:14:37.920
+or how would you work?
+
+171
+00:14:38.000 --> 00:14:42.440
+Well no, PEN&PAD picks things
+
+172
+00:14:43.160 --> 00:14:48.920
+from the post-classification tree,
+from the tree after classification.
+
+173
+00:14:49.560 --> 00:14:53.840
+In order to get the tree clean,
+it has to take it apart.
+
+174
+00:14:53.920 --> 00:14:56.000
+And what I would look would
+
+175
+00:14:57.080 --> 00:15:02.560
+I would look at is for any place where
+there are primitives in SNOMED that have
+
+176
+00:15:02.640 --> 00:15:09.560
+more than one parent, for example.
+It's for arbitrary,
+
+177
+00:15:09.640 --> 00:15:13.360
+things like that suggest something
+that's been done arbitrarily.
+
+178
+00:15:16.640 --> 00:15:20.000
+Or where there's been a conflict
+between, several authors.
+
+179
+00:15:20.080 --> 00:15:22.480
+And it's built by committee.
+
+180
+00:15:22.560 --> 00:15:28.320
+Anything and anything that isn't just
+SNOMED any big medical terminology
+
+181
+00:15:28.400 --> 00:15:31.720
+is going to be built by committee
+by the nature of things.
+
+182
+00:15:31.800 --> 00:15:34.160
+And if you build things by committee,
+
+183
+00:15:34.240 --> 00:15:37.800
+you're going to have conflicts and you're
+going to have odd things get in.
+
+184
+00:15:39.120 --> 00:15:44.960
+So that's the thing you're
+concerned about is that
+
+185
+00:15:46.160 --> 00:15:50.040
+when you hang things on them,
+that you don't say the real
+
+186
+00:15:50.120 --> 00:15:53.960
+problem is don't want to be saying
+the same thing in two different places.
+
+187
+00:15:56.160 --> 00:16:02.240
+You want to want to be having
+the issue about high blood
+
+188
+00:16:02.320 --> 00:16:07.600
+pressure coming from one place,
+the issue about hormonal factors,
+
+189
+00:16:07.680 --> 00:16:10.280
+the Cushing's disease
+coming from some place,
+
+190
+00:16:12.400 --> 00:16:18.920
+the fact But you want to be sure
+
+191
+00:16:21.040 --> 00:16:23.280
+if you're using, for example,
+
+192
+00:16:23.360 --> 00:16:27.440
+you have things that you collect
+in ischemic heart disease, you want
+
+193
+00:16:27.520 --> 00:16:32.240
+to make sure that myocardial infarction
+does fall under ischemic heart disease.
+
+194
+00:16:33.120 --> 00:16:36.800
+And there was actually
+a substantive argument
+
+195
+00:16:37.440 --> 00:16:42.200
+in SNOMED., I think it was in SNOMED.
+It may have been in ICD.
+
+196
+00:16:42.280 --> 00:16:47.520
+I may be slandering them,
+
+197
+00:16:47.600 --> 00:16:51.640
+but certainly in one of the groups
+we worked with we had an argument,
+
+198
+00:16:52.840 --> 00:16:58.800
+did infarction just mean
+death of the muscle tissue,
+
+199
+00:16:58.880 --> 00:17:04.360
+was it just necrosis, or did
+it mean necrosis due to ischemia?
+
+200
+00:17:06.000 --> 00:17:09.200
+That's the difference between
+whether it was an ischemic disease
+
+201
+00:17:10.320 --> 00:17:16.640
+or whether it wasn't And in one
+of the systems that we dealt with, it
+
+202
+00:17:18.640 --> 00:17:24.640
+was either SNOMED
+or it was the NCI thesaurus.
+
+203
+00:17:24.720 --> 00:17:28.800
+There was an issue over
+this that the doctors argued about.
+
+204
+00:17:29.720 --> 00:17:33.720
+They eventually decided that they looked
+up in a medical dictionary that said
+
+205
+00:17:33.800 --> 00:17:40.560
+that infarction meant necrosis
+due to ischemia and decided,
+
+206
+00:17:40.640 --> 00:17:43.760
+and that conveniently put
+myocardial infarction into
+
+207
+00:17:43.840 --> 00:17:48.600
+the ischemic heart disease, which is what
+the clinicians were complaining about.
+
+208
+00:17:49.160 --> 00:17:53.960
+But this actually came up in one
+of the commercial collaborations we had
+
+209
+00:17:54.720 --> 00:17:56.240
+relatively recently.
+
+210
+00:17:57.040 --> 00:18:03.160
+That, and it used both as a source,
+
+211
+00:18:03.240 --> 00:18:08.120
+know which one. We don't need
+to go into the details of that,
+
+212
+00:18:08.200 --> 00:18:10.280
+but what other advice would you have to?
+
+213
+00:18:10.360 --> 00:18:13.720
+To people trying to redo
+things from PEN&PAD,
+
+214
+00:18:13.800 --> 00:18:20.760
+but in today's context
+regarding this user focus,
+
+215
+00:18:21.640 --> 00:18:28.080
+hardware, AI, well I think
+you have to come back and
+
+216
+00:18:28.160 --> 00:18:32.840
+and think about the user-centered
+design issues completely new.
+
+217
+00:18:33.800 --> 00:18:40.360
+We've got pads, we've got
+things people can carry around,
+
+218
+00:18:40.440 --> 00:18:44.800
+we've got touchscreens, we've got pencils
+they can write on, we've got voice,
+
+219
+00:18:45.880 --> 00:18:52.880
+I don't know, in different contexts,
+different things are going to be useful.
+
+220
+00:18:53.840 --> 00:18:57.400
+Some people may still prefer,
+I'm amazed how good the current
+
+221
+00:18:57.480 --> 00:19:01.800
+handwriting recognition
+is on some of these devices.
+
+222
+00:19:02.480 --> 00:19:05.760
+My handwriting is horrible
+and it still usually gets it right.
+
+223
+00:19:06.400 --> 00:19:09.000
+I don't use it much because
+I type more naturally,
+
+224
+00:19:09.080 --> 00:19:14.960
+but then I learned to type when I was 12.
+Most people didn't.
+
+225
+00:19:17.400 --> 00:19:22.840
+A lot of younger people are very,
+very comfortable thumb typing. I'm not.
+
+226
+00:19:25.880 --> 00:19:30.440
+My guess is you'll actually find quite a
+bit of difference in the mechanics of what
+
+227
+00:19:30.520 --> 00:19:37.400
+physical devices you've used and what
+actually work, depending on where you are.
+
+228
+00:19:38.000 --> 00:19:40.400
+There are some doctors who sit at desks.
+
+229
+00:19:41.080 --> 00:19:46.160
+Consultants in the UK at the moment mostly
+
+230
+00:19:46.240 --> 00:19:50.440
+see their out-patients all seated
+at desks and there's no problem.
+
+231
+00:19:50.520 --> 00:19:53.560
+Or they see them
+increasingly over the phone.
+
+232
+00:19:54.680 --> 00:19:57.040
+And one thing may be having to coordinate
+
+233
+00:19:59.160 --> 00:20:02.360
+a video conference
+with capturing information.
+
+234
+00:20:02.440 --> 00:20:05.160
+And do you need two
+screens or what do you do?
+
+235
+00:20:05.680 --> 00:20:09.560
+There's all sorts of physical questions
+like that you'd have to answer.
+
+236
+00:20:10.480 --> 00:20:15.640
+And I don't know what line, how much
+you would do with natural language,
+
+237
+00:20:15.720 --> 00:20:19.320
+there's much more you can do
+with natural language processing.
+
+238
+00:20:20.280 --> 00:20:26.000
+And I don't know how much
+one would like to get back.
+
+239
+00:20:26.080 --> 00:20:31.560
+One of the things I would consider is a,
+
+240
+00:20:32.440 --> 00:20:34.520
+I have no idea how it would work.
+
+241
+00:20:35.080 --> 00:20:39.040
+We talked about it in one
+of the successor projects
+
+242
+00:20:39.960 --> 00:20:46.600
+of one of the goals was to let
+people just talk or type.
+
+243
+00:20:48.800 --> 00:20:55.160
+But try and understand it and feed it back
+to them after it had been processed
+
+244
+00:20:56.880 --> 00:21:00.680
+into a structured form.
+Is this what you meant?
+
+245
+00:21:04.880 --> 00:21:09.640
+Whatever it is, I'd be very
+concerned about making it easy
+
+246
+00:21:11.480 --> 00:21:14.640
+to the doctor or the nurse or whomever.
+
+247
+00:21:14.720 --> 00:21:18.640
+And making it easy. The thing that
+comes back, is this what you meant?
+
+248
+00:21:18.720 --> 00:21:22.880
+Is that thing needs to be easy
+to modify then in some way or?
+
+249
+00:21:23.600 --> 00:21:25.800
+It needs to be final.
+
+250
+00:21:25.880 --> 00:21:30.360
+said if you type or speak something
+you need to get a processed thing back
+
+251
+00:21:31.120 --> 00:21:34.920
+that says is this what you meant?
+It's user friendly.
+
+252
+00:21:36.840 --> 00:21:40.160
+And then it needs to be able
+to change that easily like in pen and
+
+253
+00:21:40.240 --> 00:21:43.000
+pad. You don't have to be able to change
+
+254
+00:21:43.600 --> 00:21:48.880
+it and that technology
+was so primitive when I last used it,
+
+255
+00:21:50.120 --> 00:21:53.920
+that I simply have no idea
+what you can do with it now.
+
+256
+00:21:56.120 --> 00:21:57.600
+It's getting a lot better,
+
+257
+00:21:57.680 --> 00:22:03.400
+and I don't know what the requirements
+in terms of hardware would be. Again,
+
+258
+00:22:05.960 --> 00:22:12.440
+it would depend on whether you –
+would you be allowed to use the cloud,
+
+259
+00:22:13.440 --> 00:22:19.080
+or would confidentiality issues mean
+that you couldn't do your natural language
+
+260
+00:22:19.160 --> 00:22:24.040
+processing in the cloud and had to be
+limited to what you could do locally.
+
+261
+00:22:24.800 --> 00:22:26.320
+Those things are changing,
+
+262
+00:22:27.000 --> 00:22:30.680
+those things are changing anyway
+so but would this most specific
+
+263
+00:22:30.760 --> 00:22:37.600
+generalization heuristic things be useful
+in that analysis of what people have said.
+
+264
+00:22:39.560 --> 00:22:46.200
+It's a way of selecting if you have
+a large number of possibilities
+
+265
+00:22:46.280 --> 00:22:51.320
+that need to be selected amongst and
+assemble, then that's when it's useful.
+
+266
+00:22:52.000 --> 00:22:53.880
+And forms is classic.
+
+267
+00:22:54.720 --> 00:22:57.160
+The two places that are classic are form
+
+268
+00:22:58.240 --> 00:23:03.640
+and actually variable data structures
+
+269
+00:23:04.160 --> 00:23:10.680
+for things like cancer
+grading and staging.
+
+270
+00:23:10.760 --> 00:23:15.480
+Loads of medicine is like that, but that's
+the one that we did most recently,
+
+271
+00:23:17.200 --> 00:23:22.080
+where it needs to be standard in a sense,
+
+272
+00:23:22.160 --> 00:23:27.880
+but the other thing I would be very
+wary of, which I think is the thing
+
+273
+00:23:27.960 --> 00:23:34.120
+that certainly HL7 has
+a history of falling down,
+
+274
+00:23:34.760 --> 00:23:39.080
+is trying to create one thing
+that serves too many purposes.
+
+275
+00:23:43.040 --> 00:23:45.720
+I served for a while on the HL-7
+
+276
+00:23:48.200 --> 00:23:51.200
+Pharmacology Committee,
+Pharmacy Committee,
+
+277
+00:23:51.840 --> 00:23:57.920
+because we were working on a drug project,
+drug project for for the NHS.
+
+278
+00:23:59.560 --> 00:24:03.080
+One of the things, the sort
+of thing that created problems
+
+279
+00:24:03.160 --> 00:24:09.840
+was continually trying to to find
+a prescription structure for V3,
+
+280
+00:24:09.920 --> 00:24:14.440
+which was flexible enough to hold
+the most complicated prescriptions,
+
+281
+00:24:14.520 --> 00:24:17.400
+that the cancer-care therapeutics people,
+
+282
+00:24:17.480 --> 00:24:23.040
+or even worse, the total parenteral
+alimentation people could come up with.
+
+283
+00:24:23.640 --> 00:24:28.840
+And that was just silly.
+They needed a separate,
+
+284
+00:24:30.040 --> 00:24:33.680
+that needs to be something
+separate, because we don't
+
+285
+00:24:33.760 --> 00:24:39.200
+want a person who wants
+to prescribe amoxicillin,
+
+286
+00:24:41.400 --> 00:24:46.840
+500mg twice a day for five days,
+to go through the same thing as the person
+
+287
+00:24:46.920 --> 00:24:53.920
+who's trying to produce a prescription
+for a complicated chemotherapy regimen,
+
+288
+00:24:54.320 --> 00:24:58.280
+or for a reducing steroid regimen,
+
+289
+00:24:58.360 --> 00:25:03.880
+or any number of other complicated,
+regimens that are just outside them.
+
+290
+00:25:05.880 --> 00:25:11.120
+Finding the right thing for the right
+circumstance that provides
+
+291
+00:25:11.200 --> 00:25:17.520
+the right amount of detail might be one
+of the tasks that we'd be concerned about
+
+292
+00:25:18.240 --> 00:25:22.200
+that not not specifically not try just
+
+293
+00:25:22.280 --> 00:25:25.960
+try specifically not to make any one thing
+
+294
+00:25:26.680 --> 00:25:30.880
+to come. So modularization
+
+295
+00:25:30.960 --> 00:25:36.120
+or smaller systems but still store
+it in some sensible way so you can
+
+296
+00:25:36.200 --> 00:25:39.640
+share the data.
+It's a flexible combination of modules.
+
+297
+00:25:41.200 --> 00:25:44.680
+No that that that that's the key
+
+298
+00:25:46.120 --> 00:25:51.480
+I think is probably the key, because
+medicine is so variable that anything
+
+299
+00:25:51.560 --> 00:25:56.120
+that tries to cope with everything
+will be impossible for most things.
+
+300
+00:25:59.040 --> 00:26:01.080
+That's what we were trying
+to overcome then.
+
+301
+00:26:01.160 --> 00:26:03.640
+I know that's still a problem for people,
+
+302
+00:26:04.600 --> 00:26:07.840
+and I suppose the other thing
+that I would be very careful of,
+
+303
+00:26:07.920 --> 00:26:10.360
+and I don't know how you deal with this,
+
+304
+00:26:12.800 --> 00:26:18.080
+well I know the thing
+that would like to do is,
+
+305
+00:26:19.560 --> 00:26:21.840
+and this has nothing
+to do really with PEN&PAD,
+
+306
+00:26:21.920 --> 00:26:26.200
+it has to do with the aspirations of some
+of the people who worked on PEN&PAD,
+
+307
+00:26:26.280 --> 00:26:28.440
+particularly Anthony Nowlan,
+
+308
+00:26:29.160 --> 00:26:34.920
+is center things on the patient
+rather than the institution,
+
+309
+00:26:35.880 --> 00:26:41.680
+and I don't know how much one can actually
+achieve that within the jurisdictional
+
+310
+00:26:41.760 --> 00:26:45.000
+and institutional issues.
+
+311
+00:26:45.080 --> 00:26:50.360
+But an awful lot gets centered.
+Still, it seems to me from my experience.
+
+312
+00:26:51.520 --> 00:26:57.320
+My record I know is still in bits and
+pieces in different corners of the NHS.
+
+313
+00:26:59.520 --> 00:27:05.200
+And I don't really have access
+to a very good version of it.
+
+314
+00:27:06.320 --> 00:27:09.720
+And there's no reason
+for that, I don't think anymore.
+
+315
+00:27:09.800 --> 00:27:11.960
+And I think we could do much more.
+
+316
+00:27:14.160 --> 00:27:17.080
+The other thing I would use
+lots of is language generation
+
+317
+00:27:17.160 --> 00:27:20.880
+for feeding things back.
+We had a lot of success,
+
+318
+00:27:20.960 --> 00:27:24.360
+and particularly in feeding
+things back to patients.
+
+319
+00:27:26.040 --> 00:27:28.360
+The sorts of medical,
+one of the things I love
+
+320
+00:27:28.440 --> 00:27:33.760
+to see is medical records that came back
+to patients in a form that was easier
+
+321
+00:27:34.840 --> 00:27:36.760
+for patients to take in.
+
+322
+00:27:36.840 --> 00:27:40.640
+So different language generation
+for clinicians and for patients.
+
+323
+00:27:40.720 --> 00:27:42.600
+Yeah, quite different.
+
+324
+00:27:45.440 --> 00:27:47.560
+From the same basic data and structures.
+
+325
+00:27:47.640 --> 00:27:49.520
+There was no reason.
+
+326
+00:27:52.200 --> 00:27:57.480
+There was a project doing that at the Open
+University that we collaborated
+
+327
+00:28:00.040 --> 00:28:05.960
+with, and they were taking
+fairly extensive facts of SNOMED
+
+328
+00:28:06.040 --> 00:28:11.160
+and trying to generate one thing for the
+doctor and one thing for the patient,
+
+329
+00:28:11.240 --> 00:28:15.120
+but it was was particularly
+generating some patients' need.
+
+330
+00:28:17.160 --> 00:28:20.240
+They were also interested
+in adding to this. What
+
+331
+00:28:20.320 --> 00:28:24.760
+extra information does the patient need
+in order to be able to understand this.
+
+332
+00:28:26.600 --> 00:28:30.200
+So the patient needs
+lots of material around
+
+333
+00:28:30.720 --> 00:28:33.840
+their medical record in order
+to make it understandable.
+
+334
+00:28:35.800 --> 00:28:41.720
+Just writing down that, sending
+back a patient something
+
+335
+00:28:42.360 --> 00:28:47.240
+that they that they had
+
+336
+00:28:50.040 --> 00:28:57.040
+an IMA to LAD bypass is not going
+to actually tell them very much.
+
+337
+00:28:57.240 --> 00:29:01.520
+And even if you spell it out into
+the full names of those arteries,
+
+338
+00:29:01.600 --> 00:29:03.680
+it won't tell them much.
+
+339
+00:29:03.760 --> 00:29:10.280
+Well, you need actually to say
+that they've taken an artery
+
+340
+00:29:10.360 --> 00:29:15.120
+from the first artery.
+that would normally,
+
+341
+00:29:15.200 --> 00:29:20.480
+the first artery that's convenient
+off that comes out of the heart
+
+342
+00:29:20.560 --> 00:29:22.920
+and grafted it back into the heart.
+
+343
+00:29:24.800 --> 00:29:26.200
+And these happen to be called.
+
+344
+00:29:26.280 --> 00:29:30.320
+And then as you draw a picture
+you can do all sorts of things.
+
+345
+00:29:30.400 --> 00:29:33.200
+But there's in turn,
+on the other hand, the cardiologist,
+
+346
+00:29:34.080 --> 00:29:40.680
+he gets a LIMA to LAD bypass.
+
+347
+00:29:41.240 --> 00:29:44.640
+He doesn't want any of that information.
+He has all he needs to know.
+
+348
+00:29:46.280 --> 00:29:51.280
+The difference is, you said this,
+
+349
+00:29:51.360 --> 00:29:54.760
+that your record is split up into
+many institutions, et cetera,
+
+350
+00:29:54.840 --> 00:29:59.560
+and I've seen many projects where
+they try to define a health care process
+
+351
+00:29:59.640 --> 00:30:04.120
+or something that you can hang things
+onto or the problem-based medical record
+
+352
+00:30:04.200 --> 00:30:08.520
+and things like this, and it seems
+to be very hard to get that successfully.
+
+353
+00:30:08.600 --> 00:30:12.600
+Do you have any advice to people
+trying to model that into systems so
+
+354
+00:30:12.680 --> 00:30:17.880
+that you actually could share a healthcare
+process over different institutions etc.
+
+355
+00:30:19.440 --> 00:30:24.880
+Well, two different issues, sharing it
+between institutions and between patients.
+
+356
+00:30:25.440 --> 00:30:30.320
+I think institutions were dealing
+with the general problem
+
+357
+00:30:30.400 --> 00:30:37.400
+of how you moderate between data data
+structures and databases and there are two
+
+358
+00:30:41.160 --> 00:30:45.160
+trying to come up
+with the more you can come up
+
+359
+00:30:45.240 --> 00:30:51.320
+with standard data structures
+
+360
+00:30:51.400 --> 00:30:57.240
+openEHR FHIR, whatever,
+
+361
+00:30:58.320 --> 00:31:03.000
+but we've had enough experience that we've
+been working on this since the mid-90s
+
+362
+00:31:04.440 --> 00:31:10.400
+to know that this is a hard problem. It's
+not, we all thought we'd solve it quickly.
+
+363
+00:31:10.480 --> 00:31:16.800
+If anybody told me you'd still be working
+on this after I retired, I'd have thought
+
+364
+00:31:16.880 --> 00:31:22.720
+when we started on it, I would have
+thought they were hopelessly pessimistic.
+
+365
+00:31:25.320 --> 00:31:29.920
+So there are obviously
+different institutional
+
+366
+00:31:30.000 --> 00:31:33.200
+needs different institutional
+needs and different requirements
+
+367
+00:31:33.280 --> 00:31:35.760
+that make it really, really hard.
+
+368
+00:31:35.840 --> 00:31:40.880
+So we've got to identify the nugget
+of what needs to be transmitted.
+
+369
+00:31:41.920 --> 00:31:45.120
+And I think one of the's things
+about most of these projects
+
+370
+00:31:45.200 --> 00:31:48.840
+is that they're too ambitious. And try,
+
+371
+00:31:49.760 --> 00:31:55.640
+part of what I would do would be to try
+and aim for getting crucial things,
+
+372
+00:31:56.360 --> 00:31:59.000
+what's really important to get across.
+
+373
+00:32:00.200 --> 00:32:03.480
+and that there really are standard
+ways of that. And I wouldn't be,
+
+374
+00:32:04.240 --> 00:32:08.840
+if I'm, again, it depends on whether I'm
+trying to get it into their record system
+
+375
+00:32:10.080 --> 00:32:17.080
+or whether I'm trying to communicate
+it to the clinician. And I would,
+
+376
+00:32:17.560 --> 00:32:21.640
+I think language generation, if I'm trying
+to communicate it to their clinician,
+
+377
+00:32:22.200 --> 00:32:27.200
+it may be that trying to be able
+to generate a mixed language and data
+
+378
+00:32:28.280 --> 00:32:33.280
+version for the clinician is more useful
+
+379
+00:32:34.080 --> 00:32:39.760
+than actually getting it into their data,
+into their medical record.
+
+380
+00:32:41.440 --> 00:32:46.360
+I think I phrased my question
+a bit badly because it was more,
+
+381
+00:32:47.440 --> 00:32:51.280
+this was a very interesting answer
+to many other questions also.
+
+382
+00:32:51.360 --> 00:32:53.800
+Sometimes it's even within
+the same health system where
+
+383
+00:32:53.880 --> 00:32:57.800
+you use the same health record, so it's
+not the problem of transferring things,
+
+384
+00:32:57.880 --> 00:33:00.680
+but sometimes you want to have, well,
+
+385
+00:33:00.760 --> 00:33:05.680
+this part, this disease, the diabetes,
+we want to have hooked up in a way
+
+386
+00:33:05.760 --> 00:33:10.440
+so we can share this legally with everyone
+involved in my diabetes process.
+
+387
+00:33:10.520 --> 00:33:14.000
+And then we have the other
+process about my hip replacement,
+
+388
+00:33:14.080 --> 00:33:17.080
+where it's not necessarily
+the same people.
+
+389
+00:33:18.960 --> 00:33:24.080
+That has been shown a little bit tricky
+to divide patients into several processes,
+
+390
+00:33:24.160 --> 00:33:27.400
+things like that.
+Do you have any thoughts about that?
+
+391
+00:33:28.720 --> 00:33:30.480
+To do with the health problems?
+
+392
+00:33:33.000 --> 00:33:38.160
+Well, I'm not sure I understand the
+question. If I do, let me try and answer.
+
+393
+00:33:38.240 --> 00:33:41.560
+And if it's not the answer
+to the right question, come back again.
+
+394
+00:33:43.680 --> 00:33:49.160
+But I think, we think
+of the medical record as one thing.
+
+395
+00:33:51.480 --> 00:33:55.200
+we try and create a record
+for this diabetic a patient who's being,
+
+396
+00:33:55.280 --> 00:34:00.120
+shared between several departments,
+the renal department,
+
+397
+00:34:00.200 --> 00:34:03.800
+and the diabetic department,
+and the eye department, and whomever.
+
+398
+00:34:04.960 --> 00:34:08.160
+And I think we have to be,
+
+399
+00:34:10.960 --> 00:34:15.240
+the eye department needs
+detail about the retina
+
+400
+00:34:15.960 --> 00:34:19.640
+that the renal department
+really doesn't care about.
+
+401
+00:34:20.600 --> 00:34:23.960
+And we don't have a good convention
+
+402
+00:34:25.240 --> 00:34:29.680
+for being able to say,
+
+403
+00:34:34.000 --> 00:34:38.560
+I don't care about this,
+
+404
+00:34:40.720 --> 00:34:44.000
+or to modularize the record into pieces
+
+405
+00:34:45.160 --> 00:34:48.320
+and to take the pieces
+that we actually need,
+
+406
+00:34:48.400 --> 00:34:51.880
+or for each module to have
+some sort of summary on it.
+
+407
+00:34:51.960 --> 00:34:55.280
+I think it's a really interesting
+problem to try and work on,
+
+408
+00:34:55.800 --> 00:35:00.640
+of how you get, of what's the amount
+of information you need for each,
+
+409
+00:35:01.840 --> 00:35:04.200
+from each person to each person,
+
+410
+00:35:04.280 --> 00:35:07.680
+because I think one of our problems
+is we transmit too much
+
+411
+00:35:09.080 --> 00:35:11.360
+and try and standardize too much.
+
+412
+00:35:12.040 --> 00:35:15.640
+You could always drill down
+when you need to, but the other
+
+413
+00:35:15.720 --> 00:35:19.680
+problem might be more interesting.
+How do you get things less detailed?
+
+414
+00:35:20.360 --> 00:35:25.440
+Yeah. How do you summarize?
+And that's why I was suggesting language.
+
+415
+00:35:26.400 --> 00:35:31.720
+The other thing I still think
+is that we haven't succeeded
+
+416
+00:35:31.800 --> 00:35:36.600
+as well as I would have
+hoped in making our systems
+
+417
+00:35:39.520 --> 00:35:45.440
+so that they expect to be built
+out of bits and pieces. And that
+
+418
+00:35:49.200 --> 00:35:54.240
+the basic notion, the fixed,
+
+419
+00:35:56.720 --> 00:36:00.600
+I think the fixed sort of structures,
+
+420
+00:36:01.200 --> 00:36:04.760
+and I think in this case, GEHR
+[nowadays OpenEHR] seems to me to be very
+
+421
+00:36:05.680 --> 00:36:11.160
+well organized in that it's a way
+of fitting together smaller pieces,
+
+422
+00:36:11.960 --> 00:36:17.560
+but still having them consistent. But
+the basic idea that was behind, I think,
+
+423
+00:36:18.920 --> 00:36:24.880
+both openEHR and [HL7] version 3 was that
+you would effectively parse the record,
+
+424
+00:36:24.960 --> 00:36:26.320
+rather have something
+
+425
+00:36:26.400 --> 00:36:32.760
+that was in a language rather than
+thought of as a data structure per se.
+
+426
+00:36:34.280 --> 00:36:38.920
+And I still think that's
+probably the only way
+
+427
+00:36:39.000 --> 00:36:43.720
+we can do it and then each group
+parses it into their own system.
+
+428
+00:36:44.320 --> 00:36:47.800
+That's proved just much harder
+than we expected it to be.
+
+429
+00:36:49.400 --> 00:36:54.000
+And I think I know part of that in the
+corners that I've been involved in,
+
+430
+00:36:54.080 --> 00:37:00.680
+and this now is my experience in HL7
+
+431
+00:37:00.760 --> 00:37:06.680
+rather than my experience in PEN&PAD,
+has constantly been an overreach,
+
+432
+00:37:08.200 --> 00:37:15.000
+and not breaking it down
+enough, and expecting it.
+
+433
+00:37:15.080 --> 00:37:21.440
+One of the lessons may be an interesting
+case study of what we might want to try
+
+434
+00:37:21.520 --> 00:37:27.320
+and do and what we need
+is the transition from SGML to HTML.
+
+435
+00:37:28.560 --> 00:37:33.320
+I don't know if you actually know
+anything about the original SGML,
+
+436
+00:37:34.000 --> 00:37:39.760
+but SGML was an enormously powerful,
+is still an enormously powerful,
+
+437
+00:37:40.280 --> 00:37:45.800
+incredibly flexible,
+enormously optionalised language
+
+438
+00:37:45.880 --> 00:37:52.000
+for managing documents for printers
+and in complete generality.
+
+439
+00:37:52.520 --> 00:37:58.320
+Building an SGML compiler
+is a monumental task.
+
+440
+00:37:59.120 --> 00:38:02.520
+Really understanding SGML
+is incredibly difficult.
+
+441
+00:38:03.120 --> 00:38:07.920
+A very specialized version
+based on SGML is HTML,
+
+442
+00:38:08.920 --> 00:38:14.160
+which has made a fixed set
+of those decisions that are useful.
+
+443
+00:38:14.240 --> 00:38:16.080
+It's grown, of course.
+
+444
+00:38:16.160 --> 00:38:18.800
+It started out as being
+a very simple set of them.
+
+445
+00:38:18.880 --> 00:38:21.400
+It's become a much less simple set,
+
+446
+00:38:21.480 --> 00:38:24.880
+as we've gone forward,
+as everything always does.
+
+447
+00:38:24.960 --> 00:38:29.680
+But the real success,
+a few real successes out of HTML,
+
+448
+00:38:32.720 --> 00:38:37.560
+And these are from, this is from TIm
+Berners-Lee himself, was one,
+
+449
+00:38:37.640 --> 00:38:41.600
+that there wouldn't be much
+optionality, and two,
+
+450
+00:38:42.480 --> 00:38:46.920
+that there would be the error,
+What is it, error 411?
+
+451
+00:38:47.640 --> 00:38:53.480
+The error... 404. That...
+Page not found, yeah.
+
+452
+00:38:53.560 --> 00:38:57.240
+Page not found just would
+mean be page not found.
+
+453
+00:38:57.320 --> 00:39:00.000
+Yeah. That some things just wouldn't work.
+
+454
+00:39:00.680 --> 00:39:04.440
+And you'd escape from that and survive it.
+
+455
+00:39:04.520 --> 00:39:08.240
+and I think one of the things
+we've tried to do is avoid,
+
+456
+00:39:08.320 --> 00:39:13.480
+we haven't learned that lesson – that
+not everything is going to quite work.
+
+457
+00:39:14.000 --> 00:39:19.240
+And SGML tried to make it always recover
+from when someone moved something, etc?
+
+458
+00:39:19.320 --> 00:39:22.400
+Previous attempts at hypertext
+
+459
+00:39:23.160 --> 00:39:28.000
+had always broken down because
+any broken link broke them.
+
+460
+00:39:28.080 --> 00:39:34.280
+(Excuse me, I just knocked
+my computer off its stand.) And HTML
+
+461
+00:39:35.520 --> 00:39:39.040
+says, you know, yeah it's a broken link.
+
+462
+00:39:39.920 --> 00:39:45.240
+So you suggest some similar approaches
+to some problems in healthcare.
+
+463
+00:39:45.800 --> 00:39:51.920
+Some of the problems that we have,
+we need to be much more tolerant of breaks
+
+464
+00:39:54.640 --> 00:39:58.080
+because that's a better solution
+than trying to cope with everything.
+
+465
+00:39:59.880 --> 00:40:04.680
+When we're coming, now we're
+getting closer to the end here,
+
+466
+00:40:04.760 --> 00:40:08.120
+do you think we could shift over
+to do you have any advice to people
+
+467
+00:40:08.200 --> 00:40:12.320
+coming into this career, students
+interested in medical informatics
+
+468
+00:40:12.400 --> 00:40:16.440
+either coming from the computer
+side or from the medical side,
+
+469
+00:40:17.600 --> 00:40:20.920
+things from your long life
+coming from both ends?
+
+470
+00:40:22.360 --> 00:40:28.400
+It's a very well, it's a very
+different field from when I came in.
+
+471
+00:40:34.640 --> 00:40:39.240
+I think as much as I think
+they're the obvious things,
+
+472
+00:40:39.320 --> 00:40:45.680
+but I think the most important thing
+for the computer people remains
+
+473
+00:40:46.400 --> 00:40:51.680
+not to underestimate the difference
+between medicine and other applications.
+
+474
+00:40:51.760 --> 00:40:56.240
+The medicine really is a very
+complicated, varied field.
+
+475
+00:40:57.560 --> 00:41:02.720
+And it's the complexities
+in medicine are different.
+
+476
+00:41:02.800 --> 00:41:08.360
+It's because of the enormous variability
+in the tasks. It isn't one task.
+
+477
+00:41:09.440 --> 00:41:12.360
+It's an enormous number
+of different tasks.
+
+478
+00:41:14.880 --> 00:41:17.720
+I think if you're coming
+in from the medical side,
+
+479
+00:41:18.560 --> 00:41:21.600
+again, you'd probably come
+into some small corner of it.
+
+480
+00:41:25.720 --> 00:41:31.040
+I'm less sure. It would be much harder
+to come in from the medical side,
+
+481
+00:41:31.120 --> 00:41:34.920
+I think at this point,
+just because there's so much,
+
+482
+00:41:35.000 --> 00:41:40.000
+though maybe not. You'd come into,
+at the time I came in, actually,
+
+483
+00:41:40.680 --> 00:41:47.280
+you could just about get all of computer
+science into Donald Knuth's books,
+
+484
+00:41:47.360 --> 00:41:54.240
+the ACM algorithms.
+It was a much more limited field.
+
+485
+00:41:57.880 --> 00:42:02.320
+Clearly, machine learning is going
+to be incredibly important.
+
+486
+00:42:03.400 --> 00:42:07.640
+And there's a whole,
+
+487
+00:42:08.200 --> 00:42:11.280
+I'm not the person to be, I'm
+not an expert on machine learning.
+
+488
+00:42:11.360 --> 00:42:18.320
+I've never had my hands dirty or very
+dirty and certainly not in any machine,
+
+489
+00:42:18.400 --> 00:42:21.040
+in no recent machine learning techniques.
+
+490
+00:42:23.360 --> 00:42:26.600
+And that's where the power
+
+491
+00:42:26.680 --> 00:42:32.920
+of today's computers just makes it totally
+different from the world that I lived in.
+
+492
+00:42:38.160 --> 00:42:44.080
+The... I think the lucky thing
+
+493
+00:42:44.160 --> 00:42:50.320
+that I did was end up with a series,
+
+494
+00:42:50.400 --> 00:42:54.760
+at different times, of problems
+that were tractable at the time,
+
+495
+00:42:55.440 --> 00:42:59.280
+that were on the edge at the time. And I
+think that's always going to be the issue.
+
+496
+00:42:59.360 --> 00:43:03.000
+And I don't, but what I don't know,
+what I can't tell,
+
+497
+00:43:03.080 --> 00:43:06.640
+I can almost tell a computer scientist
+what some of the problems would be.
+
+498
+00:43:06.720 --> 00:43:11.200
+After all, I've lived in a computer
+science department for a long time
+
+499
+00:43:11.280 --> 00:43:16.440
+and I've watched them and I'd certainly
+warn a computer scientist above all
+
+500
+00:43:17.120 --> 00:43:20.240
+to be wary of thinking
+
+501
+00:43:20.840 --> 00:43:25.320
+that logic was going to solve
+all your problems or indeed
+
+502
+00:43:26.440 --> 00:43:33.080
+that I suspect that machine learning
+was going to solve all your problems,
+
+503
+00:43:34.360 --> 00:43:40.720
+but I'm less sure of the second one.
+For the medic, I don't know what
+
+504
+00:43:41.880 --> 00:43:47.040
+that borderline, that edge problem
+that I was lucky enough to find is,
+
+505
+00:43:49.680 --> 00:43:52.400
+but I'm sure you come into a corner of it.
+
+506
+00:43:52.920 --> 00:43:54.720
+I came in first to Bayesian,
+
+507
+00:43:55.840 --> 00:44:00.240
+the simple Bayesian reasoning, and then
+to more complicated Bayesian reasoning,
+
+508
+00:44:01.560 --> 00:44:08.240
+and then into knowledge representation and
+medical records, just at the time when,
+
+509
+00:44:08.320 --> 00:44:13.960
+and then suddenly it was possible
+to build a more sophisticated interface.
+
+510
+00:44:14.920 --> 00:44:18.120
+I think the other piece of advice
+I would give to the medics.
+
+511
+00:44:19.080 --> 00:44:21.800
+In fact, to both sides,
+for heaven's sakes,
+
+512
+00:44:21.880 --> 00:44:26.840
+talk to psychologists,
+talk to people who are into human factors.
+
+513
+00:44:29.120 --> 00:44:31.640
+This is a multidisciplinary field.
+
+514
+00:44:32.800 --> 00:44:36.080
+And we need ideas
+from all sorts of people.
+
+515
+00:44:36.160 --> 00:44:41.000
+And it's a task problem. The problem
+isn't how to build the computer system
+
+516
+00:44:41.080 --> 00:44:44.440
+for the medic in particular,
+but no, for both of them.
+
+517
+00:44:45.120 --> 00:44:47.520
+It's how to make,
+it's how to make a system
+
+518
+00:44:48.360 --> 00:44:52.240
+that works better
+for the doctor and the patient,
+
+519
+00:44:53.160 --> 00:44:59.760
+the healthcare professional in general.
+And it, the technology is there,
+
+520
+00:45:00.320 --> 00:45:04.920
+has got to serve that purpose
+rather than be the end.
+
+521
+00:45:05.000 --> 00:45:08.560
+Now it may spin off something
+which is a really fascinating
+
+522
+00:45:09.360 --> 00:45:12.240
+technical problem like decision logics,
+
+523
+00:45:12.320 --> 00:45:17.080
+description logics, or Bayesian
+reasoning, or something else.
+
+524
+00:45:18.320 --> 00:45:22.600
+But the core task,
+which is very easy to get lost,
+
+525
+00:45:22.680 --> 00:45:26.240
+and so you can say
+my career ended up that way,
+
+526
+00:45:26.800 --> 00:45:30.960
+spending a lot of time
+teaching people to use OWL,
+
+527
+00:45:34.080 --> 00:45:39.160
+is that the core task of actually
+trying make things better.
+
+528
+00:45:40.200 --> 00:45:43.240
+for practice in medicine is very hard,
+
+529
+00:45:44.560 --> 00:45:51.440
+and it's going to take a lot of different
+techniques and a lot of different people.
+
+530
+00:45:52.400 --> 00:45:56.680
+And I suppose the other thing
+for medics coming in is talk to nurses.
+
+531
+00:45:59.120 --> 00:46:04.920
+The one thing, the work we did in
+geriatrics, it's the only time I've worked
+
+532
+00:46:05.000 --> 00:46:11.040
+in hospitals, not because geriatrics
+I think is that different just because
+
+533
+00:46:11.120 --> 00:46:15.880
+that was that was the opportunity
+we had to work with hospital doctors
+
+534
+00:46:15.960 --> 00:46:22.920
+and in the sort of detail that we worked
+with GPs was that the nurses actually knew
+
+535
+00:46:23.000 --> 00:46:30.000
+vastly more about what went on day to day
+on the wards than most of the doctors did.
+
+536
+00:46:30.640 --> 00:46:32.280
+And also that junior doctors,
+
+537
+00:46:32.360 --> 00:46:36.120
+you've got to talk to junior
+doctors as well as senior doctors
+
+538
+00:46:37.240 --> 00:46:40.480
+and that's less of a problem.
+Most of the people coming in will
+
+539
+00:46:40.560 --> 00:46:45.040
+probably be close to being junior
+doctors so that's less of a problem
+
+540
+00:46:45.120 --> 00:46:48.920
+than it might otherwise be a problem
+for computer scientists.
+
+541
+00:46:49.000 --> 00:46:51.720
+One of the things that has
+happened with computer scientists
+
+542
+00:46:51.800 --> 00:46:55.840
+is that they've ended up talking
+only to the very senior clinicians
+
+543
+00:46:57.120 --> 00:47:03.560
+and losing track of what happens
+actually at the bedside, day-to-day.
+
+544
+00:47:05.080 --> 00:47:07.280
+things like that which are very general.
+
+545
+00:47:09.200 --> 00:47:15.360
+At a technical level, I just actually
+at this point have to have the humility
+
+546
+00:47:15.440 --> 00:47:21.320
+to say the world is moving so fast
+and move on beyond where I am.
+
+547
+00:47:21.400 --> 00:47:25.120
+I hope some people will take up
+some of the ideas that I've had.
+
+548
+00:47:25.200 --> 00:47:28.120
+And I think there's an idea
+for some people there.
+
+549
+00:47:28.200 --> 00:47:30.720
+But I think there are lots
+of other ideas floating around
+
+550
+00:47:30.800 --> 00:47:33.000
+and what the best idea is going to be.
+
+551
+00:47:34.240 --> 00:47:35.600
+Well, if I knew that,
+
+552
+00:47:36.920 --> 00:47:42.520
+if any of us knew that, I'd
+be doing something else.
+
+553
+00:47:42.600 --> 00:47:47.520
+Might even be trying to jump out of
+retirement, but I don't. And so I won't.
+
+554
+00:47:49.440 --> 00:47:52.440
+Okay, thank you very much.
+That's excellent advice.
+
+555
+00:47:53.280 --> 00:47:54.280
+Thank you.
+
+556
+00:47:55.120 --> 00:47:57.040
+Thank you both of you.
+I've really enjoyed it.
+
+557
+00:47:57.120 --> 00:48:00.720
+It has been really interesting.
+I hope it's been useful to you.
+
+558
+00:48:01.880 --> 00:48:04.000
+I think it will be very
+useful to many people.
+
+559
+00:48:04.960 --> 00:48:07.400
+Well, and I have people I have to thank.
+
+560
+00:48:07.480 --> 00:48:12.240
+This is, the whole series of projects
+has involved a great many people,
+
+561
+00:48:12.320 --> 00:48:15.680
+and I can't possibly thank
+everybody who's been involved.
+
+562
+00:48:15.760 --> 00:48:18.920
+But I certainly, for the original PEN&PAD,
+
+563
+00:48:19.000 --> 00:48:25.120
+the team that we gathered was quite
+amazing: Anthony Nowlan, who was both
+
+564
+00:48:25.760 --> 00:48:31.240
+the medic and one of the chief
+architects of the classifier in GRAIL.
+
+565
+00:48:31.320 --> 00:48:36.080
+Bernard Horan, who was the user
+interface genius who put this together,
+
+566
+00:48:36.160 --> 00:48:42.400
+and Peter Crowther,
+who is an amazing programmer,
+
+567
+00:48:42.920 --> 00:48:48.480
+got this together. John Kirby was
+behind Clinergy and shrinking it.
+
+568
+00:48:48.560 --> 00:48:53.800
+Carole Goble went on to take a lot of
+these ideas went on into bioinformatics,
+
+569
+00:48:53.880 --> 00:48:57.360
+and had a bigger impact there
+probably than any place else,
+
+570
+00:48:57.440 --> 00:48:58.880
+and Steve Kay, who helped us.
+
+571
+00:48:58.960 --> 00:49:05.200
+David Metcalfe led a group of GPs,
+Mike Fitter and Bob Garber, psychologists
+
+572
+00:49:05.920 --> 00:49:12.280
+and then once we got to GALEN,
+Jeremy, Danny, Peter, that trio,
+
+573
+00:49:13.000 --> 00:49:18.240
+and Egbert, the four of them
+Jeremy Rogers, Danny Solomon,
+
+574
+00:49:18.320 --> 00:49:23.680
+Pieter Zanstra and Egbert van der Haring
+plus in the ICD project in particular,
+
+575
+00:49:23.760 --> 00:49:26.280
+as well as in GALEN,
+
+576
+00:49:26.360 --> 00:49:31.280
+Jean Marie Rodrigues and Angelo Rossi
+Mori, for the beginning of GALEN.
+
+577
+00:49:31.360 --> 00:49:36.120
+And Protégé-OWL, we cannot
+not mention Matthew Horridge,
+
+578
+00:49:36.200 --> 00:49:39.280
+who did an enormous,
+who really built that.
+
+579
+00:49:39.360 --> 00:49:42.920
+And Ian Horrocks,
+who was the person behind
+
+580
+00:49:43.440 --> 00:49:50.440
+really turning description logics into
+a more practical medium with FaCT.
+
+581
+00:49:50.840 --> 00:49:52.840
+So thank you to all of them and thank
+
+582
+00:49:52.920 --> 00:49:56.360
+you to all of you for giving
+me this chance to speak.

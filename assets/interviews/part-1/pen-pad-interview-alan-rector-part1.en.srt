@@ -1,0 +1,1962 @@
+1
+00:00:00,000 --> 00:00:03,267
+We're going to talk about, I guess,
+one of your favorite subjects,
+
+2
+00:00:03,333 --> 00:00:07,200
+the PEN&PAD system Could
+you tell us a little bit about
+
+3
+00:00:07,733 --> 00:00:11,467
+who you are, your background, how did
+you get into this, what was the ideas
+
+4
+00:00:11,533 --> 00:00:15,367
+leading to this PEN&PAD electronic
+health record system, things like that.
+
+5
+00:00:17,133 --> 00:00:22,333
+Yes, well PEN&PAD grew out of a long
+interest in medical decision-making.
+
+6
+00:00:22,400 --> 00:00:29,233
+I'd come out of an original background in
+philosophy and mathematics and foundations
+
+7
+00:00:29,300 --> 00:00:35,300
+and logic and then medical school
+and with various things in between,
+
+8
+00:00:35,367 --> 00:00:38,867
+but I turned out to be much better
+at computer science than medicine
+
+9
+00:00:39,467 --> 00:00:46,467
+and came over to the UK to work with Tim
+de Dombal on computerized decision-making,
+
+10
+00:00:46,533 --> 00:00:49,967
+in the days of Bayesian
+decision-making and idiot Bayes,
+
+11
+00:00:51,133 --> 00:00:57,333
+and then ended up, through a long series
+of things which I won't bore people with,
+
+12
+00:00:57,400 --> 00:01:01,000
+in a very innovative department
+of general practice and community
+
+13
+00:01:01,067 --> 00:01:05,767
+medicine at University of Nottingham, just
+at the time when computers were suddenly
+
+14
+00:01:05,833 --> 00:01:11,133
+becoming something one could imagine
+working with and we set up a system
+
+15
+00:01:12,733 --> 00:01:16,767
+for GPs and I spent a lot of time
+investigating it but it was an interesting
+
+16
+00:01:16,833 --> 00:01:23,833
+department that had a mixture of doctors
+and sociologists and psychologists,
+
+17
+00:01:24,100 --> 00:01:30,500
+eventually we got to the point where there
+was the big panic about expert systems
+
+18
+00:01:30,567 --> 00:01:35,800
+and the Japanese fifth generation project.
+And that was enough to panic the research
+
+19
+00:01:35,867 --> 00:01:39,467
+councils into funding research
+on medical decision-making.
+
+20
+00:01:40,467 --> 00:01:42,900
+And we had a very naive project,
+
+21
+00:01:42,967 --> 00:01:47,033
+naive in retrospect, we didn't think
+it was naive when we proposed it,
+
+22
+00:01:47,633 --> 00:01:51,900
+of developing a whole series
+of expert systems to help GPs.
+
+23
+00:01:53,133 --> 00:01:57,800
+We were clever enough to at least
+have a group of psychologists
+
+24
+00:01:57,867 --> 00:02:03,900
+and sociologists and GPs working with us,
+a lot of studies then, in Nottingham,
+
+25
+00:02:03,967 --> 00:02:07,500
+of observing GPs actually
+having actors play.
+
+26
+00:02:07,567 --> 00:02:11,800
+the role of patients,
+in some cases, looking at things.
+
+27
+00:02:11,867 --> 00:02:16,567
+And we ended up making the decision
+that what we were trying to do
+
+28
+00:02:16,633 --> 00:02:21,100
+was even if we could do it,
+which we obviously couldn't, was bonkers,
+
+29
+00:02:21,167 --> 00:02:23,833
+and wasn't going
+to be of any use to anybody,
+
+30
+00:02:24,767 --> 00:02:28,267
+and started to think about
+how else you would do it.
+
+31
+00:02:28,333 --> 00:02:32,800
+And at the end of that project,
+we mocked up a piece
+
+32
+00:02:32,867 --> 00:02:38,467
+of cardboard that looked sort
+of like the PEN&PAD interface.
+
+33
+00:02:39,867 --> 00:02:46,733
+It was literally cardboard, it was done
+in display post script, on a Sun,
+
+34
+00:02:47,900 --> 00:02:52,833
+but it was convincing enough to get
+one person on the committee to ask,
+
+35
+00:02:52,900 --> 00:02:57,900
+haven't you done the project? People were
+very naive about computing at that point.
+
+36
+00:02:58,767 --> 00:03:05,600
+We got a report out of that project which
+was gave in which half the reviewers gave
+
+37
+00:03:05,667 --> 00:03:10,967
+us five stars for having this and half
+of the reviewers gave us one.
+
+38
+00:03:12,833 --> 00:03:17,100
+the one star for not having done
+what we said we were going to do,
+
+39
+00:03:17,167 --> 00:03:20,867
+five stars for having suggested
+something more interesting.
+
+40
+00:03:20,933 --> 00:03:23,367
+But out of a lot of discussion,
+
+41
+00:03:23,433 --> 00:03:27,133
+eventually we got a joint project
+with the Department of Health to build
+
+42
+00:03:27,200 --> 00:03:33,267
+what became PEN&PAD and put together
+what was really quite an amazing team.
+
+43
+00:03:34,300 --> 00:03:38,967
+And in the meantime, for reasons
+which are complicated, I moved to,
+
+44
+00:03:39,033 --> 00:03:43,667
+and David Metcalfe who led the GP
+group had both moved to Manchester.
+
+45
+00:03:44,700 --> 00:03:51,000
+And so we put together a group
+to try and do the same kind of study?
+
+46
+00:03:51,067 --> 00:03:54,567
+That's what might be useful in Manchester.
+
+47
+00:03:54,633 --> 00:04:00,633
+And really, what came out
+of this was both a plan for how you do
+
+48
+00:04:01,267 --> 00:04:06,200
+user-centered design and general practice.
+And general practice in the UK, at least,
+
+49
+00:04:06,267 --> 00:04:10,900
+was easier than many other areas
+of medicine because general practitioners
+
+50
+00:04:10,967 --> 00:04:15,800
+sat at desks, and were much easier
+to study than hospital doctors
+
+51
+00:04:15,867 --> 00:04:21,767
+who constantly moved around, or nurses
+who ran around even faster and so —
+
+52
+00:04:21,833 --> 00:04:25,167
+And you didn't have very much mobile
+computers at that time, right?
+
+53
+00:04:25,867 --> 00:04:27,967
+The standard of mobility,
+
+54
+00:04:30,600 --> 00:04:37,600
+Our first, quote, laptop was described
+as the Arnold Schwarzenegger laptop,
+
+55
+00:04:37,867 --> 00:04:44,200
+which we took to Brussels at the end
+of the first stage of PEN&PAD
+
+56
+00:04:44,267 --> 00:04:46,300
+when we were applying for GALEN,
+
+57
+00:04:46,367 --> 00:04:52,200
+which was a huge 25-pound
+Toshiba monstrosity,
+
+58
+00:04:52,833 --> 00:04:57,267
+which the airlines weren't even very happy
+in and putting in an overhead bin for us
+
+59
+00:04:57,333 --> 00:04:58,733
+and wanted to check.
+
+60
+00:04:59,433 --> 00:05:04,900
+Anthony Nowlan, who some of you may know,
+fought with them over hand-carrying this,
+
+61
+00:05:04,967 --> 00:05:08,600
+which obviously we didn't wish
+to trust in the baggage department.
+
+62
+00:05:10,733 --> 00:05:15,667
+But it was a very busy program
+
+63
+00:05:15,733 --> 00:05:20,533
+of on the one hand user centered
+design, working with the doctors.
+
+64
+00:05:20,600 --> 00:05:23,467
+And that's what we're gonna…
+the user-centered design will
+
+65
+00:05:23,533 --> 00:05:27,100
+dive into deeper in section
+two of this recording, I guess.
+
+66
+00:05:27,167 --> 00:05:31,633
+Yeah, and we'll talk
+about more of that later.
+
+67
+00:05:31,700 --> 00:05:36,667
+And then also, this was just
+the time when there was a lot of work
+
+68
+00:05:38,033 --> 00:05:42,500
+on knowledge representation.
+
+69
+00:05:42,567 --> 00:05:47,967
+The ideas behind description logic had
+not actually been invented quite yet.
+
+70
+00:05:48,033 --> 00:05:51,833
+The projects that were going into
+description logic were happening.
+
+71
+00:05:52,367 --> 00:05:54,167
+And we picked that up
+
+72
+00:05:54,233 --> 00:05:58,333
+and picked up the basic tool
+and algorithm that I'll talk about
+
+73
+00:05:59,000 --> 00:06:04,800
+in the third part of the talk
+as our Swiss Army knife, the thing
+
+74
+00:06:04,867 --> 00:06:09,600
+that turned out to be useful for all sorts
+of things and we still think is useful.
+
+75
+00:06:10,333 --> 00:06:14,067
+And that worked very well.
+
+76
+00:06:14,667 --> 00:06:21,267
+And then that led on to just
+a whole series of projects.
+
+77
+00:06:22,733 --> 00:06:27,067
+some of them in knowledge representation,
+some of them in bioinformatics,
+
+78
+00:06:27,133 --> 00:06:31,233
+to GALEN above all, obviously,
+which is where you met us,
+
+79
+00:06:32,133 --> 00:06:39,000
+and to eventually the other project,
+which I just want to mention briefly
+
+80
+00:06:39,067 --> 00:06:43,700
+at the end of the talk,
+is the ICD-11 project,
+
+81
+00:06:43,767 --> 00:06:50,767
+which was eventually a project
+to coordinate SNOMED and ICD,
+
+82
+00:06:51,133 --> 00:06:54,000
+which eventually came apart over politics.
+
+83
+00:06:55,033 --> 00:06:58,067
+Getting any one organization,
+all the parts of any one
+
+84
+00:06:58,133 --> 00:07:03,400
+organization to keep going in a straight
+line for three years is difficult,
+
+85
+00:07:03,467 --> 00:07:08,400
+getting parts of three organizations,
+maybe four, to go in the same direction,
+
+86
+00:07:08,467 --> 00:07:13,600
+eventually we weren't, I at least and the
+people around me weren't clever enough
+
+87
+00:07:15,900 --> 00:07:20,033
+to pull off quite.
+So it never quite actually…
+
+88
+00:07:20,100 --> 00:07:22,600
+eventually ICD decided that they were more
+
+89
+00:07:22,667 --> 00:07:25,333
+concerned with stability than
+they were with innovation.
+
+90
+00:07:25,400 --> 00:07:29,567
+OK, so it didn't stop because
+of technical problems there.
+
+91
+00:07:29,633 --> 00:07:34,733
+It wasn't technical.
+No, we were doing very well technically.
+
+92
+00:07:35,933 --> 00:07:40,367
+It wasn't finished, but the prototypes
+were looking very good indeed.
+
+93
+00:07:40,900 --> 00:07:47,000
+But at that point, SNOMED
+
+94
+00:07:47,067 --> 00:07:49,233
+also underwent a reorganization.
+
+95
+00:07:49,867 --> 00:07:51,800
+And that was the point
+at which Kent Spackman,
+
+96
+00:07:51,867 --> 00:07:54,967
+who had been leading
+it for SNOMED, left SNOMED.
+
+97
+00:07:55,733 --> 00:08:00,367
+And so it came apart for all
+of those kinds of reasons,
+
+98
+00:08:00,433 --> 00:08:02,267
+rather than anything else.
+
+99
+00:08:02,333 --> 00:08:06,467
+But we might talk about how to pick up
+these ideas anyway in the fourth part
+
+100
+00:08:06,533 --> 00:08:08,033
+of the interview here.
+
+101
+00:08:08,733 --> 00:08:10,833
+We can certainly talk about that.
+
+102
+00:08:10,900 --> 00:08:15,400
+I think we did succeed very well
+in showing how you might coordinate them
+
+103
+00:08:15,933 --> 00:08:21,500
+and why you can't just integrate them.
+They don't, won't fit together.
+
+104
+00:08:21,567 --> 00:08:25,800
+The biggest thing to come out
+of that project is how different
+
+105
+00:08:26,333 --> 00:08:29,800
+the tasks are for on the one hand,
+
+106
+00:08:29,867 --> 00:08:34,500
+recording information for clinical
+purposes and the tasks that ICD
+
+107
+00:08:34,567 --> 00:08:39,533
+has of classifying it and maintaining
+statistics for international purposes.
+
+108
+00:08:40,233 --> 00:08:43,933
+And you can coordinate
+those two activities,
+
+109
+00:08:44,000 --> 00:08:47,500
+but you can't just mash them together.
+
+110
+00:08:47,567 --> 00:08:51,667
+And a lot of the criticism of over
+the years, there's been any
+
+111
+00:08:51,733 --> 00:08:55,900
+number of arguments, as you know,
+about the relative merits of ICD,
+
+112
+00:08:55,967 --> 00:09:01,867
+and SNOMED, and Read, and ICPC,
+and any number, and for that matter, MeSH,
+
+113
+00:09:02,467 --> 00:09:05,833
+and all the other various things.
+
+114
+00:09:05,900 --> 00:09:11,400
+And one of the things that I think most
+has come out of not PEN&PAD itself,
+
+115
+00:09:11,467 --> 00:09:14,967
+but the things at the end of this is:
+these are different tasks
+
+116
+00:09:15,533 --> 00:09:17,200
+and you can coordinate them.
+
+117
+00:09:18,767 --> 00:09:22,333
+But you need to understand what they're
+doing and why they're different.
+
+118
+00:09:22,867 --> 00:09:24,167
+And is that what you're
+
+119
+00:09:24,233 --> 00:09:28,900
+talking about using some query languages
+and things that has a glue between them?
+
+120
+00:09:28,967 --> 00:09:34,033
+Yes. If from the point of view of SNOMED,
+
+121
+00:09:34,100 --> 00:09:38,400
+you have to do it with query languages
+and not with actually putting things
+
+122
+00:09:38,467 --> 00:09:43,267
+into the SNOMED, putting everything
+into the SNOMED formalism itself.
+
+123
+00:09:44,833 --> 00:09:47,633
+It looks slightly different.
+If I were giving this talk
+
+124
+00:09:47,700 --> 00:09:50,800
+to an ICD audience,
+it would look slightly different.
+
+125
+00:09:51,433 --> 00:09:57,933
+In which way you have to, which point of
+view you're looking at the problem from.
+
+126
+00:09:59,600 --> 00:10:01,367
+I think there are many countries,
+
+127
+00:10:02,767 --> 00:10:05,933
+and not just SNOMED countries,
+but even those trying,
+
+128
+00:10:06,000 --> 00:10:11,333
+aiming to implement ICD-11
+who are struggling with these issues,
+
+129
+00:10:11,400 --> 00:10:16,633
+and recommendations for those countries,
+I guess, are in high demand.
+
+130
+00:10:20,233 --> 00:10:26,333
+I think these ideas are important
+for the coordination of different
+
+131
+00:10:27,133 --> 00:10:29,767
+nomenclatures and different terminologies.
+
+132
+00:10:30,600 --> 00:10:37,400
+And the use of, call it an ontology,
+call it a logic-based concept model,
+
+133
+00:10:37,467 --> 00:10:42,567
+whatever you want to call that central
+terminology piece, which is logic-based
+
+134
+00:10:42,633 --> 00:10:46,733
+with various things which have various
+pragmatic requirements on them,
+
+135
+00:10:47,233 --> 00:10:52,633
+which don't fit necessarily
+and can't be expressed conveniently,
+
+136
+00:10:53,167 --> 00:10:55,767
+can't be expressed at all necessarily,
+
+137
+00:10:57,933 --> 00:11:02,767
+within in the same set of axioms and logic
+structure that you have if you're going
+
+138
+00:11:02,833 --> 00:11:07,733
+to make SNOMED work the way SNOMED
+is supposed to work, or any other,
+
+139
+00:11:07,800 --> 00:11:12,867
+or GALEN, and anything that's based
+on those on description logic technology.
+
+140
+00:11:13,967 --> 00:11:18,567
+We can dive deeper into this in the
+technical part and in the future part.
+
+141
+00:11:19,933 --> 00:11:25,600
+We'll pause it a little bit now
+and rig up a demo of this PEN&PAD.
+
+142
+00:11:26,267 --> 00:11:31,467
+Okay, now we've got the computer here.
+This runs on a Windows XP emulator.
+
+143
+00:11:31,533 --> 00:11:33,933
+What is it that we see
+in front of us here, Alan?
+
+144
+00:11:34,867 --> 00:11:40,433
+Well, this is about the second
+stage of the screens
+
+145
+00:11:40,500 --> 00:11:46,833
+that we use to enter a patient encounter.
+These were intended to be used by a doctor
+
+146
+00:11:47,467 --> 00:11:51,100
+on a system that was sitting
+on their desk while the patient was there.
+
+147
+00:11:51,667 --> 00:11:57,833
+A key thing was we went on the one
+hand we wanted a concise summary
+
+148
+00:11:58,433 --> 00:12:03,100
+and this is one form of the summary
+there were other things that we did
+
+149
+00:12:03,167 --> 00:12:07,967
+which were actually much harder to do
+at that time than they would be now.
+
+150
+00:12:08,033 --> 00:12:13,200
+We had the version that we had
+originally in Smalltalk was prettier
+
+151
+00:12:13,900 --> 00:12:15,733
+because the graphics were prettier.
+
+152
+00:12:16,300 --> 00:12:20,100
+But the key thing:
+if you wanted to enter information,
+
+153
+00:12:20,167 --> 00:12:23,867
+you clicked on symptom
+and you brought up a form.
+
+154
+00:12:23,933 --> 00:12:28,633
+So if I click the symptom
+here and then I've got this
+
+155
+00:12:30,000 --> 00:12:32,667
+and you can then… we found it was very
+
+156
+00:12:32,733 --> 00:12:37,267
+important to have people be able
+to select things in various ways
+
+157
+00:12:37,333 --> 00:12:41,600
+so as a starting point you could
+either point at the homunculus
+
+158
+00:12:41,667 --> 00:12:47,167
+the drawings that we had like
+the little icons that we had at the top
+
+159
+00:12:48,367 --> 00:12:54,400
+or or pick up from the text
+lists at the side.
+
+160
+00:12:54,467 --> 00:12:57,800
+And some doctors liked one
+and some doctors liked the other.
+
+161
+00:12:59,133 --> 00:13:02,233
+The graphics were fun
+
+162
+00:13:02,833 --> 00:13:08,367
+and they helped sell the system
+and get people to enjoy it.
+
+163
+00:13:08,433 --> 00:13:13,167
+But many people actually use the text
+much more than they use the graphics.
+
+164
+00:13:14,633 --> 00:13:17,767
+They were also slightly worried
+that the patients would think
+
+165
+00:13:17,833 --> 00:13:23,167
+that they weren't clever enough to figure
+out what the words meant or something.
+
+166
+00:13:23,233 --> 00:13:27,200
+There was slight worry about
+using icons at that point.
+
+167
+00:13:27,267 --> 00:13:30,600
+This was in 1992. Mice were new.
+
+168
+00:13:30,667 --> 00:13:34,633
+Some of the doctors had never met
+a mouse when they met this system,
+
+169
+00:13:34,700 --> 00:13:41,567
+let alone use things
+that were mostly graphical.
+
+170
+00:13:41,633 --> 00:13:45,067
+So there were things like
+that that we just didn't know.
+
+171
+00:13:46,100 --> 00:13:51,033
+If you go and you select the hand, you'll
+see that each time you select a part,
+
+172
+00:13:51,100 --> 00:13:55,267
+it will reduce the number
+
+173
+00:13:55,333 --> 00:14:00,033
+of possibilities and eventually
+you get down to a list of words.
+
+174
+00:14:01,667 --> 00:14:04,600
+That's just the way people communicate.
+
+175
+00:14:04,667 --> 00:14:09,200
+And you've got down actually
+to the thumb there, nicely located,
+
+176
+00:14:09,267 --> 00:14:10,733
+and if you pick pain.
+
+177
+00:14:11,767 --> 00:14:18,200
+So thumb and then pain.
+It says thumb pain down here.
+
+178
+00:14:18,267 --> 00:14:20,500
+Thumb pain, and then you press form.
+
+179
+00:14:21,767 --> 00:14:26,300
+And that's one more click than we wanted.
+We were trying to get the clicks down,
+
+180
+00:14:26,367 --> 00:14:30,000
+but for technical reasons,
+which I cannot remember,
+
+181
+00:14:30,067 --> 00:14:37,067
+we couldn't get rid of that last click.
+Maybe today when you thought about it,
+
+182
+00:14:37,333 --> 00:14:41,167
+you popped up a form and just
+a few things about these forms.
+
+183
+00:14:42,733 --> 00:14:45,800
+They were meant to be fairly
+large and easy to click on.
+
+184
+00:14:45,867 --> 00:14:50,600
+We didn't, we didn't use the dominant
+pattern at the time for forms,
+
+185
+00:14:50,667 --> 00:14:53,767
+it was radio buttons
+and little round buttons
+
+186
+00:14:53,833 --> 00:14:57,700
+and we wanted things that were big,
+that people could hit easily.
+
+187
+00:14:58,467 --> 00:15:05,000
+And we also wanted people
+to be able to turn away at any time.
+
+188
+00:15:05,067 --> 00:15:07,833
+So the reason there
+are “more”-buttons there,
+
+189
+00:15:08,433 --> 00:15:12,700
+rather than click and press
+on present, which was:
+
+190
+00:15:12,767 --> 00:15:19,433
+if you click on 'Thumb
+swelling' 'present',
+
+191
+00:15:20,867 --> 00:15:23,667
+you just get present.
+If you click on 'more…',
+
+192
+00:15:23,733 --> 00:15:28,967
+you'll get a further form with details.
+And here I see text also generated.
+
+193
+00:15:29,033 --> 00:15:34,967
+And it's also generated some text.
+And if you click there, you'll get,
+
+194
+00:15:35,033 --> 00:15:38,433
+and another form comes up.
+It isn't something you have to hold on.
+
+195
+00:15:38,500 --> 00:15:42,367
+It's not a pull-down. It's something
+that pops up and stays there.
+
+196
+00:15:42,433 --> 00:15:45,067
+So you can turn away to the patient.
+
+197
+00:15:45,567 --> 00:15:49,967
+And again, one of the things we were very
+concerned about is that doctors didn't
+
+198
+00:15:50,033 --> 00:15:52,233
+have to pay too much attention.
+
+199
+00:15:52,767 --> 00:15:59,367
+We tried to make the forms actually as big
+as we could given the screens of the day.
+
+200
+00:15:59,433 --> 00:16:02,333
+There's no question
+that we wanted bigger screens.
+
+201
+00:16:03,433 --> 00:16:06,567
+I suspect everybody always
+wants bigger screens,
+
+202
+00:16:06,633 --> 00:16:10,333
+though there have been exceptions to this.
+
+203
+00:16:11,967 --> 00:16:18,367
+We had some long discussions with Patrice
+Degoulet in France, who had a system
+
+204
+00:16:18,433 --> 00:16:24,333
+in which they tried to cram as much
+information as humanly possible on a form
+
+205
+00:16:24,400 --> 00:16:27,367
+because people didn't wanna
+change the forms very often.
+
+206
+00:16:27,900 --> 00:16:31,833
+And that was in a hospital setting
+and was in a quite different setting.
+
+207
+00:16:31,900 --> 00:16:33,300
+We went the other way.
+
+208
+00:16:33,367 --> 00:16:37,667
+We were trying to keep each
+individual form as simple as possible.
+
+209
+00:16:38,200 --> 00:16:42,367
+That one doesn't have any further
+levels but you, you could get
+
+210
+00:16:42,933 --> 00:16:47,033
+a third level on some things.
+If, if you cancel what you have there,
+
+211
+00:16:47,100 --> 00:16:52,033
+or accept it, and you go
+to more on right thumb.
+
+212
+00:16:53,933 --> 00:16:59,000
+Yes, you see there, the right thumb
+joint, you still get another more,
+
+213
+00:17:00,300 --> 00:17:01,933
+and you can keep going.
+
+214
+00:17:02,000 --> 00:17:06,900
+Now the other thing about these forms and
+the reason you could have so many of them
+
+215
+00:17:06,967 --> 00:17:10,367
+is they weren't built
+individually in advance.
+
+216
+00:17:10,933 --> 00:17:12,800
+All of the forms were built
+
+217
+00:17:12,867 --> 00:17:17,333
+out of fragmentary forms
+that were assembled on the fly.
+
+218
+00:17:18,333 --> 00:17:23,767
+And a great deal of the trick
+was the techniques that we used
+
+219
+00:17:23,833 --> 00:17:28,567
+took a long time to build
+and the classification process
+
+220
+00:17:28,633 --> 00:17:33,067
+that was essential to making this work,
+was very slow at the time.
+
+221
+00:17:34,967 --> 00:17:38,733
+But the retrieval technique
+that I'll talk about again
+
+222
+00:17:38,800 --> 00:17:41,600
+in the technical section, is very fast.
+
+223
+00:17:41,667 --> 00:17:47,067
+So, if you would change the underlying
+ontology or logic system,
+
+224
+00:17:47,133 --> 00:17:50,967
+then the user entry form here
+would actually get more selections
+
+225
+00:17:51,033 --> 00:17:53,400
+or less or whatever.
+We get more or less selections.
+
+226
+00:17:53,467 --> 00:17:57,300
+The way you changed
+it you could do two things.
+
+227
+00:17:57,367 --> 00:18:00,300
+You actually could change
+the underlying structure
+
+228
+00:18:01,167 --> 00:18:05,267
+and talk about fingers one
+to five rather than thumb
+
+229
+00:18:06,833 --> 00:18:10,300
+something of that sort, that's
+a silly example, but nevermind.
+
+230
+00:18:11,467 --> 00:18:15,467
+Or you could, the things
+that we hung on the ontology,
+
+231
+00:18:15,533 --> 00:18:18,067
+which were these fragments
+that we assembled,
+
+232
+00:18:18,767 --> 00:18:24,500
+all those fragments were hung on the
+ontology and you could add it to those.
+
+233
+00:18:24,567 --> 00:18:26,800
+But you added to them
+in fairly small bits,
+
+234
+00:18:26,867 --> 00:18:32,567
+roughly each little section you see there.
+The thing that would be the examination
+
+235
+00:18:33,500 --> 00:18:37,000
+and whether there was anything
+more than normal an examination
+
+236
+00:18:37,067 --> 00:18:43,300
+would be in that particular location
+for the left thumb would be something
+
+237
+00:18:43,367 --> 00:18:49,167
+that would be assembled out of well,
+what is there for examinations always?
+
+238
+00:18:49,233 --> 00:18:54,567
+There's always present or absent
+for certain kinds of things.
+
+239
+00:18:54,633 --> 00:18:58,167
+What is there for the thumb?
+What are the specific things?
+
+240
+00:18:58,233 --> 00:19:03,000
+Well, there's flexion, there's extension,
+there's abduction, there's adduction.
+
+241
+00:19:03,067 --> 00:19:05,667
+What can be the values of those things?
+
+242
+00:19:05,733 --> 00:19:09,800
+That's what was actually held
+as additional information
+
+243
+00:19:10,633 --> 00:19:16,767
+and getting that correctly balanced
+between what was in the terminology
+
+244
+00:19:16,833 --> 00:19:21,900
+and what was hung on the terminology
+was the clever bit.
+
+245
+00:19:23,267 --> 00:19:28,300
+But what we're aiming for was something
+that might take the authors of,
+
+246
+00:19:28,367 --> 00:19:32,067
+we had to be efficient for the,
+reasonably efficient for the authors.
+
+247
+00:19:32,133 --> 00:19:34,233
+The authors of the logical tree or?
+
+248
+00:19:34,300 --> 00:19:38,867
+after you made the change,
+you then looked at it.
+
+249
+00:19:40,100 --> 00:19:43,533
+You probably, you had to go and have
+a cup of coffee at those days.
+
+250
+00:19:44,233 --> 00:19:49,567
+The process was look at what you want,
+write down what has to be changed,
+
+251
+00:19:49,633 --> 00:19:54,500
+or more likely talk to the doctors in a
+workshop, find out what they did like,
+
+252
+00:19:55,733 --> 00:19:59,633
+find out what had to be changed,
+make the change, go
+
+253
+00:20:00,400 --> 00:20:05,033
+set the thing off to compile,
+classify and reorganize itself,
+
+254
+00:20:05,100 --> 00:20:08,500
+have a cup of coffee or whatever
+else you were going to do,
+
+255
+00:20:08,567 --> 00:20:11,467
+and then come back and see
+if you got the result you wanted.
+
+256
+00:20:11,533 --> 00:20:17,667
+And chances were you didn't.
+And so you then try it again.
+
+257
+00:20:18,433 --> 00:20:22,400
+And like any other
+software debugging process,
+
+258
+00:20:24,400 --> 00:20:28,167
+you eventually got the knack of getting
+better and better at how you hung
+
+259
+00:20:28,233 --> 00:20:32,200
+these things together so that that they
+came out the way you wanted them to.
+
+260
+00:20:33,167 --> 00:20:38,867
+And the logic of this worked very well.
+And if you got something really weird,
+
+261
+00:20:39,933 --> 00:20:43,967
+and we did get some really
+weird things from time to time,
+
+262
+00:20:44,033 --> 00:20:47,433
+It probably meant that there
+was something wrong in the ontology,
+
+263
+00:20:48,300 --> 00:20:49,967
+something really wrong in the ontology.
+
+264
+00:20:50,033 --> 00:20:55,067
+And all it takes is getting a little bit
+of anatomy wrong, mistyping something.
+
+265
+00:20:55,133 --> 00:20:57,667
+And we were typing into source files.
+
+266
+00:20:58,200 --> 00:21:04,533
+It was a long time ago,
+and that propagates,
+
+267
+00:21:05,167 --> 00:21:09,400
+and you get all sorts of strange results a
+long way from where you thought you were.
+
+268
+00:21:09,900 --> 00:21:15,433
+So if it obviously
+thinks that that flexion
+
+269
+00:21:16,033 --> 00:21:20,500
+should have a color, something
+is terribly wrong with flexion,
+
+270
+00:21:21,400 --> 00:21:25,867
+and you better go look at the ontology.
+
+271
+00:21:25,933 --> 00:21:28,900
+So I'll talk about QA in the next section,
+
+272
+00:21:28,967 --> 00:21:32,100
+because that was a very
+important part of what we did.
+
+273
+00:21:32,167 --> 00:21:37,067
+But an important part of QA was also both
+
+274
+00:21:38,133 --> 00:21:40,767
+our own checks and immediately checks,
+
+275
+00:21:40,833 --> 00:21:46,333
+because this did actually get deployed
+in about 15 or 20 practices before
+
+276
+00:21:47,333 --> 00:21:53,933
+the national program for IT saw fit to put
+a halt on GPs acquiring new systems.
+
+277
+00:21:56,533 --> 00:22:02,100
+And we would, if we got a report back
+of something happening strangely,
+
+278
+00:22:02,833 --> 00:22:07,467
+or John Kirby did because he was the
+person who was actually at the sharp
+
+279
+00:22:07,533 --> 00:22:12,167
+end of this, you went back and we got
+a report back that something was wrong.
+
+280
+00:22:13,333 --> 00:22:15,600
+And then you fixed it.
+
+281
+00:22:16,767 --> 00:22:17,767
+Yeah,
+
+282
+00:22:19,267 --> 00:22:24,133
+so this actually looks more advanced
+than many systems you see today.
+
+283
+00:22:26,200 --> 00:22:30,667
+So what happened, you mentioned
+that there were some political
+
+284
+00:22:31,867 --> 00:22:34,467
+decisions or whatever. What killed this?
+
+285
+00:22:34,533 --> 00:22:36,067
+Or was it bad marketing or?
+
+286
+00:22:36,133 --> 00:22:41,200
+A combination of, we weren't
+clever enough about marketing.
+
+287
+00:22:41,267 --> 00:22:44,900
+It was still being basically
+
+288
+00:22:45,800 --> 00:22:49,233
+funded from academic sources,
+which ran out,
+
+289
+00:22:50,033 --> 00:22:56,833
+and Hewlett Packard, who was in GALEN,
+our main industrial collaborator,
+
+290
+00:22:57,633 --> 00:23:02,100
+made a board level decision
+that it was more profitable to sell
+
+291
+00:23:03,300 --> 00:23:08,700
+ink cartridges than it was to build
+healthcare IT systems, literally,
+
+292
+00:23:10,467 --> 00:23:13,600
+And they closed down
+their health IT section,
+
+293
+00:23:13,667 --> 00:23:19,167
+which meant that their sponsor, we lost
+our industrial champion at that point.
+
+294
+00:23:19,833 --> 00:23:24,600
+The small company that we set up
+at the university to market this,
+
+295
+00:23:26,100 --> 00:23:29,933
+which was actually going quite well,
+as I say the Department of Health
+
+296
+00:23:30,000 --> 00:23:35,367
+had a national program for IT and said
+that nothing new would happen until they
+
+297
+00:23:35,433 --> 00:23:40,433
+decided what was going to happen and then
+it would happen in a more orderly way.
+
+298
+00:23:41,333 --> 00:23:46,567
+And getting a small company, there
+was a lot of competition in the field.
+
+299
+00:23:46,633 --> 00:23:51,933
+We didn't manage the commercialization
+as cleverly as it might have been.
+
+300
+00:23:53,067 --> 00:23:56,900
+And for all the other
+same reasons that GALEN…
+
+301
+00:23:56,967 --> 00:24:02,267
+in the event, SNOMED won
+the competition with GALEN.
+
+302
+00:24:05,300 --> 00:24:09,733
+So there was a lot of interest,
+but it never quite…
+
+303
+00:24:09,800 --> 00:24:15,233
+then there were a whole series
+of attempts to commercialize it later
+
+304
+00:24:15,767 --> 00:24:17,933
+that came … a proper.
+
+305
+00:24:18,567 --> 00:24:22,200
+No sooner did we have it sold
+to a company than the company,
+
+306
+00:24:22,267 --> 00:24:26,933
+just before they actually signed the check
+was taken over by another company
+
+307
+00:24:27,000 --> 00:24:29,967
+and we would spend another year discussing
+
+308
+00:24:30,833 --> 00:24:37,833
+with the people in that company who would
+go off, and this happened repeatedly.
+
+309
+00:24:39,733 --> 00:24:45,100
+There was a Canadian company
+that was interested called Synergy.
+
+310
+00:24:45,167 --> 00:24:50,200
+There was a West Coast company whose
+name I forget and then much more
+
+311
+00:24:50,267 --> 00:24:54,867
+recently we worked with Siemens Health
+before they were taken over by Cerner.
+
+312
+00:24:56,300 --> 00:25:03,300
+All of these, that was a slightly
+different project,
+
+313
+00:25:03,667 --> 00:25:07,200
+but I think it takes
+a great deal of both luck.
+
+314
+00:25:07,267 --> 00:25:11,267
+And I think, realistically,
+I'm not a businessman, I'm an academic.
+
+315
+00:25:11,933 --> 00:25:13,933
+But, you know…
+
+316
+00:25:15,133 --> 00:25:22,133
+If I had been Bill Gates,
+maybe it would have worked.
+
+317
+00:25:22,400 --> 00:25:26,000
+What about, do you think, we can
+get into that in the fourth part
+
+318
+00:25:26,067 --> 00:25:29,933
+when we talk about future,
+but if we had gone the open source
+
+319
+00:25:30,000 --> 00:25:34,667
+approach, if that would have
+been more of a thing by then.
+
+320
+00:25:34,733 --> 00:25:40,567
+That was one of the conflicts.
+GALEN was committed to being open source.
+
+321
+00:25:42,133 --> 00:25:45,800
+But we were trying to fund
+it with a subscription
+
+322
+00:25:47,733 --> 00:25:54,067
+model with companies, and the model
+just didn't prove viable at that time,
+
+323
+00:25:54,133 --> 00:26:00,000
+particularly when the lead company,
+Hewlett Packard, had ceased to exist.
+
+324
+00:26:01,367 --> 00:26:04,433
+The person who was supposed to be doing
+
+325
+00:26:05,567 --> 00:26:10,600
+the persuasion for us,
+the companies, to take this up,
+
+326
+00:26:10,667 --> 00:26:17,567
+was basically seconded to us
+from HP and had those skills,
+
+327
+00:26:20,233 --> 00:26:23,300
+and he disappeared when HP disappeared.
+
+328
+00:26:25,133 --> 00:26:28,567
+So by looking at this user interface here,
+
+329
+00:26:30,467 --> 00:26:37,467
+today or at least some years ago,
+there's been a discussion about the awful
+
+330
+00:26:38,567 --> 00:26:44,133
+EHR user interfaces and 'death
+by a thousand clicks' has been the...
+
+331
+00:26:45,967 --> 00:26:50,367
+and I believe that maybe not all
+clicks are created equal.
+
+332
+00:26:51,800 --> 00:26:57,933
+So what was the user acceptance
+of this way of documenting in the...
+
+333
+00:26:59,233 --> 00:27:03,067
+It's unfair for me to say it because
+the users who actually bought...
+
+334
+00:27:03,133 --> 00:27:07,800
+it was built with users and the users
+it was built with and the practices
+
+335
+00:27:07,867 --> 00:27:13,467
+that purchased it and the installations
+we had mostly loved it.
+
+336
+00:27:15,867 --> 00:27:20,300
+There were disagreements within every
+practice and I would say within every
+
+337
+00:27:20,367 --> 00:27:26,100
+practice there was probably somebody
+who loathed it and who didn't use it.
+
+338
+00:27:27,033 --> 00:27:30,300
+Not everybody is alike in what they like.
+
+339
+00:27:30,367 --> 00:27:34,567
+And the thing that doesn't show
+up in this demonstration version
+
+340
+00:27:35,233 --> 00:27:42,033
+is that actually there were dozens of key
+combinations and keyboard shortcuts added
+
+341
+00:27:42,100 --> 00:27:44,700
+as we went along because at that time
+
+342
+00:27:44,767 --> 00:27:50,100
+the systems that were in use in general
+practice were all typing systems
+
+343
+00:27:50,167 --> 00:27:56,633
+and they all had dozens of keyboard
+shortcuts and the doctors became very,
+
+344
+00:27:56,700 --> 00:28:01,700
+very familiar with how to deal
+with a cold with three keyboard shortcuts.
+
+345
+00:28:02,633 --> 00:28:03,800
+And there's no way actually,
+
+346
+00:28:03,867 --> 00:28:06,933
+with a point-and-click interface,
+you can be as quick as that.
+
+347
+00:28:07,900 --> 00:28:14,900
+And the things they did absolutely
+every day, five times a day,
+
+348
+00:28:15,100 --> 00:28:20,967
+they wanted them absolutely quick.
+And we produced forms for some of those,
+
+349
+00:28:21,967 --> 00:28:26,600
+and they liked the prescribing
+section -that we don't have on this.
+
+350
+00:28:26,667 --> 00:28:29,400
+This was the thing they liked
+best because that gave them
+
+351
+00:28:29,467 --> 00:28:34,967
+their favorite prescriptions immediately,
+and, and with an absolute minimum of fuss.
+
+352
+00:28:36,000 --> 00:28:38,467
+And they liked the summarization.
+
+353
+00:28:40,867 --> 00:28:44,533
+Most of them liked,
+some of them just didn't like mice.
+
+354
+00:28:44,600 --> 00:28:47,333
+And as I say, people
+were much less familiar.
+
+355
+00:28:47,833 --> 00:28:51,733
+It was obvious that for some people
+touch screens would have been much nicer,
+
+356
+00:28:51,800 --> 00:28:53,267
+but we didn't have them.
+
+357
+00:28:54,333 --> 00:28:57,167
+I don't, but, I don't know
+if that's really true.
+
+358
+00:28:58,133 --> 00:29:03,067
+We learned very much the hard way
+in doing experiments with people
+
+359
+00:29:03,133 --> 00:29:07,267
+that what people tell you they want
+and you try and give it to them,
+
+360
+00:29:08,500 --> 00:29:12,667
+you soon find that actually when you've
+given them what they've asked for,
+
+361
+00:29:13,833 --> 00:29:18,267
+it turns out that it didn't really
+solve their problem after all.
+
+362
+00:29:18,333 --> 00:29:22,600
+You have to think, you have to look.
+We ended up with the slogan,
+
+363
+00:29:22,667 --> 00:29:25,833
+“the user's always right,
+but they're usually wrong”.
+
+364
+00:29:28,500 --> 00:29:32,700
+What they were asking for was a very
+good indication of what you had wrong.
+
+365
+00:29:34,367 --> 00:29:38,733
+What wasn't working for them, and they
+were asking for a solution to a problem.
+
+366
+00:29:40,533 --> 00:29:43,767
+Their best idea of a solution
+wasn't always the best idea,
+
+367
+00:29:43,833 --> 00:29:48,900
+and maybe there wasn't a solution within
+the things that were available to us.
+
+368
+00:29:48,967 --> 00:29:52,567
+And the other thing that happened
+to it, it was just ahead of the game,
+
+369
+00:29:53,500 --> 00:29:59,433
+that the technology didn't
+go in this direction rapidly
+
+370
+00:29:59,500 --> 00:30:02,433
+and maintaining this kind of an interface.
+
+371
+00:30:02,500 --> 00:30:08,033
+I'm amazed at the job
+that the Clinergy team did
+
+372
+00:30:08,733 --> 00:30:14,667
+in reducing this to run on [Windows] XP.
+We weren't sure it could be done.
+
+373
+00:30:16,233 --> 00:30:20,200
+And the fact that they actually
+managed to pull this off.
+
+374
+00:30:20,267 --> 00:30:26,967
+People were also terribly
+afraid of, it wasn't Read codes,
+
+375
+00:30:27,033 --> 00:30:33,867
+though it selected Read codes.
+And there was an index file,
+
+376
+00:30:35,367 --> 00:30:40,767
+which held the transformation between
+what you created and what you put in.
+
+377
+00:30:40,833 --> 00:30:43,300
+And people were terribly
+afraid you'd lose it,
+
+378
+00:30:44,600 --> 00:30:46,967
+and some of the technical
+people were terribly afraid
+
+379
+00:30:47,033 --> 00:30:50,767
+that this would go missing,
+which nobody would worry about today.
+
+380
+00:30:51,567 --> 00:30:55,167
+There's this sort of back and forth
+cross-referencing of files that just
+
+381
+00:30:55,233 --> 00:30:58,167
+everything contains today.
+Just the way things work.
+
+382
+00:30:59,833 --> 00:31:06,633
+So I think there were lots of reasons,
+but lots of academic ideas don't
+
+383
+00:31:06,700 --> 00:31:09,767
+work and don't get commercialized
+
+384
+00:31:09,833 --> 00:31:14,167
+and don't actually succeed and you need
+a lot of luck and we didn't have it.
+
+385
+00:31:14,233 --> 00:31:17,167
+Or maybe you need a lot
+of skill and we didn't have it.
+
+386
+00:31:17,667 --> 00:31:22,167
+And sometimes they're ahead of their time
+and they can pop up again in other forms
+
+387
+00:31:23,033 --> 00:31:25,133
+with other tools and in another setting.
+
+388
+00:31:25,700 --> 00:31:32,000
+Yes, and I mean much of the technology
+now, that we have struggled with is easy.
+
+389
+00:31:32,733 --> 00:31:37,167
+In some ways maybe it's harder
+because you don't have a blank slate.
+
+390
+00:31:38,600 --> 00:31:40,867
+We'll stop this part of the recording now.
+
+391
+00:31:40,933 --> 00:31:44,767
+The next part will be about how
+you did user experience stuff,
+
+392
+00:31:46,467 --> 00:31:50,633
+and the third part will be about
+the technology underneath,
+
+393
+00:31:50,700 --> 00:31:54,433
+a little bit nerdy
+with terminology systems.
+
+394
+00:31:54,500 --> 00:31:56,567
+We've talked quite a bit
+about some of the things.
+
+395
+00:31:56,633 --> 00:31:58,667
+I'll make the next part fairly brief.
+
+396
+00:32:01,400 --> 00:32:04,167
+We didn't mention the...
+
+397
+00:32:04,233 --> 00:32:08,033
+I think there are Read codes
+on the black screen there.
+
+398
+00:32:10,033 --> 00:32:11,733
+So I don't know if that...
+
+399
+00:32:12,467 --> 00:32:13,567
+Accept here.
+
+400
+00:32:14,933 --> 00:32:16,933
+Show Read codes. F6.
+
+401
+00:32:17,000 --> 00:32:21,233
+And there's something… It pops up little
+things between square brackets here.
+
+402
+00:32:21,300 --> 00:32:23,433
+Yes, that actually should have been shown.
+
+403
+00:32:25,667 --> 00:32:30,667
+At that point, it was essential
+in the UK by law to show Read codes.
+
+404
+00:32:30,733 --> 00:32:33,533
+The same technique
+for selecting Read codes,
+
+405
+00:32:34,433 --> 00:32:38,600
+essentially as we advocate
+for selecting ICD codes today.
+
+406
+00:32:38,667 --> 00:32:43,267
+It's the same problem and the same issue.
+
+407
+00:32:43,333 --> 00:32:46,300
+And we weren't able to influence…
+
+408
+00:32:46,367 --> 00:32:52,200
+we had hoped to collaborate with Read,
+but that didn't work, so we attached them.

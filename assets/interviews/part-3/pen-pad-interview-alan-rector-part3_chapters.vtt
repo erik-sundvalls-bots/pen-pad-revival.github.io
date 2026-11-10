@@ -1,0 +1,57 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:02:04.000
+The technology and semantics underneath: tailoring forms beyond hand programming meets knowledge representation
+
+2
+00:02:04.000 --> 00:04:53.000
+SMK, later GRAIL - a language for 'conceptual Lego'; frame systems and tangled semantic networks
+
+3
+00:04:53.000 --> 00:07:07.000
+Inheriting the most specific things and collecting them onto a form (the hypertension example)
+
+4
+00:07:07.000 --> 00:09:20.000
+Extrinsics in GALEN, and normalizing the ontology: primitive trees stuck together with properties
+
+5
+00:09:20.000 --> 00:13:17.000
+Pulling apart part-whole, function and structure - primitive hierarchies without exceptions (supernumerary fingers, dextrocardia: 'it's biology, not physics')
+
+6
+00:13:17.000 --> 00:16:11.000
+Classifiers and most specific generalizations (more in the 'On beyond Gruber' paper)
+
+7
+00:16:11.000 --> 00:18:42.000
+Collecting forms, treatments and codes (ICD, Read codes); negation in description logics and the need for queries
+
+8
+00:18:42.000 --> 00:21:32.000
+Querying an OWL ontology - the 'hypertension not in pregnancy' trap
+
+9
+00:21:32.000 --> 00:24:58.000
+Why check after classification? Errors propagate - getting the foot out of the pelvis in SNOMED
+
+10
+00:24:58.000 --> 00:28:49.000
+12 hours per classifier run - regression queries 'just like software testing'; user interfaces and language generation as QA
+
+11
+00:28:49.000 --> 00:34:02.000
+Pre- or post-coordination? Clean, normalized hierarchies; axioms vs generalizations (penicillins, Tweety the bird)
+
+12
+00:34:02.000 --> 00:35:51.000
+Modular ontologies and property patterns - contributions to OWL
+
+13
+00:35:51.000 --> 00:40:10.000
+Final words for techies: the same technique in ICD-11, queries to coordinate SNOMED and ICD, 'rigid' properties
+
+14
+00:40:10.000 --> 00:40:16.240
+The end

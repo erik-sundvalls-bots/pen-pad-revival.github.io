@@ -1,0 +1,525 @@
+nav:
+- id: part1
+  number: 1
+  url: /interviews/alan-rector-part-1/
+- id: part2
+  number: 2
+  url: /interviews/alan-rector-part-2/
+- id: part3
+  number: 3
+  url: /interviews/alan-rector-part-3/
+- id: part4
+  number: 4
+  url: /interviews/alan-rector-part-4/
+part1:
+  number: 1
+  title: Intro & Demo of PEN&PAD
+  intro: Alan Rector, a central researcher in the PEN&PAD approach to electronic health records, in a conversation with Erik
+    Sundvall and Daniel Karlsson.
+  bullets:
+  - Who is Alan Rector and how did he get involved in this?
+  - What was PEN&PAD? (Including live demo of the PEN & PAD-based Clinergy user interface)
+  - Where did it lead?
+  being_edited: false
+  coming_soon: false
+  chapters_provisional: false
+  slides_first: false
+  transcript: true
+  captions:
+    vtt: /assets/interviews/part-1/pen-pad-interview-alan-rector-part1.en.vtt
+    srt: /assets/interviews/part-1/pen-pad-interview-alan-rector-part1.en.srt
+    txt: /assets/interviews/part-1/pen-pad-interview-alan-rector-part1_transcript.txt
+    chapters_vtt: /assets/interviews/part-1/pen-pad-interview-alan-rector-part1_chapters.vtt
+  chapters:
+  - label: "0:00"
+    seek: 0
+    text: Who is Alan Rector and how did he get involved in this? An innovative research environment.
+    transcript_id: t-00-00
+  - label: '1:23'
+    seek: 83
+    text: '''Expert systems'' for clinicians - ''bonkers idea'' - but the user centered research gave birth to the PEN&PAD
+      approach.'
+    transcript_id: t-00-17
+  - label: '4:21'
+    seek: 261
+    text: (Anecdote - the Arnold Schwarzenegger laptop)
+    transcript_id: t-04-21
+  - label: '5:12'
+    seek: 312
+    text: User centered design + the "swiss army knife" of knowledge representation (description logics, GALEN etc.)
+    transcript_id: t-04-25
+  - label: '6:33'
+    seek: 393
+    text: The ICD-11 project and it's relation to SNOMED CT
+    transcript_id: t-06-22
+  - label: '11:25'
+    seek: 685
+    text: Live demo of the PEN & PAD-based Clinergy user interface, explained by Alan
+    transcript_id: t-11-13
+  - label: '22:19'
+    seek: 1339
+    text: Was it used? What eventually killed PEN&PAD and GALEN commercially?
+    transcript_id: t-22-16
+  - label: '25:24'
+    seek: 1524
+    text: What about user Acceptance? Could 'death by a thousand clicks' be avoided? Different user preferences, keyboard
+      shortcuts etc.
+    transcript_id: t-25-22
+  - label: '28:58'
+    seek: 1738
+    text: '''The user is always right, but they are usually wrong'''
+    transcript_id: t-28-07
+  - label: '29:49'
+    seek: 1789
+    text: Ahead of it's time & technological challenges. + Info about interview parts 2 & 3
+    transcript_id: t-29-18
+  - label: '31:58'
+    seek: 1918
+    text: About generating 'Read codes' (Bonus track)
+    transcript_id: t-31-54
+  - label: '32:53'
+    seek: 1973
+    text: The end
+    transcript_id: t-32-21
+  overlays: []
+  archive:
+    id: pen-pad-interview-alan-rector-part1
+    details: https://archive.org/details/pen-pad-interview-alan-rector-part1
+    mp4: https://archive.org/download/pen-pad-interview-alan-rector-part1/pen-pad-interview-alan-rector-part1_1080p.mp4
+    srt: https://archive.org/download/pen-pad-interview-alan-rector-part1/pen-pad-interview-alan-rector-part1.en.srt
+    vtt: https://archive.org/download/pen-pad-interview-alan-rector-part1/pen-pad-interview-alan-rector-part1.en.vtt
+    txt: https://archive.org/download/pen-pad-interview-alan-rector-part1/pen-pad-interview-alan-rector-part1_transcript.txt
+  youtube_secondary: https://youtu.be/PGEAmJJ4frU
+part2:
+  number: 2
+  title: The User Centered Design Process, Human Factors, Problem & Solution Space
+  intro: Alan Rector, a central researcher in the PEN&PAD approach to electronic health records, in a conversation with Erik
+    Sundvall and Daniel Karlsson.
+  being_edited: false
+  coming_soon: false
+  chapters_provisional: false
+  slides_first: false
+  transcript: true
+  poster: /assets/interviews/part-2/title.png
+  captions:
+    vtt: /assets/interviews/part-2/pen-pad-interview-alan-rector-part2.en.vtt
+    srt: /assets/interviews/part-2/pen-pad-interview-alan-rector-part2.en.srt
+    txt: /assets/interviews/part-2/pen-pad-interview-alan-rector-part2_transcript.txt
+    chapters_vtt: /assets/interviews/part-2/pen-pad-interview-alan-rector-part2_chapters.vtt
+  chapters:
+  - label: "0:00"
+    seek: 0
+    text: 'How the user centered design ideas came about: workshops with GPs, programmers and psychologists'
+    transcript_id: t-00-01
+  - label: '1:53'
+    seek: 113
+    text: Photos from the workshops ('three ring circuses') - circular menus and radio buttons were a disaster; actors playing
+      patients
+    transcript_id: t-01-11
+  - label: '4:12'
+    seek: 252
+    text: Rapid prototyping in Smalltalk - 'cardboard' interfaces built before the guts behind them; useful and usable
+    transcript_id: t-04-12
+  - label: '5:33'
+    seek: 333
+    text: 'Summarizing the medical record: problem lists, graphs and timelines - ''exhaustive is the enemy of the useful'''
+    transcript_id: t-04-34
+  - label: '6:59'
+    seek: 419
+    text: Typing and Read codes by heart - fast paths for experienced users
+    transcript_id: t-06-58
+  - label: '8:21'
+    seek: 501
+    text: Tailoring to each doctor and practice - favourite prescriptions, and AI for personalization today?
+    transcript_id: t-08-23
+  - label: '10:16'
+    seek: 616
+    text: Different forms for different trials, CLEF - 'it's very easy to do things that aren't helpful'
+    transcript_id: t-10-02
+  - label: '12:00'
+    seek: 720
+    text: '''Death by a thousand clicks'' - throwing out a prototype isn''t painful. Low code/no code prototyping today? ''Essential.'''
+    transcript_id: t-11-52
+  - label: '13:22'
+    seek: 802
+    text: 'What works in general practice doesn''t work everywhere: geriatrics, radiologists and light boxes'
+    transcript_id: t-13-02
+  - label: '15:37'
+    seek: 937
+    text: One record system for the whole hospital and general practice? Modules and tailoring (cath lab, dermatology photos)
+    transcript_id: t-15-38
+  - label: '17:29'
+    seek: 1049
+    text: Individual options per doctor, and typing or voice into a big tree - record exactly what was said, or offer alternatives?
+    transcript_id: t-17-04
+  - label: '21:56'
+    seek: 1316
+    text: '''Medicine is a humanly impossible task'' and a wicked problem - errors, interruptions and reminders'
+    transcript_id: t-21-56
+  - label: '25:16'
+    seek: 1516
+    text: You don't need a computer to fix everything (incompatible gas connectors, coloured syringes) - but slow deterioration
+      is hard to catch
+    transcript_id: t-25-16
+  - label: '27:50'
+    seek: 1670
+    text: The end
+    transcript_id: t-27-52
+  overlays:
+  - src: /assets/interviews/part-2/title.png
+    width: 1600
+    height: 900
+    alt: Title card for part 2 of the Alan Rector PEN&PAD interview
+    shown: "0:00-0:06"
+    caption: Title card.
+    seek: 0
+  - kind: note
+    shown: "2:04-2:20 and 2:24-2:42"
+    caption: Workshop photographs are shown in the video at these times and are not republished on this page.
+    seek: 124
+  - src: /assets/interviews/part-2/pie.png
+    width: 1600
+    height: 900
+    alt: Slide comparing circular menus, radio buttons, and large square buttons
+    shown: "2:55-3:20"
+    caption: Pie menus and radio buttons - ruled out.
+    credit: 'Options: ''Character'' row of a pain form shown in the demo in interview part 1. Quotes: Alan Rector, PEN&PAD
+      interview (parts 1 and 2).
+
+      Widgets redrawn, not screenshots.
+
+      Graphic: PEN&PAD revival project, CC0'
+    seek: 175
+  - src: /assets/interviews/part-2/alto.jpg
+    width: 1600
+    height: 900
+    alt: Photograph of a Xerox Alto workstation
+    shown: "4:12.4-4:17"
+    caption: Xerox Alto (1973).
+    credit: 'Xerox Alto (1973), the Xerox PARC workstation on which Smalltalk was developed. Photo: Michael Hicks, CC BY 2.0'
+    seek: 252.4
+  - src: /assets/interviews/part-2/smalltalk-80.png
+    width: 1600
+    height: 900
+    alt: Smalltalk-80 system browser
+    shown: "4:17-4:25"
+    caption: Smalltalk-80 system browser.
+    credit: Smalltalk-80 system browser (own session in the CHM Smalltalk Zoo emulator).
+    seek: 257
+  - src: /assets/interviews/part-2/smalltalk-vs-cpp.png
+    width: 1600
+    height: 900
+    alt: Slide comparing the Smalltalk-80 and C++ change cycle
+    shown: "4:25-4:40"
+    caption: Change a line of code - then what?
+    credit: 'Sources: A. Goldberg, Smalltalk-80: The Interactive Programming Environment (1984), preface; J. Lakos, Large-Scale
+      C++ Software Design (1996), ch. 0 & 6.
+
+      Graphic: PEN&PAD revival project, CC0'
+    seek: 265
+  - src: /assets/interviews/part-2/clinergy.png
+    width: 1600
+    height: 900
+    alt: Clinergy screen from the PEN&PAD demo
+    shown: "5:45-6:00"
+    caption: Clinergy.
+    credit: 'Frame from the PEN&PAD demo in interview part 1.
+
+      Clinergy
+
+      The commercial implementation of PEN&PAD as a front end for existing GP systems'
+    seek: 345
+  - src: /assets/interviews/part-2/read-codes.png
+    width: 1600
+    height: 900
+    alt: 'Slide: Read codes, CTV3 and SNOMED CT'
+    shown: "7:02-7:30"
+    caption: Read codes, CTV3 and SNOMED CT.
+    credit: 'Sources: NHS England Digital, digital.nhs.uk/services/terminology-and-classifications/read-codes; NLM, nlm.nih.gov/healthit/snomedct/snomed_overview.html.
+      Quote: Alan Rector, PEN&PAD interview.
+
+      Graphic: PEN&PAD revival project, CC0'
+    seek: 422
+  - src: /assets/interviews/part-2/clef.png
+    width: 1600
+    height: 900
+    alt: 'Slide: CLEF, Clinical e-Science Framework'
+    shown: "10:46-11:01"
+    caption: CLEF - Clinical e-Science Framework.
+    credit: 'Sources: Kalra D et al., Methods Inf Med 2005 (PMID 15924174); Roberts A et al., AMIA 2007 (PMID 18693911); Rector
+      A et al., UK e-Science All Hands Meeting 2003 (discovery.ucl.ac.uk/id/eprint/1586); Zagon, Taweel & Rector, ERCIM News
+      60 (2005); users.sussex.ac.uk/~drs22/projects/CLEF. Quote: Alan Rector, PEN&PAD interview.
+
+      Graphic: PEN&PAD revival project, CC0'
+    seek: 646
+  archive:
+    id: pen-pad-interview-alan-rector-part2
+    details: https://archive.org/details/pen-pad-interview-alan-rector-part2
+    mp4: https://archive.org/download/pen-pad-interview-alan-rector-part2/pen-pad-interview-alan-rector-part2_1080p.mp4
+    srt: https://archive.org/download/pen-pad-interview-alan-rector-part2/pen-pad-interview-alan-rector-part2.en.srt
+    vtt: https://archive.org/download/pen-pad-interview-alan-rector-part2/pen-pad-interview-alan-rector-part2.en.vtt
+    txt: https://archive.org/download/pen-pad-interview-alan-rector-part2/pen-pad-interview-alan-rector-part2_transcript.txt
+part3:
+  number: 3
+  title: Technical details, terminology systems, ontologies and logic
+  intro: Alan Rector, a central researcher in the PEN&PAD approach to electronic health records, in a conversation with Erik
+    Sundvall and Daniel Karlsson.
+  being_edited: false
+  coming_soon: false
+  chapters_provisional: false
+  slides_first: true
+  transcript: true
+  chapters:
+  - label: "0:00"
+    seek: 0
+    text: 'The technology and semantics underneath: tailoring forms beyond hand programming meets knowledge representation'
+    transcript_id: t-00-01
+  - label: '2:04'
+    seek: 124
+    text: SMK, later GRAIL - a language for 'conceptual Lego'; frame systems and tangled semantic networks
+    transcript_id: t-01-31
+  - label: '4:53'
+    seek: 293
+    text: Inheriting the most specific things and collecting them onto a form (the hypertension example)
+    transcript_id: t-04-53
+  - label: '7:07'
+    seek: 427
+    text: 'Extrinsics in GALEN, and normalizing the ontology: primitive trees stuck together with properties'
+    transcript_id: t-07-08
+  - label: '9:20'
+    seek: 560
+    text: 'Pulling apart part-whole, function and structure - primitive hierarchies without exceptions (supernumerary fingers,
+      dextrocardia: ''it''s biology, not physics'')'
+    transcript_id: t-09-20
+  - label: '13:17'
+    seek: 797
+    text: Classifiers and most specific generalizations (more in the 'On beyond Gruber' paper)
+    transcript_id: t-13-17
+  - label: '16:11'
+    seek: 971
+    text: Collecting forms, treatments and codes (ICD, Read codes); negation in description logics and the need for queries
+    transcript_id: t-16-11
+  - label: '18:42'
+    seek: 1122
+    text: Querying an OWL ontology - the 'hypertension not in pregnancy' trap
+    transcript_id: t-18-42
+  - label: '21:32'
+    seek: 1292
+    text: Why check after classification? Errors propagate - getting the foot out of the pelvis in SNOMED
+    transcript_id: t-21-32
+  - label: '24:58'
+    seek: 1498
+    text: 12 hours per classifier run - regression queries 'just like software testing'; user interfaces and language generation
+      as QA
+    transcript_id: t-25-00
+  - label: '28:49'
+    seek: 1729
+    text: Pre- or post-coordination? Clean, normalized hierarchies; axioms vs generalizations (penicillins, Tweety the bird)
+    transcript_id: t-28-49
+  - label: '34:02'
+    seek: 2042
+    text: Modular ontologies and property patterns - contributions to OWL
+    transcript_id: t-34-02
+  - label: '35:51'
+    seek: 2151
+    text: 'Final words for techies: the same technique in ICD-11, queries to coordinate SNOMED and ICD, ''rigid'' properties'
+    transcript_id: t-35-48
+  - label: '40:10'
+    seek: 2410
+    text: The end
+    transcript_id: t-40-10
+  overlays:
+  - src: /assets/interviews/part-3/title.png
+    width: 1600
+    height: 900
+    alt: Title card for part 3 of the Alan Rector PEN&PAD interview
+    caption: Title card for this part.
+  captions:
+    vtt: /assets/interviews/part-3/pen-pad-interview-alan-rector-part3.en.vtt
+    srt: /assets/interviews/part-3/pen-pad-interview-alan-rector-part3.en.srt
+    txt: /assets/interviews/part-3/pen-pad-interview-alan-rector-part3_transcript.txt
+    chapters_vtt: /assets/interviews/part-3/pen-pad-interview-alan-rector-part3_chapters.vtt
+  archive:
+    id: pen-pad-interview-alan-rector-part3
+    details: https://archive.org/details/pen-pad-interview-alan-rector-part3
+    mp4: https://archive.org/download/pen-pad-interview-alan-rector-part3/pen-pad-interview-alan-rector-part3_1080p.mp4
+    srt: https://archive.org/download/pen-pad-interview-alan-rector-part3/pen-pad-interview-alan-rector-part3.en.srt
+    vtt: https://archive.org/download/pen-pad-interview-alan-rector-part3/pen-pad-interview-alan-rector-part3.en.vtt
+    txt: https://archive.org/download/pen-pad-interview-alan-rector-part3/pen-pad-interview-alan-rector-part3_transcript.txt
+  poster: /assets/interviews/part-3/title.png
+part4:
+  number: 4
+  title: Lessons learned – how we’d do it today + some advice to those entering the health informatics space
+  intro: Alan Rector, a central researcher in the PEN&PAD approach to electronic health records, in a conversation with Erik
+    Sundvall and Daniel Karlsson.
+  being_edited: false
+  coming_soon: false
+  chapters_provisional: false
+  slides_first: true
+  transcript: true
+  chapters:
+  - label: "0:00"
+    seek: 0
+    text: How would you do this today? Where do SNOMED CT, openEHR archetypes, HL7 FHIR and queries fit in? (The 'propeller'
+      paper)
+    transcript_id: t-00-01
+  - label: "0:48"
+    seek: 48
+    text: 'Terminology is just one part of the system: concept model, information/EHR model and inference model - coordinated,
+      but not the same thing'
+    transcript_id: t-00-48
+  - label: '4:19'
+    seek: 259
+    text: 'If doing it today: archetypes hung on a concept model? Grading and staging of cancers in a cancer trial project'
+    transcript_id: t-04-19
+  - label: '7:34'
+    seek: 454
+    text: openEHR, FHIR and finding the right granularity - 'I'd certainly use SNOMED if I were starting today'
+    transcript_id: t-07-34
+  - label: '8:37'
+    seek: 517
+    text: 'Query SNOMED rather than create new concepts. Lessons from the ICD-11 project: statistics need stability, and ICD
+      wouldn''t work for PEN&PAD'
+    transcript_id: t-08-38
+  - label: '14:20'
+    seek: 860
+    text: 'Building on SNOMED: watch out for primitives with more than one parent, and terminologies built by committee'
+    transcript_id: t-14-20
+  - label: '18:02'
+    seek: 1082
+    text: 'Redoing PEN&PAD today: rethink user centered design for touch screens, pens, voice and natural language - ''Is
+      this what you meant?'''
+    transcript_id: t-18-03
+  - label: '22:51'
+    seek: 1371
+    text: Don't make one thing serve too many purposes (HL7 V3 prescriptions) - a flexible combination of modules
+    transcript_id: t-22-52
+  - label: '26:27'
+    seek: 1587
+    text: Centering the record on the patient, and language generation for clinicians and for patients
+    transcript_id: t-25-36
+  - label: '29:44'
+    seek: 1784
+    text: Sharing records between institutions and departments - find the nugget that needs to be transmitted; how do you
+      summarize?
+    transcript_id: t-29-46
+  - label: '35:19'
+    seek: 2119
+    text: Systems built out of bits and pieces - lessons from SGML and HTML ('Page not found')
+    transcript_id: t-35-20
+  - label: '39:58'
+    seek: 2398
+    text: Advice to students coming into health informatics from the computer or the medical side - talk to psychologists,
+      nurses and junior doctors
+    transcript_id: t-39-59
+  - label: '48:04'
+    seek: 2884
+    text: 'Alan''s acknowledgements: the PEN&PAD, GALEN and OWL teams'
+    transcript_id: t-48-04
+  - label: '49:50'
+    seek: 2990
+    text: The end
+    transcript_id: t-49-31
+  overlays:
+  - src: /assets/interviews/part-4/title.png
+    width: 1600
+    height: 900
+    alt: Title card for part 4 of the Alan Rector PEN&PAD interview
+    shown: "0:00-0:06"
+    caption: Title card.
+    seek: 0
+  - src: /assets/interviews/part-4/propeller-slide.jpg
+    width: 1600
+    height: 900
+    alt: 'Alan Rector''s "propeller" slide: three information models for clinical systems'
+    shown: "0:46-1:00"
+    caption: 'The "propeller" paper – Rector, Rogers & Taweel 2004 (PMID 15360779): three kinds of model a clinical system
+      needs. Zooms on the diagram (concept, data, information/EHR, interface and inference models) follow until 5:00.'
+    credit: Frame from the interview recording (slide shows Fig. 1 of Rector, Rogers & Taweel 2004, PMID 15360779).
+    seek: 46
+  - src: /assets/interviews/part-4/openehr-archetypes-A39.png
+    width: 1600
+    height: 900
+    alt: 'Erik Sundvall slide: template, archetypes and form in openEHR'
+    shown: "4:22-4:41"
+    caption: openEHR archetypes – reusable, clinician-designed models of clinical content; templates combine and configure
+      them for a use case.
+    credit: 'Slides: Erik Sundvall, CC BY 4.0'
+    seek: 262
+  - src: /assets/interviews/part-4/tnm-breast-T.png
+    width: 1600
+    height: 900
+    alt: Breast cancer T categories (simplified)
+    shown: "5:41-5:48"
+    caption: 'Breast cancer – T = tumour size: T1 up to 2 cm, T2 over 2–5 cm, T3 over 5 cm, T4 into chest wall or skin.'
+    credit: 'Simplified, after AJCC 8th ed. (as summarised in NCI PDQ); not for clinical use. Graphic: PEN&PAD revival project,
+      CC0'
+    seek: 341
+  - src: /assets/interviews/part-4/tnm-melanoma-T.png
+    width: 1600
+    height: 900
+    alt: Melanoma T categories by Breslow thickness (simplified)
+    shown: "5:48-5:56"
+    caption: 'Melanoma – T = Breslow thickness: 1 / 2 / 4 mm cut-offs; a/b = without/with ulceration.'
+    credit: 'Simplified, after AJCC 8th ed. (as summarised in NCI PDQ); not for clinical use. Graphic: PEN&PAD revival project,
+      CC0'
+    seek: 348
+  - src: /assets/interviews/part-4/tnm-compare.png
+    width: 1600
+    height: 900
+    alt: TNM letters compared for breast cancer and melanoma (simplified)
+    shown: "5:56-6:07"
+    caption: Same TNM letters, different rulers – so each cancer needs its own staging form and data structure.
+    credit: 'Simplified, after AJCC 8th ed. (as summarised in NCI PDQ); not for clinical use. Graphic: PEN&PAD revival project,
+      CC0'
+    seek: 356
+  - src: /assets/interviews/part-4/snomed-ct-B53.png
+    width: 1600
+    height: 900
+    alt: 'Erik Sundvall slide: SNOMED CT, an example of a polyhierarchy'
+    shown: "6:47-7:03"
+    caption: 'SNOMED CT – clinical terminology maintained by SNOMED International; formed (1999–2002) by merging SNOMED RT
+      with CTV3 (the former UK Read codes). A polyhierarchy: a concept can have several parents.'
+    credit: 'Slides: Erik Sundvall, CC BY 4.0'
+    seek: 407
+  - src: /assets/interviews/part-4/mesh.png
+    width: 1600
+    height: 900
+    alt: 'MeSH: one heading, several tree places (Melanoma)'
+    shown: "10:19-10:33"
+    caption: MeSH – NLM's hierarchical indexing vocabulary; one heading, several tree places (Melanoma); MeSH vs SNOMED CT
+      vs ICD purposes.
+    credit: 'Graphic: PEN&PAD revival project, CC0'
+    seek: 619
+  - src: /assets/interviews/part-4/icd.png
+    width: 1600
+    height: 900
+    alt: 'ICD: built for comparable statistics'
+    shown: "11:20-11:43"
+    caption: ICD – built for comparable statistics; ICD-11 adopted 2019, in effect 1 Jan 2022; 2026 roll-out status; Alan
+      on stability.
+    credit: 'Graphic: PEN&PAD revival project, CC0; photo (cropped) "World Health Organization Headquarters and Flag.jpg"
+      by United States Mission Geneva, CC BY 2.0, via Wikimedia Commons'
+    seek: 680
+  - kind: note
+    shown: "7:34-7:48"
+    caption: 'On-screen text: "openEHR – The inventors of the standard pronounce it like "open air". EHR = Electronic Health
+      Record" (from Erik Sundvall''s slide, CC BY 4.0).'
+    seek: 454
+  - kind: note
+    shown: "5:00-11:24"
+    caption: Speaker view enlarged from the small camera tiles (screen sharing was still on).
+    seek: 300
+  captions:
+    vtt: /assets/interviews/part-4/pen-pad-interview-alan-rector-part4.en.vtt
+    srt: /assets/interviews/part-4/pen-pad-interview-alan-rector-part4.en.srt
+    txt: /assets/interviews/part-4/pen-pad-interview-alan-rector-part4_transcript.txt
+    chapters_vtt: /assets/interviews/part-4/pen-pad-interview-alan-rector-part4_chapters.vtt
+  archive:
+    id: pen-pad-interview-alan-rector-part4
+    details: https://archive.org/details/pen-pad-interview-alan-rector-part4
+    mp4: https://archive.org/download/pen-pad-interview-alan-rector-part4/pen-pad-interview-alan-rector-part4_1080p.mp4
+    srt: https://archive.org/download/pen-pad-interview-alan-rector-part4/pen-pad-interview-alan-rector-part4.en.srt
+    vtt: https://archive.org/download/pen-pad-interview-alan-rector-part4/pen-pad-interview-alan-rector-part4.en.vtt
+    txt: https://archive.org/download/pen-pad-interview-alan-rector-part4/pen-pad-interview-alan-rector-part4_transcript.txt
+  poster: /assets/interviews/part-4/title.png

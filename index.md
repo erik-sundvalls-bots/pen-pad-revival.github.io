@@ -7,7 +7,9 @@ This is the humble beginning of a website for the PEN &amp; PAD revival communit
 ### A conversation with Alan Rector about PEN&PAD, recorded in 4 parts, October 21, 2021
 Alan Rector, a central researcher in the PEN&PAD approach to electronic health records, in a conversation with Erik Sundvall and Daniel Karlsson
 
-1. Intro & Demo of PEN&PAD - Now available at [https://youtu.be/PGEAmJJ4frU](https://youtu.be/PGEAmJJ4frU)
+The transcripts on the part pages were machine-assisted and then proofread, and they may still contain errors. Please send corrections as an [issue](https://github.com/pen-pad-revival/pen-pad-revival.github.io/issues/new) or a pull request on the transcript file in the [PEN&PAD revival site repository](https://github.com/pen-pad-revival/pen-pad-revival.github.io); each part page links to its file, and the subtitle files are regenerated from the transcript.
+
+1. [Intro & Demo of PEN&PAD](interviews/alan-rector-part-1/) - Now available at [https://youtu.be/PGEAmJJ4frU](https://youtu.be/PGEAmJJ4frU)
     * Who is Alan Rector and how did he get involved in this?
     * What was PEN&PAD? (Including live demo of the PEN & PAD-based Clinergy user interface)
     * Where did it lead?
@@ -24,7 +26,7 @@ Alan Rector, a central researcher in the PEN&PAD approach to electronic health r
         * [29:49](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=1789s) Ahead of it's time & technological challenges. + Info about interview parts 2 & 3
         * [31:58](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=1918s) About generating 'Read codes' (Bonus track)
         * [32:53](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=1973s) The end
-2. The User Centered Design Process, Human Factors, Problem & Solution Space *- Being edited...*
+2. [The User Centered Design Process, Human Factors, Problem & Solution Space](interviews/alan-rector-part-2/)
     * Chapters (provisional times, will be checked against the final edit):
         * 0:00 How the user centered design ideas came about: workshops with GPs, programmers and psychologists
         * 1:53 Photos from the workshops ('three ring circuses') - circular menus and radio buttons were a disaster; actors playing patients
@@ -40,7 +42,7 @@ Alan Rector, a central researcher in the PEN&PAD approach to electronic health r
         * 21:56 'Medicine is a humanly impossible task' and a wicked problem - errors, interruptions and reminders
         * 25:16 You don't need a computer to fix everything (incompatible gas connectors, coloured syringes) - but slow deterioration is hard to catch
         * 27:50 The end
-3. Technical details, terminology systems, ontologies and logic *- Being edited...*
+3. [Technical details, terminology systems, ontologies and logic](interviews/alan-rector-part-3/)
     * Chapters (provisional times, will be checked against the final edit):
         * 0:00 The technology and semantics underneath: tailoring forms beyond hand programming meets knowledge representation
         * 2:04 SMK, later GRAIL - a language for 'conceptual Lego'; frame systems and tangled semantic networks
@@ -56,7 +58,7 @@ Alan Rector, a central researcher in the PEN&PAD approach to electronic health r
         * 34:02 Modular ontologies and property patterns - contributions to OWL
         * 35:51 Final words for techies: the same technique in ICD-11, queries to coordinate SNOMED and ICD, 'rigid' properties
         * 40:10 The end
-4. Lessons learned – how we’d do it today + some advice to those entering the health informatics space *- Being edited...*
+4. [Lessons learned – how we’d do it today + some advice to those entering the health informatics space](interviews/alan-rector-part-4/)
     * Chapters (provisional times, will be checked against the final edit):
         * 0:00 How would you do this today? Where do SNOMED CT, openEHR archetypes, HL7 FHIR and queries fit in? (The 'propeller' paper)
         * 0:48 Terminology is just one part of the system: concept model, information/EHR model and inference model - coordinated, but not the same thing

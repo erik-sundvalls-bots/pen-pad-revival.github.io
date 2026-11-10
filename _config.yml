@@ -1,0 +1,8 @@
+title: "PEN & PAD revival community"
+description: "Web site for the PEN & PAD revival community - https://pen-pad-revival.github.io"
+theme: jekyll-theme-primer
+exclude:
+  - vendor
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
