@@ -1,0 +1,57 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:48.000
+How would you do this today? Where do SNOMED CT, openEHR archetypes, HL7 FHIR and queries fit in? (The 'propeller' paper)
+
+2
+00:00:48.000 --> 00:04:19.000
+Terminology is just one part of the system: concept model, information/EHR model and inference model - coordinated, but not the same thing
+
+3
+00:04:19.000 --> 00:07:34.000
+If doing it today: archetypes hung on a concept model? Grading and staging of cancers in a cancer trial project
+
+4
+00:07:34.000 --> 00:08:37.000
+openEHR, FHIR and finding the right granularity - 'I'd certainly use SNOMED if I were starting today'
+
+5
+00:08:37.000 --> 00:14:20.000
+Query SNOMED rather than create new concepts. Lessons from the ICD-11 project: statistics need stability, and ICD wouldn't work for PEN&PAD
+
+6
+00:14:20.000 --> 00:18:02.000
+Building on SNOMED: watch out for primitives with more than one parent, and terminologies built by committee
+
+7
+00:18:02.000 --> 00:22:51.000
+Redoing PEN&PAD today: rethink user centered design for touch screens, pens, voice and natural language - 'Is this what you meant?'
+
+8
+00:22:51.000 --> 00:26:27.000
+Don't make one thing serve too many purposes (HL7 V3 prescriptions) - a flexible combination of modules
+
+9
+00:26:27.000 --> 00:29:44.000
+Centering the record on the patient, and language generation for clinicians and for patients
+
+10
+00:29:44.000 --> 00:35:19.000
+Sharing records between institutions and departments - find the nugget that needs to be transmitted; how do you summarize?
+
+11
+00:35:19.000 --> 00:39:58.000
+Systems built out of bits and pieces - lessons from SGML and HTML ('Page not found')
+
+12
+00:39:58.000 --> 00:48:04.000
+Advice to students coming into health informatics from the computer or the medical side - talk to psychologists, nurses and junior doctors
+
+13
+00:48:04.000 --> 00:49:50.000
+Alan's acknowledgements: the PEN&PAD, GALEN and OWL teams
+
+14
+00:49:50.000 --> 00:49:58.240
+The end

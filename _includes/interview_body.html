@@ -30,16 +30,13 @@
   {% endif %}
 
   <p class="license">The video, transcript and subtitles are licensed <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.</p>
+  {% if part.captions.txt %}
+  {% assign transcript_path = part.captions.txt | remove_first: "/" %}
+  <p>These transcripts were machine-assisted and then proofread, and they may still contain errors. You can help fix them by opening an <a href="https://github.com/pen-pad-revival/pen-pad-revival.github.io/issues/new?title=Transcript+correction%3A+part+{{ part.number }}">issue</a> or a <a href="https://github.com/pen-pad-revival/pen-pad-revival.github.io/edit/main/{{ transcript_path }}">pull request</a> for <a href="https://github.com/pen-pad-revival/pen-pad-revival.github.io/blob/main/{{ transcript_path }}">this part's transcript</a> in the <a href="https://github.com/pen-pad-revival/pen-pad-revival.github.io">PEN&amp;PAD revival site repository</a>. The SRT and WebVTT subtitles are regenerated from the corrected transcript in later updates, so please send corrections to the transcript rather than the subtitle files.</p>
+  {% endif %}
   <p class="meta">Zenodo DOI:{% capture zenodo_doi %}{{ page.zenodo_doi }}{% endcapture %}{% assign zenodo_doi = zenodo_doi | strip %}{% if zenodo_doi == "" %} <span class="unassigned">not assigned</span>{% else %} {{ zenodo_doi }}{% endif %}</p>
 
   <h2 id="video">Video</h2>
-  {% if page.show_youtube %}
-  <p>YouTube: <a href="https://youtu.be/{{ page.youtube_id }}">https://youtu.be/{{ page.youtube_id }}</a></p>
-  <div class="interview-video">
-    <iframe src="https://www.youtube.com/embed/{{ page.youtube_id }}" title="Part {{ part.number }}: {{ part.title }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
-  {% endif %}
-
   {% if page.archive_details_url %}
   <p>Internet Archive: <a href="{{ page.archive_details_url }}">{{ page.archive_details_url }}</a>
     {% unless page.show_archive_embed %}<span class="unassigned">(embed switched off until this item is live)</span>{% endunless %}
@@ -68,6 +65,15 @@
   {% endif %}
   {% endif %}
 
+  {% if part.archive %}
+  <p class="meta">On the Internet Archive (ad-free): <a href="{{ part.archive.details }}">item page</a>
+    · <a href="{{ part.archive.mp4 }}">MP4 1080p</a>
+    · <a href="{{ part.archive.srt }}">SRT</a> · <a href="{{ part.archive.vtt }}">WebVTT</a> · <a href="{{ part.archive.txt }}">transcript</a></p>
+  {% endif %}
+  {% if part.youtube_secondary %}
+  <p class="meta">Also on YouTube: <a href="{{ part.youtube_secondary }}">{{ part.youtube_secondary }}</a></p>
+  {% endif %}
+
   {% if part.captions %}
   <p>Subtitles and transcript file (CC BY 4.0):
     {% if part.captions.vtt %}<a href="{{ part.captions.vtt | relative_url }}">WebVTT</a>{% endif %}
@@ -77,7 +83,7 @@
   </p>
   {% endif %}
 
-  {% unless page.show_youtube or page.archive_details_url %}
+  {% unless page.archive_details_url %}
   <p>No video has been published for this part.</p>
   {% endunless %}
 
@@ -95,7 +101,7 @@
       {% if chapter.video_url %}
         <a href="{{ chapter.video_url }}">{{ chapter.label }}</a>
       {% elsif page.show_archive_embed and archive_video_url != "" %}
-        <a class="chapter-time" href="#interview-video" data-start="{{ chapter.seek }}">{{ chapter.label }}</a>
+        <a class="chapter-time" href="#t={{ chapter.seek }}" data-start="{{ chapter.seek }}">{{ chapter.label }}</a>
       {% else %}
         <a href="#chapter-{{ forloop.index }}">{{ chapter.label }}</a>
       {% endif %}
@@ -119,6 +125,10 @@
       {% include transcripts/part1.html %}
     {% elsif page.part_id == "part2" %}
       {% include transcripts/part2.html %}
+    {% elsif page.part_id == "part3" %}
+      {% include transcripts/part3.html %}
+    {% elsif page.part_id == "part4" %}
+      {% include transcripts/part4.html %}
     {% endif %}
   </div>
   {% endif %}
