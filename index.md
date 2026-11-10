@@ -9,71 +9,128 @@ Alan Rector, a central researcher in the PEN&PAD approach to electronic health r
 
 The transcripts on the part pages were machine-assisted and then proofread, and they may still contain errors. Please send corrections as an [issue](https://github.com/pen-pad-revival/pen-pad-revival.github.io/issues/new) or a pull request on the transcript file in the [PEN&PAD revival site repository](https://github.com/pen-pad-revival/pen-pad-revival.github.io); each part page links to its file, and the subtitle files are regenerated from the transcript.
 
-1. [Intro & Demo of PEN&PAD](interviews/alan-rector-part-1/) - Now available at [https://youtu.be/PGEAmJJ4frU](https://youtu.be/PGEAmJJ4frU)
-    * Who is Alan Rector and how did he get involved in this?
-    * What was PEN&PAD? (Including live demo of the PEN & PAD-based Clinergy user interface)
-    * Where did it lead?
-    * Chapters:
-        * [0:00](https://www.youtube.com/watch?v=PGEAmJJ4frU) Who is Alan Rector and how did he get involved in this? An innovative research environment.
-        * [1:23](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=83s) 'Expert systems' for clinicians - 'bonkers idea' - but the user centered research gave birth to the PEN&PAD approach.
-        * [4:21](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=261s) (Anecdote - the Arnold Schwarzenegger laptop)
-        * [5:12](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=312s) User centered design + the "swiss army knife" of knowledge representation (description logics, GALEN etc.)
-        * [6:33](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=393s) The ICD-11 project and it's relation to SNOMED CT
-        * [11:25](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=685s) Live demo of the PEN & PAD-based Clinergy user interface, explained by Alan
-        * [22:19](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=1339s) Was it used? What eventually killed PEN&PAD and GALEN commercially?
-        * [25:24](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=1524s) What about user Acceptance? Could 'death by a thousand clicks' be avoided? Different user preferences, keyboard shortcuts etc.
-        * [28:58](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=1738s) 'The user is always right, but they are usually wrong'
-        * [29:49](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=1789s) Ahead of it's time & technological challenges. + Info about interview parts 2 & 3
-        * [31:58](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=1918s) About generating 'Read codes' (Bonus track)
-        * [32:53](https://www.youtube.com/watch?v=PGEAmJJ4frU&t=1973s) The end
-2. [The User Centered Design Process, Human Factors, Problem & Solution Space](interviews/alan-rector-part-2/)
-    * Chapters (provisional times, will be checked against the final edit):
-        * 0:00 How the user centered design ideas came about: workshops with GPs, programmers and psychologists
-        * 1:53 Photos from the workshops ('three ring circuses') - circular menus and radio buttons were a disaster; actors playing patients
-        * 4:12 Rapid prototyping in Smalltalk - 'cardboard' interfaces built before the guts behind them; useful and usable
-        * 5:33 Summarizing the medical record: problem lists, graphs and timelines - 'exhaustive is the enemy of the useful'
-        * 6:59 Typing and Read codes by heart - fast paths for experienced users
-        * 8:21 Tailoring to each doctor and practice - favourite prescriptions, and AI for personalization today?
-        * 10:16 Different forms for different trials, CLEF - 'it's very easy to do things that aren't helpful'
-        * 12:00 'Death by a thousand clicks' - throwing out a prototype isn't painful. Low code/no code prototyping today? 'Essential.'
-        * 13:22 What works in general practice doesn't work everywhere: geriatrics, radiologists and light boxes
-        * 15:37 One record system for the whole hospital and general practice? Modules and tailoring (cath lab, dermatology photos)
-        * 17:29 Individual options per doctor, and typing or voice into a big tree - record exactly what was said, or offer alternatives?
-        * 21:56 'Medicine is a humanly impossible task' and a wicked problem - errors, interruptions and reminders
-        * 25:16 You don't need a computer to fix everything (incompatible gas connectors, coloured syringes) - but slow deterioration is hard to catch
-        * 27:50 The end
-3. [Technical details, terminology systems, ontologies and logic](interviews/alan-rector-part-3/)
-    * Chapters (provisional times, will be checked against the final edit):
-        * 0:00 The technology and semantics underneath: tailoring forms beyond hand programming meets knowledge representation
-        * 2:04 SMK, later GRAIL - a language for 'conceptual Lego'; frame systems and tangled semantic networks
-        * 4:53 Inheriting the most specific things and collecting them onto a form (the hypertension example)
-        * 7:07 Extrinsics in GALEN, and normalizing the ontology: primitive trees stuck together with properties
-        * 9:20 Pulling apart part-whole, function and structure - primitive hierarchies without exceptions (supernumerary fingers, dextrocardia: 'it's biology, not physics')
-        * 13:17 Classifiers and most specific generalizations (more in the 'On beyond Gruber' paper)
-        * 16:11 Collecting forms, treatments and codes (ICD, Read codes); negation in description logics and the need for queries
-        * 18:42 Querying an OWL ontology - the 'hypertension not in pregnancy' trap
-        * 21:32 Why check after classification? Errors propagate - getting the foot out of the pelvis in SNOMED
-        * 24:58 12 hours per classifier run - regression queries 'just like software testing'; user interfaces and language generation as QA
-        * 28:49 Pre- or post-coordination? Clean, normalized hierarchies; axioms vs generalizations (penicillins, Tweety the bird)
-        * 34:02 Modular ontologies and property patterns - contributions to OWL
-        * 35:51 Final words for techies: the same technique in ICD-11, queries to coordinate SNOMED and ICD, 'rigid' properties
-        * 40:10 The end
-4. [Lessons learned – how we’d do it today + some advice to those entering the health informatics space](interviews/alan-rector-part-4/)
-    * Chapters (provisional times, will be checked against the final edit):
-        * 0:00 How would you do this today? Where do SNOMED CT, openEHR archetypes, HL7 FHIR and queries fit in? (The 'propeller' paper)
-        * 0:48 Terminology is just one part of the system: concept model, information/EHR model and inference model - coordinated, but not the same thing
-        * 4:19 If doing it today: archetypes hung on a concept model? Grading and staging of cancers in a cancer trial project
-        * 7:34 openEHR, FHIR and finding the right granularity - 'I'd certainly use SNOMED if I were starting today'
-        * 8:37 Query SNOMED rather than create new concepts. Lessons from the ICD-11 project: statistics need stability, and ICD wouldn't work for PEN&PAD
-        * 14:20 Building on SNOMED: watch out for primitives with more than one parent, and terminologies built by committee
-        * 18:02 Redoing PEN&PAD today: rethink user centered design for touch screens, pens, voice and natural language - 'Is this what you meant?'
-        * 22:51 Don't make one thing serve too many purposes (HL7 V3 prescriptions) - a flexible combination of modules
-        * 26:27 Centering the record on the patient, and language generation for clinicians and for patients
-        * 29:44 Sharing records between institutions and departments - find the nugget that needs to be transmitted; how do you summarize?
-        * 35:19 Systems built out of bits and pieces - lessons from SGML and HTML ('Page not found')
-        * 39:58 Advice to students coming into health informatics from the computer or the medical side - talk to psychologists, nurses and junior doctors
-        * 48:04 Alan's acknowledgements: the PEN&PAD, GALEN and OWL teams
-        * 49:50 The end
+<link rel="stylesheet" href="/assets/css/home-interviews.css">
+<section class="home-film" id="home-film-1">
+  <h4 class="home-film-title"><a href="interviews/alan-rector-part-1/">1. Intro &amp; Demo of PEN&amp;PAD</a></h4>
+  <ul class="home-film-points">
+    <li>Who is Alan Rector and how did he get involved in this?</li>
+    <li>What was PEN&amp;PAD? (Including live demo of the PEN &amp; PAD-based Clinergy user interface)</li>
+    <li>Where did it lead?</li>
+  </ul>
+  <div class="home-film-layout">
+    <div class="home-film-player">
+      <video id="home-film-player-1" controls preload="metadata" playsinline>
+        <source src="https://archive.org/download/pen-pad-interview-alan-rector-part1/pen-pad-interview-alan-rector-part1_1080p.mp4" type="video/mp4">
+        <track kind="subtitles" srclang="en" label="English" src="/assets/interviews/part-1/pen-pad-interview-alan-rector-part1.en.vtt" default>
+      </video>
+    </div>
+    <div class="home-film-chapters">
+      <ol>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=0" data-start="0"><span class="home-chapter-time">0:00</span> Who is Alan Rector and how did he get involved in this? An innovative research environment.</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=83" data-start="83"><span class="home-chapter-time">1:23</span> &#x27;Expert systems&#x27; for clinicians - &#x27;bonkers idea&#x27; - but the user centered research gave birth to the PEN&amp;PAD approach.</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=261" data-start="261"><span class="home-chapter-time">4:21</span> (Anecdote - the Arnold Schwarzenegger laptop)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=312" data-start="312"><span class="home-chapter-time">5:12</span> User centered design + the &quot;swiss army knife&quot; of knowledge representation (description logics, GALEN etc.)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=393" data-start="393"><span class="home-chapter-time">6:33</span> The ICD-11 project and it&#x27;s relation to SNOMED CT</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=685" data-start="685"><span class="home-chapter-time">11:25</span> Live demo of the PEN &amp; PAD-based Clinergy user interface, explained by Alan</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=1339" data-start="1339"><span class="home-chapter-time">22:19</span> Was it used? What eventually killed PEN&amp;PAD and GALEN commercially?</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=1524" data-start="1524"><span class="home-chapter-time">25:24</span> What about user Acceptance? Could &#x27;death by a thousand clicks&#x27; be avoided? Different user preferences, keyboard shortcuts etc.</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=1738" data-start="1738"><span class="home-chapter-time">28:58</span> &#x27;The user is always right, but they are usually wrong&#x27;</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=1789" data-start="1789"><span class="home-chapter-time">29:49</span> Ahead of it&#x27;s time &amp; technological challenges. + Info about interview parts 2 &amp; 3</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=1918" data-start="1918"><span class="home-chapter-time">31:58</span> About generating &#x27;Read codes&#x27; (Bonus track)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-1/#t=1973" data-start="1973"><span class="home-chapter-time">32:53</span> The end</a></li>
+      </ol>
+    </div>
+  </div>
+  <p class="home-film-also"><a href="https://youtu.be/PGEAmJJ4frU">Also on YouTube</a></p>
+</section>
+<section class="home-film" id="home-film-2">
+  <h4 class="home-film-title"><a href="interviews/alan-rector-part-2/">2. The User Centered Design Process, Human Factors, Problem &amp; Solution Space</a></h4>
+  <div class="home-film-layout">
+    <div class="home-film-player">
+      <video id="home-film-player-2" controls preload="metadata" playsinline>
+        <source src="https://archive.org/download/pen-pad-interview-alan-rector-part2/pen-pad-interview-alan-rector-part2_1080p.mp4" type="video/mp4">
+        <track kind="subtitles" srclang="en" label="English" src="/assets/interviews/part-2/pen-pad-interview-alan-rector-part2.en.vtt" default>
+      </video>
+    </div>
+    <div class="home-film-chapters">
+      <ol>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=0" data-start="0"><span class="home-chapter-time">0:00</span> How the user centered design ideas came about: workshops with GPs, programmers and psychologists</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=113" data-start="113"><span class="home-chapter-time">1:53</span> Photos from the workshops (&#x27;three ring circuses&#x27;) - circular menus and radio buttons were a disaster; actors playing patients</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=252" data-start="252"><span class="home-chapter-time">4:12</span> Rapid prototyping in Smalltalk - &#x27;cardboard&#x27; interfaces built before the guts behind them; useful and usable</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=333" data-start="333"><span class="home-chapter-time">5:33</span> Summarizing the medical record: problem lists, graphs and timelines - &#x27;exhaustive is the enemy of the useful&#x27;</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=419" data-start="419"><span class="home-chapter-time">6:59</span> Typing and Read codes by heart - fast paths for experienced users</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=501" data-start="501"><span class="home-chapter-time">8:21</span> Tailoring to each doctor and practice - favourite prescriptions, and AI for personalization today?</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=616" data-start="616"><span class="home-chapter-time">10:16</span> Different forms for different trials, CLEF - &#x27;it&#x27;s very easy to do things that aren&#x27;t helpful&#x27;</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=720" data-start="720"><span class="home-chapter-time">12:00</span> &#x27;Death by a thousand clicks&#x27; - throwing out a prototype isn&#x27;t painful. Low code/no code prototyping today? &#x27;Essential.&#x27;</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=802" data-start="802"><span class="home-chapter-time">13:22</span> What works in general practice doesn&#x27;t work everywhere: geriatrics, radiologists and light boxes</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=937" data-start="937"><span class="home-chapter-time">15:37</span> One record system for the whole hospital and general practice? Modules and tailoring (cath lab, dermatology photos)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=1049" data-start="1049"><span class="home-chapter-time">17:29</span> Individual options per doctor, and typing or voice into a big tree - record exactly what was said, or offer alternatives?</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=1316" data-start="1316"><span class="home-chapter-time">21:56</span> &#x27;Medicine is a humanly impossible task&#x27; and a wicked problem - errors, interruptions and reminders</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=1516" data-start="1516"><span class="home-chapter-time">25:16</span> You don&#x27;t need a computer to fix everything (incompatible gas connectors, coloured syringes) - but slow deterioration is hard to catch</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-2/#t=1670" data-start="1670"><span class="home-chapter-time">27:50</span> The end</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section class="home-film" id="home-film-3">
+  <h4 class="home-film-title"><a href="interviews/alan-rector-part-3/">3. Technical details, terminology systems, ontologies and logic</a></h4>
+  <div class="home-film-layout">
+    <div class="home-film-player">
+      <video id="home-film-player-3" controls preload="metadata" playsinline>
+        <source src="https://archive.org/download/pen-pad-interview-alan-rector-part3/pen-pad-interview-alan-rector-part3_1080p.mp4" type="video/mp4">
+        <track kind="subtitles" srclang="en" label="English" src="/assets/interviews/part-3/pen-pad-interview-alan-rector-part3.en.vtt" default>
+      </video>
+    </div>
+    <div class="home-film-chapters">
+      <ol>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=0" data-start="0"><span class="home-chapter-time">0:00</span> The technology and semantics underneath: tailoring forms beyond hand programming meets knowledge representation</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=124" data-start="124"><span class="home-chapter-time">2:04</span> SMK, later GRAIL - a language for &#x27;conceptual Lego&#x27;; frame systems and tangled semantic networks</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=293" data-start="293"><span class="home-chapter-time">4:53</span> Inheriting the most specific things and collecting them onto a form (the hypertension example)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=427" data-start="427"><span class="home-chapter-time">7:07</span> Extrinsics in GALEN, and normalizing the ontology: primitive trees stuck together with properties</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=560" data-start="560"><span class="home-chapter-time">9:20</span> Pulling apart part-whole, function and structure - primitive hierarchies without exceptions (supernumerary fingers, dextrocardia: &#x27;it&#x27;s biology, not physics&#x27;)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=797" data-start="797"><span class="home-chapter-time">13:17</span> Classifiers and most specific generalizations (more in the &#x27;On beyond Gruber&#x27; paper)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=971" data-start="971"><span class="home-chapter-time">16:11</span> Collecting forms, treatments and codes (ICD, Read codes); negation in description logics and the need for queries</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=1122" data-start="1122"><span class="home-chapter-time">18:42</span> Querying an OWL ontology - the &#x27;hypertension not in pregnancy&#x27; trap</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=1292" data-start="1292"><span class="home-chapter-time">21:32</span> Why check after classification? Errors propagate - getting the foot out of the pelvis in SNOMED</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=1498" data-start="1498"><span class="home-chapter-time">24:58</span> 12 hours per classifier run - regression queries &#x27;just like software testing&#x27;; user interfaces and language generation as QA</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=1729" data-start="1729"><span class="home-chapter-time">28:49</span> Pre- or post-coordination? Clean, normalized hierarchies; axioms vs generalizations (penicillins, Tweety the bird)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=2042" data-start="2042"><span class="home-chapter-time">34:02</span> Modular ontologies and property patterns - contributions to OWL</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=2151" data-start="2151"><span class="home-chapter-time">35:51</span> Final words for techies: the same technique in ICD-11, queries to coordinate SNOMED and ICD, &#x27;rigid&#x27; properties</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-3/#t=2410" data-start="2410"><span class="home-chapter-time">40:10</span> The end</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<section class="home-film" id="home-film-4">
+  <h4 class="home-film-title"><a href="interviews/alan-rector-part-4/">4. Lessons learned – how we’d do it today + some advice to those entering the health informatics space</a></h4>
+  <div class="home-film-layout">
+    <div class="home-film-player">
+      <video id="home-film-player-4" controls preload="metadata" playsinline>
+        <source src="https://archive.org/download/pen-pad-interview-alan-rector-part4/pen-pad-interview-alan-rector-part4_1080p.mp4" type="video/mp4">
+        <track kind="subtitles" srclang="en" label="English" src="/assets/interviews/part-4/pen-pad-interview-alan-rector-part4.en.vtt" default>
+      </video>
+    </div>
+    <div class="home-film-chapters">
+      <ol>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=0" data-start="0"><span class="home-chapter-time">0:00</span> How would you do this today? Where do SNOMED CT, openEHR archetypes, HL7 FHIR and queries fit in? (The &#x27;propeller&#x27; paper)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=48" data-start="48"><span class="home-chapter-time">0:48</span> Terminology is just one part of the system: concept model, information/EHR model and inference model - coordinated, but not the same thing</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=259" data-start="259"><span class="home-chapter-time">4:19</span> If doing it today: archetypes hung on a concept model? Grading and staging of cancers in a cancer trial project</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=454" data-start="454"><span class="home-chapter-time">7:34</span> openEHR, FHIR and finding the right granularity - &#x27;I&#x27;d certainly use SNOMED if I were starting today&#x27;</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=517" data-start="517"><span class="home-chapter-time">8:37</span> Query SNOMED rather than create new concepts. Lessons from the ICD-11 project: statistics need stability, and ICD wouldn&#x27;t work for PEN&amp;PAD</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=860" data-start="860"><span class="home-chapter-time">14:20</span> Building on SNOMED: watch out for primitives with more than one parent, and terminologies built by committee</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=1082" data-start="1082"><span class="home-chapter-time">18:02</span> Redoing PEN&amp;PAD today: rethink user centered design for touch screens, pens, voice and natural language - &#x27;Is this what you meant?&#x27;</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=1371" data-start="1371"><span class="home-chapter-time">22:51</span> Don&#x27;t make one thing serve too many purposes (HL7 V3 prescriptions) - a flexible combination of modules</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=1587" data-start="1587"><span class="home-chapter-time">26:27</span> Centering the record on the patient, and language generation for clinicians and for patients</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=1784" data-start="1784"><span class="home-chapter-time">29:44</span> Sharing records between institutions and departments - find the nugget that needs to be transmitted; how do you summarize?</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=2119" data-start="2119"><span class="home-chapter-time">35:19</span> Systems built out of bits and pieces - lessons from SGML and HTML (&#x27;Page not found&#x27;)</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=2398" data-start="2398"><span class="home-chapter-time">39:58</span> Advice to students coming into health informatics from the computer or the medical side - talk to psychologists, nurses and junior doctors</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=2884" data-start="2884"><span class="home-chapter-time">48:04</span> Alan&#x27;s acknowledgements: the PEN&amp;PAD, GALEN and OWL teams</a></li>
+        <li><a class="home-chapter" href="interviews/alan-rector-part-4/#t=2990" data-start="2990"><span class="home-chapter-time">49:50</span> The end</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+<script src="/assets/js/home-interview-players.js"></script>
 
 ### Interview updates
 To be notified of new uploads, subscribe to the pen-pad-revival YouTube channel [https://www.youtube.com/channel/UCWAejpmEBhz7gGutdYUNJyw/](https://www.youtube.com/channel/UCWAejpmEBhz7gGutdYUNJyw/)
