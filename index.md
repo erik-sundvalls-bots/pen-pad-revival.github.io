@@ -11,7 +11,7 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
 
 <link rel="stylesheet" href="/assets/css/home-interviews.css">
 <section class="home-film" id="home-film-1">
-  <h4 class="home-film-title"><a href="interviews/alan-rector-part-1/">1. Intro &amp; Demo of PEN&amp;PAD</a></h4>
+  <h4 class="home-film-title"><a href="interviews/alan-rector-part-1/">1. Intro &amp; Demo of PEN&amp;PAD</a> <a class="home-film-more" href="interviews/alan-rector-part-1/">[Click for other video formats, full transcript, links etc.]</a></h4>
   <ul class="home-film-points">
     <li>Who is Alan Rector and how did he get involved in this?</li>
     <li>What was PEN&amp;PAD? (Including live demo of the PEN &amp; PAD-based Clinergy user interface)</li>
@@ -19,6 +19,7 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
   </ul>
   <div class="home-film-layout">
     <div class="home-film-player">
+      <button type="button" class="home-film-size" aria-pressed="false">Enlarge</button>
       <video id="home-film-player-1" controls preload="metadata" playsinline>
         <source src="https://archive.org/download/pen-pad-interview-alan-rector-part1/pen-pad-interview-alan-rector-part1_1080p.mp4" type="video/mp4">
         <track kind="subtitles" srclang="en" label="English" src="/assets/interviews/part-1/pen-pad-interview-alan-rector-part1.en.vtt" default>
@@ -44,9 +45,10 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
   <p class="home-film-also"><a href="https://youtu.be/PGEAmJJ4frU">Also on YouTube</a></p>
 </section>
 <section class="home-film" id="home-film-2">
-  <h4 class="home-film-title"><a href="interviews/alan-rector-part-2/">2. The User Centered Design Process, Human Factors, Problem &amp; Solution Space</a></h4>
+  <h4 class="home-film-title"><a href="interviews/alan-rector-part-2/">2. The User Centered Design Process, Human Factors, Problem &amp; Solution Space</a> <a class="home-film-more" href="interviews/alan-rector-part-2/">[Click for other video formats, full transcript, links etc.]</a></h4>
   <div class="home-film-layout">
     <div class="home-film-player">
+      <button type="button" class="home-film-size" aria-pressed="false">Enlarge</button>
       <video id="home-film-player-2" controls preload="metadata" playsinline>
         <source src="https://archive.org/download/pen-pad-interview-alan-rector-part2/pen-pad-interview-alan-rector-part2_1080p.mp4" type="video/mp4">
         <track kind="subtitles" srclang="en" label="English" src="/assets/interviews/part-2/pen-pad-interview-alan-rector-part2.en.vtt" default>
@@ -73,9 +75,10 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
   </div>
 </section>
 <section class="home-film" id="home-film-3">
-  <h4 class="home-film-title"><a href="interviews/alan-rector-part-3/">3. Technical details, terminology systems, ontologies and logic</a></h4>
+  <h4 class="home-film-title"><a href="interviews/alan-rector-part-3/">3. Technical details, terminology systems, ontologies and logic</a> <a class="home-film-more" href="interviews/alan-rector-part-3/">[Click for other video formats, full transcript, links etc.]</a></h4>
   <div class="home-film-layout">
     <div class="home-film-player">
+      <button type="button" class="home-film-size" aria-pressed="false">Enlarge</button>
       <video id="home-film-player-3" controls preload="metadata" playsinline>
         <source src="https://archive.org/download/pen-pad-interview-alan-rector-part3/pen-pad-interview-alan-rector-part3_1080p.mp4" type="video/mp4">
         <track kind="subtitles" srclang="en" label="English" src="/assets/interviews/part-3/pen-pad-interview-alan-rector-part3.en.vtt" default>
@@ -102,9 +105,10 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
   </div>
 </section>
 <section class="home-film" id="home-film-4">
-  <h4 class="home-film-title"><a href="interviews/alan-rector-part-4/">4. Lessons learned – how we’d do it today + some advice to those entering the health informatics space</a></h4>
+  <h4 class="home-film-title"><a href="interviews/alan-rector-part-4/">4. Lessons learned – how we’d do it today + some advice to those entering the health informatics space</a> <a class="home-film-more" href="interviews/alan-rector-part-4/">[Click for other video formats, full transcript, links etc.]</a></h4>
   <div class="home-film-layout">
     <div class="home-film-player">
+      <button type="button" class="home-film-size" aria-pressed="false">Enlarge</button>
       <video id="home-film-player-4" controls preload="metadata" playsinline>
         <source src="https://archive.org/download/pen-pad-interview-alan-rector-part4/pen-pad-interview-alan-rector-part4_1080p.mp4" type="video/mp4">
         <track kind="subtitles" srclang="en" label="English" src="/assets/interviews/part-4/pen-pad-interview-alan-rector-part4.en.vtt" default>
@@ -131,9 +135,6 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
   </div>
 </section>
 <script src="/assets/js/home-interview-players.js"></script>
-
-### Interview updates
-To be notified of new uploads, subscribe to the pen-pad-revival YouTube channel [https://www.youtube.com/channel/UCWAejpmEBhz7gGutdYUNJyw/](https://www.youtube.com/channel/UCWAejpmEBhz7gGutdYUNJyw/)
 
 ## Papers and links
 * [The PEN&PAD data entry system: from prototype to practical system](https://pubmed.ncbi.nlm.nih.gov/8947757/) J Kirby, A L Rector. Proc AMIA Annu Fall Symp. 1996;709-13.

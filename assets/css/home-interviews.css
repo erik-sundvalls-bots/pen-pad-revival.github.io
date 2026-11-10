@@ -11,6 +11,13 @@
   font-size: 1.05rem;
   font-weight: 600;
   border: 0;
+  line-height: 1.35;
+}
+
+.home-film-more {
+  font-size: 0.82rem;
+  font-weight: 400;
+  margin-left: 0.25rem;
 }
 
 .home-film-points {
@@ -30,6 +37,24 @@
   width: 100%;
   max-width: 400px;
   min-width: 0;
+}
+
+.home-film-size {
+  appearance: none;
+  background: #fff;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  color: #0969da;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin: 0 0 0.4rem;
+  padding: 0.05rem 0.45rem;
+}
+
+.home-film-size:hover {
+  background: #f6f8fa;
 }
 
 .home-film-player video {
@@ -62,6 +87,20 @@
 .home-film-also {
   margin: 0.75rem 0 0;
   font-size: 0.85rem;
+}
+
+.home-film.is-wide {
+  box-sizing: border-box;
+  width: calc(100vw - 2rem);
+  max-width: calc(100vw - 2rem);
+  margin-left: calc(50% - 50vw + 1rem);
+  margin-right: calc(50% - 50vw + 1rem);
+}
+
+.home-film.is-wide .home-film-player,
+.home-film.is-wide .home-film-chapters {
+  flex-basis: 100%;
+  max-width: none;
 }
 
 @media (max-width: 700px) {
