@@ -1,0 +1,136 @@
+{% assign part = site.data.interviews[page.part_id] %}
+<article class="interview">
+  <p class="interview-nav"><a href="{{ '/' | relative_url }}#interviews">Interviews</a>
+  {% for item in site.data.interviews.nav %}
+    {% if item.id == page.part_id %}
+      · <strong>Part {{ item.number }}</strong>
+    {% else %}
+      · <a href="{{ item.url | relative_url }}">Part {{ item.number }}</a>
+    {% endif %}
+  {% endfor %}
+  </p>
+
+  <h1>Part {{ part.number }}: {{ part.title }}</h1>
+  <p>{{ part.intro }} Recorded in 4 parts, October 21, 2021.</p>
+
+  {% if part.bullets %}
+  <ul>
+    {% for bullet in part.bullets %}
+    <li>{{ bullet }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if part.coming_soon %}
+  <p class="coming-soon"><strong>Coming soon.</strong> This part is not rendered yet, so there is no video link. The description and chapter index below are the notes already published on the site.</p>
+  {% endif %}
+
+  {% if part.being_edited %}
+  <p><em>Being edited.</em></p>
+  {% endif %}
+
+  <p class="license">The video, transcript and subtitles are licensed <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a>.</p>
+  <p class="meta">Zenodo DOI:{% capture zenodo_doi %}{{ page.zenodo_doi }}{% endcapture %}{% assign zenodo_doi = zenodo_doi | strip %}{% if zenodo_doi == "" %} <span class="unassigned">not assigned</span>{% else %} {{ zenodo_doi }}{% endif %}</p>
+
+  <h2 id="video">Video</h2>
+  {% if page.show_youtube %}
+  <p>YouTube: <a href="https://youtu.be/{{ page.youtube_id }}">https://youtu.be/{{ page.youtube_id }}</a></p>
+  <div class="interview-video">
+    <iframe src="https://www.youtube.com/embed/{{ page.youtube_id }}" title="Part {{ part.number }}: {{ part.title }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  {% endif %}
+
+  {% if page.archive_details_url %}
+  <p>Internet Archive: <a href="{{ page.archive_details_url }}">{{ page.archive_details_url }}</a>
+    {% unless page.show_archive_embed %}<span class="unassigned">(embed switched off until this item is live)</span>{% endunless %}
+  </p>
+  {% capture archive_video_url %}{{ page.archive_video_url }}{% endcapture %}
+  {% assign archive_video_url = archive_video_url | strip %}
+  {% if page.show_archive_embed %}
+    {% if archive_video_url != "" %}
+    <div class="interview-video">
+      <video id="interview-video" controls preload="metadata" playsinline{% if part.poster %} poster="{{ part.poster | relative_url }}"{% endif %}>
+        <source src="{{ archive_video_url }}" type="video/mp4">
+        {% if part.captions.vtt %}
+        <track kind="subtitles" srclang="en" label="English" src="{{ part.captions.vtt | relative_url }}" default>
+        {% endif %}
+        {% if part.captions.chapters_vtt %}
+        <track kind="chapters" srclang="en" label="Chapters" src="{{ part.captions.chapters_vtt | relative_url }}">
+        {% endif %}
+      </video>
+    </div>
+    {% else %}
+    <div class="interview-video">
+      <iframe src="https://archive.org/embed/{{ page.archive_id }}" title="Part {{ part.number }} on the Internet Archive" allowfullscreen></iframe>
+    </div>
+    <p class="meta">Set <code>archive_video_url</code> in this page's front matter to the direct media file to attach the English WebVTT file as a subtitle track.</p>
+    {% endif %}
+  {% endif %}
+  {% endif %}
+
+  {% if part.captions %}
+  <p>Subtitles and transcript file (CC BY 4.0):
+    {% if part.captions.vtt %}<a href="{{ part.captions.vtt | relative_url }}">WebVTT</a>{% endif %}
+    {% if part.captions.srt %} · <a href="{{ part.captions.srt | relative_url }}">SRT</a>{% endif %}
+    {% if part.captions.chapters_vtt %} · <a href="{{ part.captions.chapters_vtt | relative_url }}">Chapter markers (WebVTT)</a>{% endif %}
+    {% if part.captions.txt %} · <a href="{{ part.captions.txt | relative_url }}">Transcript text</a>{% endif %}
+  </p>
+  {% endif %}
+
+  {% unless page.show_youtube or page.archive_details_url %}
+  <p>No video has been published for this part.</p>
+  {% endunless %}
+
+  {% if part.slides_first %}
+  {% include interview_slides.html part=part %}
+  {% endif %}
+
+  <h2 id="chapters">Chapters</h2>
+  {% if part.chapters_provisional %}
+  <p>Chapters (provisional times, will be checked against the final edit):</p>
+  {% endif %}
+  <ol class="chapters">
+    {% for chapter in part.chapters %}
+    <li id="chapter-{{ forloop.index }}">
+      {% if chapter.video_url %}
+        <a href="{{ chapter.video_url }}">{{ chapter.label }}</a>
+      {% elsif page.show_archive_embed and archive_video_url != "" %}
+        <a class="chapter-time" href="#interview-video" data-start="{{ chapter.seek }}">{{ chapter.label }}</a>
+      {% else %}
+        <a href="#chapter-{{ forloop.index }}">{{ chapter.label }}</a>
+      {% endif %}
+      {% if chapter.transcript_id %}
+        <a href="#{{ chapter.transcript_id }}">{{ chapter.text }}</a>
+      {% else %}
+        {{ chapter.text }}
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+
+  {% unless part.slides_first %}
+  {% include interview_slides.html part=part %}
+  {% endunless %}
+
+  {% if part.transcript %}
+  <h2 id="transcript">Transcript</h2>
+  <div class="transcript">
+    {% if page.part_id == "part1" %}
+      {% include transcripts/part1.html %}
+    {% elsif page.part_id == "part2" %}
+      {% include transcripts/part2.html %}
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <p class="interview-nav"><a href="{{ '/' | relative_url }}#interviews">Back to interviews</a>
+  {% for item in site.data.interviews.nav %}
+    {% if item.id == page.part_id %}
+      · <strong>Part {{ item.number }}</strong>
+    {% else %}
+      · <a href="{{ item.url | relative_url }}">Part {{ item.number }}</a>
+    {% endif %}
+  {% endfor %}
+  </p>
+</article>
+<script src="{{ '/assets/js/interview-chapters.js' | relative_url }}"></script>
