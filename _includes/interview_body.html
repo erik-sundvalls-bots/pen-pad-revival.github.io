@@ -68,7 +68,8 @@
   {% if part.archive %}
   <p class="meta">On the Internet Archive (ad-free): <a href="{{ part.archive.details }}">item page</a>
     · <a href="{{ part.archive.mp4 }}">MP4 1080p</a>
-    · <a href="{{ part.archive.srt }}">SRT</a> · <a href="{{ part.archive.vtt }}">WebVTT</a> · <a href="{{ part.archive.txt }}">transcript</a></p>
+    · <a href="{{ part.archive.srt }}">SRT</a> · <a href="{{ part.archive.vtt }}">WebVTT</a> · <a href="{{ part.archive.txt }}">transcript</a>
+    · <a href="https://archive.org/download/{{ part.archive.id }}/{{ part.archive.id }}_archive.torrent">Torrent (all files)</a></p>
   {% endif %}
   {% if part.youtube_secondary %}
   <p class="meta">Also on YouTube: <a href="{{ part.youtube_secondary }}">{{ part.youtube_secondary }}</a></p>
