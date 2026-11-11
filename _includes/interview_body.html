@@ -88,10 +88,6 @@
   <p>No video has been published for this part.</p>
   {% endunless %}
 
-  {% if part.slides_first %}
-  {% include interview_slides.html part=part %}
-  {% endif %}
-
   <h2 id="chapters">Chapters</h2>
   {% if part.chapters_provisional %}
   <p>Chapters (provisional times, will be checked against the final edit):</p>
@@ -115,10 +111,6 @@
     {% endfor %}
   </ol>
 
-  {% unless part.slides_first %}
-  {% include interview_slides.html part=part %}
-  {% endunless %}
-
   {% if part.transcript %}
   <h2 id="transcript">Transcript</h2>
   <div class="transcript">
@@ -133,6 +125,8 @@
     {% endif %}
   </div>
   {% endif %}
+
+  {% include interview_slides.html part=part %}
 
   <p class="interview-nav"><a href="{{ '/' | relative_url }}#interviews">Back to interviews</a>
   {% for item in site.data.interviews.nav %}

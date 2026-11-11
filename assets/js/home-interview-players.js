@@ -1,14 +1,6 @@
 (function () {
   var cards = document.querySelectorAll(".home-film");
   cards.forEach(function (card) {
-    var toggle = card.querySelector(".home-film-size");
-    if (toggle) {
-      toggle.addEventListener("click", function () {
-        var wide = card.classList.toggle("is-wide");
-        toggle.textContent = wide ? "Shrink" : "Enlarge";
-        toggle.setAttribute("aria-pressed", wide ? "true" : "false");
-      });
-    }
     var video = card.querySelector("video");
     if (!video || typeof video.play !== "function") return;
     card.querySelectorAll("a.home-chapter[data-start]").forEach(function (link) {
