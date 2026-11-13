@@ -137,8 +137,8 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
 * [On beyond Gruber:“Ontologies” in today’s biomedical information systems and the limits of OWL.](https://www.sciencedirect.com/science/article/pii/S2590177X19300010) Alan Rector, Stefan Schulz, Jean Marie Rodrigues, Christopher G. Chute, and Harold Solbrig. Journal of Biomedical Informatics: X 2 (2019): 100002.
 
 * The OpenGALEN website contains a lot of background information, downloadable ontology, tools and links to more informaton. Two known copies are:
-  * https://opengalen.eggbird.eu/ 
-  * [opengalen.org frozen copy via archive.org]([https://www.opengalen.org/](https://web.archive.org/web/20220308122743/https://opengalen.org/))
+  * [https://opengalen.eggbird.eu/](https://opengalen.eggbird.eu/)
+  * [opengalen.org frozen copy via archive.org](https://web.archive.org/web/20220308122743/https://opengalen.org/)
 * An [OpenGALEN 8 browser](opengalen-browser/) for the published hierarchy is on this site ([source on GitHub](https://github.com/erik-sundvalls-bots/opengalen-browser), including the [GALEN sources](https://github.com/erik-sundvalls-bots/opengalen-browser/tree/main/sources)). To suggest an improvement or a feature, see [Suggest improvement/feature](https://github.com/erik-sundvalls-bots/opengalen-browser/issues) or [open one](https://github.com/erik-sundvalls-bots/opengalen-browser/issues/new).
 
 ## Snomed CT Expo 2021 talk

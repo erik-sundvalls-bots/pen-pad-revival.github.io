@@ -2,9 +2,9 @@
 
 This folder is a copy of the built static site (`site/`) from
 [erik-sundvalls-bots/opengalen-browser](https://github.com/erik-sundvalls-bots/opengalen-browser)
-at commit `a0f11f03ebdb5cf4f0fc1727a784c1da8dccaa85`.
+at commit `a240a5ecd3f3d18e2f1c8d4f5ce616d9d78e296e`.
 
-The browser code is MIT. The terminology data in `data/` is a compiled form of the OpenGALEN 8 sources and is under the GALEN Open Source License (GOSL) 1.0. The licence text is [gosl.html](gosl.html). The unmodified GALEN sources that this build was made from are in the source repository: [sources/](https://github.com/erik-sundvalls-bots/opengalen-browser/tree/a0f11f03ebdb5cf4f0fc1727a784c1da8dccaa85/sources).
+The browser code is MIT. The terminology data in `data/` is a compiled form of the OpenGALEN 8 sources and is under the GALEN Open Source License (GOSL) 1.0. The licence text is [gosl.html](gosl.html). The unmodified GALEN sources that this build was made from are in the source repository: [sources/](https://github.com/erik-sundvalls-bots/opengalen-browser/tree/a240a5ecd3f3d18e2f1c8d4f5ce616d9d78e296e/sources).
 
 To suggest an improvement or a feature, see [Suggest improvement/feature](https://github.com/erik-sundvalls-bots/opengalen-browser/issues) or [open one](https://github.com/erik-sundvalls-bots/opengalen-browser/issues/new).
 
