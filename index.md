@@ -139,6 +139,7 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
 * The OpenGALEN website contains a lot of background information, downloadable ontology, tools and links to more informaton. Two known copies are:
   * https://opengalen.eggbird.eu/ 
   * [opengalen.org frozen copy via archive.org]([https://www.opengalen.org/](https://web.archive.org/web/20220308122743/https://opengalen.org/))
+* An [OpenGALEN 8 browser](opengalen-browser/) for the published hierarchy is on this site ([source on GitHub](https://github.com/erik-sundvalls-bots/opengalen-browser), including the [GALEN sources](https://github.com/erik-sundvalls-bots/opengalen-browser/tree/main/sources)). To suggest an improvement or a feature, see [Suggest improvement/feature](https://github.com/erik-sundvalls-bots/opengalen-browser/issues) or [open one](https://github.com/erik-sundvalls-bots/opengalen-browser/issues/new).
 
 ## Snomed CT Expo 2021 talk
 * At [SNOMED CT Expo 2021](https://www.snomed.org/news-and-events/events/snomedct-expo) Daniel Karlsson and Erik Sundvall presented the PEN & PAD inspired talk "Context-aware interactive use of SNOMED CT and terminology services in openEHR-based electronic health records"

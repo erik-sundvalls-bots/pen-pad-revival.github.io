@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenGALEN 8 browser</title>
+<script>
+/* A directory URL without a trailing slash would otherwise resolve css/, js/ and data/ against the parent. */
+(function () {
+  var path = location.pathname;
+  if (path.endsWith("/")) return;
+  var last = path.slice(path.lastIndexOf("/") + 1);
+  if (last.indexOf(".") !== -1) return;
+  var base = document.createElement("base");
+  base.href = location.origin + path + "/";
+  document.head.appendChild(base);
+})();
+</script>
+<link rel="stylesheet" href="css/app.css?v=6">
+</head>
+<body>
+<header class="topbar">
+  <h1>OpenGALEN 8</h1>
+  <label class="search">
+    <span class="vh">Search concepts</span>
+    <input id="q" type="search" placeholder="Search concepts, for example heart, anaemia, asthma" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="suggest" aria-autocomplete="list">
+    <div id="suggest" role="listbox" hidden></div>
+  </label>
+  <div class="switches" role="group" aria-label="Graph options">
+    <label class="switch-row">Generated
+      <button type="button" id="tog-gen" class="switch" role="switch" aria-checked="true" aria-label="Show generated classes" title="Show generated classes"></button>
+    </label>
+    <label class="switch-row">Labels
+      <button type="button" id="tog-labels" class="switch" role="switch" aria-checked="true" aria-label="Show labels" title="Show labels"></button>
+    </label>
+    <label class="switch-row">Clustering
+      <button type="button" id="tog-cluster" class="switch" role="switch" aria-checked="true" aria-label="Cluster intermediate ancestors" title="Cluster intermediate ancestors"></button>
+    </label>
+  </div>
+</header>
+<div class="layout">
+  <div id="stage">
+    <div id="status">Loading the hierarchy…</div>
+    <svg id="g" role="img" aria-label="Concept neighbourhood"></svg>
+    <div class="zoom-controls" aria-label="Zoom">
+      <button type="button" data-zoom="in" aria-label="Zoom in" title="Zoom in"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2z"/></svg></button>
+      <button type="button" data-zoom="out" aria-label="Zoom out" title="Zoom out"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14zM7 9h5v1H7z"/></svg></button>
+      <button type="button" data-zoom="one" class="zoom-one" aria-label="Original scale" title="Original scale">1:1</button>
+      <button type="button" data-zoom="fit" aria-label="Show all nodes" title="Show all nodes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3l2.3 2.3-2.89 2.87 1.42 1.42L18.7 6.7 21 9V3h-6zM9 3H3v6l2.3-2.3 2.87 2.89 1.42-1.42L6.7 5.3 9 3zm0 18l-2.3-2.3 2.89-2.87-1.42-1.42L5.3 17.3 3 15v6h6zm12-6l-2.3 2.3-2.87-2.89-1.42 1.42 2.89 2.87L15 21h6v-6z"/></svg></button>
+    </div>
+  </div>
+  <aside id="panel" aria-label="Concept details">
+    <div class="rail">
+      <button type="button" id="panel-toggle" aria-expanded="true" aria-controls="panel-body" aria-label="Hide concept details" title="Hide concept details">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" id="about-btn" aria-label="About and licence" title="About and licence">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 11v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="8" r="0.9" fill="currentColor"/></svg>
+      </button>
+      <button type="button" data-act="children" aria-pressed="true" aria-label="Show children of the focus" title="Show children">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="6" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="18" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.2V11M12 11L6 14.6M12 11l6 3.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" data-act="siblings" aria-pressed="false" aria-label="Show siblings of the focus" title="Show siblings">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="2.2" fill="currentColor"/><circle cx="19" cy="12" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M7.2 12h2.6M14.2 12h2.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button type="button" data-act="ancestors" aria-pressed="false" aria-label="Ancestors only" title="Ancestors only">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V7M12 7l-4 4M12 7l4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" data-act="rels" aria-pressed="false" aria-label="Definition relationships" title="Definition relationships">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16c4-8 10-8 14 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-dasharray="3 2" stroke-linecap="round"/><circle cx="5" cy="16" r="2" fill="currentColor"/><circle cx="19" cy="16" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+      </button>
+    </div>
+    <div class="panel-main">
+      <div id="panel-actions" class="panel-actions" aria-label="Graph actions for the focus">
+        <button type="button" data-act="children" aria-pressed="true">Children</button>
+        <button type="button" data-act="siblings" aria-pressed="false">Siblings</button>
+        <button type="button" data-act="ancestors" aria-pressed="false">Ancestors only</button>
+        <button type="button" data-act="rels" aria-pressed="false">Relationships</button>
+      </div>
+      <div id="panel-body" class="panel-scroll" aria-live="polite"></div>
+    </div>
+  </aside>
+</div>
+<dialog id="about" aria-labelledby="about-title">
+  <h2 id="about-title">About and licence</h2>
+  <p class="ack">This product uses the OpenGALEN Clinical Terminology, Copyright the Universities of Manchester and Nijmegen, licensed through OpenGALEN (www.opengalen.org). (now mirrored at <a href="https://opengalen.eggbird.eu/">https://opengalen.eggbird.eu/</a>, contact <a href="mailto:eh@eggbird.eu">eh@eggbird.eu</a>, and archived at the Internet Archive: <a href="https://web.archive.org/web/*/opengalen.org">https://web.archive.org/web/*/opengalen.org</a>)</p>
+  <p>Graph browser for the classified Common Reference Model, diseases, procedures and drugs. There is no live reasoner: the hierarchy is the one the GALEN team published in 2010, with property chains.</p>
+  <p id="about-counts" class="muted"></p>
+  <p>The terminology and the derived data are under the <a href="gosl.html">GALEN Open Source License</a>. Unmodified sources are in <a href="https://github.com/erik-sundvalls-bots/opengalen-browser/tree/main/sources">sources/</a>. The browser code is MIT. <a href="https://github.com/erik-sundvalls-bots/opengalen-browser">Repository</a>.</p>
+  <p><b>Feedback.</b> <a href="https://github.com/erik-sundvalls-bots/opengalen-browser/issues/new">Suggest improvement/feature</a>.</p>
+  <h3>Controls</h3>
+  <ul>
+    <li><b>Generated</b>, <b>Labels</b>, and <b>Clustering</b> are switches beside the search box. Generated and Clustering are on at each start. Clustering off shows every ancestor as its own node. Siblings is a button in the side panel, off until you turn it on.</li>
+    <li>A dashed <b>+n</b> pill is a cluster of intermediate ancestors. Click the pill to expand it. Click the coloured background of an expanded cluster, not a node, to collapse that cluster again.</li>
+    <li>Zoom in, zoom out, <b>1:1</b> and fit sit at the upper right of the graph. Drag the background to pan. The wheel pans. Ctrl or ⌘ and the wheel zoom.</li>
+    <li>The side panel slides off to the right. The narrow strip keeps icon buttons: show the concept again, open this panel, show or hide the focus concept’s children, show or hide its siblings, ancestors only, and definition relationships. The same actions sit at the top of the open panel. The strip remembers whether it was open.</li>
+    <li>With a mouse, hover a node for its name without changing focus, and hover a collapsed cluster to read the hidden names. A click refocuses. On a touch screen the first tap is that preview and the second tap on the same node refocuses or expands the cluster. The preview closes if you tap elsewhere, pan or zoom, change focus, tap its close mark, or leave it for a few seconds. While <b>Labels</b> is off, that preview also writes the names onto the node’s immediate parents, children and drawn relationship targets, and lists the same names in the preview, so a covered or crowded dot can still be read.</li>
+    <li>The address of the focused concept is <code>#concept=Name</code>.</li>
+    <li><b>Relationships</b> are off until you turn a kind on. They are the roles in the concept’s OWL definition, drawn as dashed edges in the colour of their property group. Every selected target is climbed by is-a to the root, and clustering folds the ancestors those targets share. The encircled i beside a heading explains how to read that section. A sanction in the same colour names a role that is allowed and is not drawn; a definition link is what this concept has. A nested filler such as <i>hasConsequence (X which hasReversibility Reversible)</i> is one edge to X, or to the generated which-class when that class is the filler. The nesting stays in the definition text.</li>
+  </ul>
+  <form method="dialog"><button type="submit" id="about-ok">Continue</button></form>
+</dialog>
+<div id="info-pop" hidden></div>
+<div id="tip" hidden>
+  <button type="button" id="tip-x" aria-label="Close preview" hidden>×</button>
+  <div id="tip-body"></div>
+</div>
+<script src="vendor/d3.min.js"></script>
+<script src="vendor/d3-dag.min.js"></script>
+<script src="js/data.js?v=6"></script>
+<script src="js/graph.js?v=6"></script>
+<script src="js/app.js?v=6"></script>
+</body>
+</html>
