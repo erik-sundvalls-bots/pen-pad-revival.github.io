@@ -135,6 +135,7 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
 ## Papers and links
 * [The PEN&PAD data entry system: from prototype to practical system](https://pubmed.ncbi.nlm.nih.gov/8947757/) J Kirby, A L Rector. Proc AMIA Annu Fall Symp. 1996;709-13.
 * [On beyond Gruber:“Ontologies” in today’s biomedical information systems and the limits of OWL.](https://www.sciencedirect.com/science/article/pii/S2590177X19300010) Alan Rector, Stefan Schulz, Jean Marie Rodrigues, Christopher G. Chute, and Harold Solbrig. Journal of Biomedical Informatics: X 2 (2019): 100002.
+* [OpenGALEN: open source medical terminology and tools](https://pmc.ncbi.nlm.nih.gov/articles/PMC1480228/) A L Rector, J E Rogers, P E Zanstra, E Van Der Haring. AMIA Annu Symp Proc. 2003;982. A short summary of how OpenGALEN was formed in 1999 to share the results of the GALEN research programme (begun in 1991) as open source, including its ontology development environment and large description logic-based medical ontology.
 
 * The OpenGALEN website contains a lot of background information, downloadable ontology, tools and links to more informaton. Two known copies are:
   * [https://opengalen.eggbird.eu/](https://opengalen.eggbird.eu/)
