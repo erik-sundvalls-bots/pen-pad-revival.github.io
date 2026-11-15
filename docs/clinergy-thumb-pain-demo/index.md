@@ -603,7 +603,6 @@ In this run the icons were clicked one by one. The icons have no captions. The g
 
 | # | Time | State | Action | Summary text after the action (new or changed part) |
 |---|------|-------|--------|------------------------------------------------------|
-
 | 1 | [12:24](https://pen-pad-revival.github.io/interviews/alan-rector-part-1/#t=744) | [Host system with the Clinergy launch panel](img/01-host-system-clinergy-launch.png) | The mouse pointer is on **SYM** in the Clinergy Launch group. | — |
 | 2 | [12:28](https://pen-pad-revival.github.io/interviews/alan-rector-part-1/#t=748) | [Topics picker: all symptoms](img/02-topics-symptoms-all.png) | SYM was clicked in the launch panel; **All** is the active icon. | — |
 | 3 | [12:44](https://pen-pad-revival.github.io/interviews/alan-rector-part-1/#t=764) | [Icon filter: bent-arm (joints) icon](img/03-topics-musculoskeletal-filter.png) | Bent-arm icon (by its list, the joints / musculoskeletal group; the icon has no visible caption). | — |
