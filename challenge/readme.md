@@ -3,6 +3,7 @@ This page lists contributions the brave folks that have accepted the revival cha
 # Nordic Hackathon 2026
 * [Sendero: from clinical meaning to a confirmed record](./sendero/) — PEN&PAD-style assessment fragments, progressive refinement and a bounded openEHR composition example, by Francesc Mateu.
 * [PEN&PAD terminology-driven input](./penpad-snomed-nordqvist) (SNOMED CT via ECL decides the options; sentence, SNOMED expression, openEHR and FHIR output) by Gunnar Nordqvist, [live demo](https://gunnarnordqvist.github.io/Hack/)
+* [Arne's function, in any language](./nimloth-penpad26) (track steps orientation, refinement, confirmation in clinician and patient mode; one record rendered in Swedish, Norwegian, Danish, Finnish, German and English plus plain Swedish; functional status into an EPS document with validation) by Anders Carlius / Nimloth, [live demo](https://penpad.nimloth.se)
 * [Dynamic clinical documentation in primary care – exploring clinical variability with an acute otitis media prototype](dynamic-primary-care-documentation/) by Marek Czajkowski
 * ...
 
