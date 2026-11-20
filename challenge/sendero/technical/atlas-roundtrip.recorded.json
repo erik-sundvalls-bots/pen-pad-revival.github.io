@@ -1,0 +1,27 @@
+{
+  "uid": "93fe6777-5d0a-58a2-af93-28e65bfa4870::naveta.rehearsal::1",
+  "patientId": "SYN-NAVETA-001",
+  "storage": "atlas",
+  "collection": "rehearsal_compositions",
+  "readBackEqual": true,
+  "readBackValidated": true,
+  "canonicalDigest": "0223ac914ee32762686e5886b47060fe873b5b8c15382663f1f21bde373d1ec6",
+  "validation": {
+    "rmJsonSchemaPassed": true,
+    "optPassed": true,
+    "boundedProfilePassed": true,
+    "technicalChecksPassed": true,
+    "errors": [],
+    "schemaCommit": "14387ce9191f228d768b6bade3308b79aaf87471",
+    "schemaSha256": "0bbbb0ecb42de6a750679e5c2d507bca6387da358d10afd361c2bcfb091ee594",
+    "templateId": "hads_v0",
+    "templateSha256": "5dc135ec89bfb7ab8567fc0dd5549afd9eeaec9811d66117f36fc996886c82ad",
+    "clinicalMappingReviewed": false,
+    "fullRmConformanceCertified": false,
+    "externalCdrRoundTrip": false
+  },
+  "qualification": "synthetic-technical-roundtrip-not-clinical-publication",
+  "nativeClinicalWrites": false,
+  "independentClientReadBack": true,
+  "clinicalCompositionCountUnchanged": true
+}

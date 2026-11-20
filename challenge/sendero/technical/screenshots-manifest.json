@@ -1,0 +1,162 @@
+[
+  {
+    "file": "screenshots/01-patient-list.png",
+    "sha256": "62b793b6b664b83fdb5b5cb9267b366311e1de1086f128877308b11b44353ef2",
+    "bytes": 212111
+  },
+  {
+    "file": "screenshots/02-history-and-proms.png",
+    "sha256": "e6bdf4a9c944c7dcbe32c4d3f0a4e1eef6c1912093a08be73d8f999a5a0c4458",
+    "bytes": 337532
+  },
+  {
+    "file": "screenshots/03-guided-first-question.png",
+    "sha256": "c66103abe6162f4415151824ae2dc21e921665fe275ee6417b1ff35a2eeeb789",
+    "bytes": 458765
+  },
+  {
+    "file": "screenshots/04-evidence-and-follow-up.png",
+    "sha256": "e2a83c97a4df6832ba661158b2986149064c2fc8f183aa9c76fa960e9f2be414",
+    "bytes": 445537
+  },
+  {
+    "file": "screenshots/05-deeper-pathway.png",
+    "sha256": "b5098e970b4afc3cd9f50ce30c2a93ae9c168c255de62e5b45c1aab57776a1ff",
+    "bytes": 473443
+  },
+  {
+    "file": "screenshots/06-likely-answers-medication.png",
+    "sha256": "135b23f7a835423a2f71b476823d418761c56e432aa9bfb2c7abd7f73ebe902f",
+    "bytes": 493124
+  },
+  {
+    "file": "screenshots/07-body-map.png",
+    "sha256": "7cc45584d5c714883e082fd868f10de2558add535ac3d679d2b4d76e380bea85",
+    "bytes": 456493
+  },
+  {
+    "file": "screenshots/09-review-and-confirm.png",
+    "sha256": "592d7b918053947f1be3f6a278e63da493b51d841fa72be0c37e5ddf7c32c2c7",
+    "bytes": 607076
+  },
+  {
+    "file": "screenshots/10-evidence-similar-pathways.png",
+    "sha256": "166ddbdb139c7fdebf320d3b69b8a4d184444efab557b88ce82c718e8f70e2f2",
+    "bytes": 428888
+  },
+  {
+    "file": "screenshots/11-clinical-record.png",
+    "sha256": "ad8381e6e4597ba3ba9b18ff3941b41117b71fe13646ad47e1ebc488d07930ed",
+    "bytes": 328920
+  },
+  {
+    "file": "screenshots/12-ontology-graph.png",
+    "sha256": "9a045a8af8c5de43766efef6f807ed610680ea81a65b20e91a45be90a30934a7",
+    "bytes": 395014
+  },
+  {
+    "file": "screenshots/13-ontology-node-detail.png",
+    "sha256": "48afe1c65bc0c60428c3dce1edd8e45e527a6818d9116ed32488b78a95768d53",
+    "bytes": 451522
+  },
+  {
+    "file": "screenshots/13b-ontology-with-layers.png",
+    "sha256": "994c40471a5bf9a6e68b9c6e43361bbf71c4912abfc8a4082788896c15ef3d3a",
+    "bytes": 466264
+  },
+  {
+    "file": "screenshots/14-research-pathways.png",
+    "sha256": "df11c1a4f1e5e6e3aca67b45b96786d6ccd3fc8e5d5b96e712b7b66c97e00bac",
+    "bytes": 297122
+  },
+  {
+    "file": "screenshots/14b-research-similar-pathways.png",
+    "sha256": "89f18ebacf870085f832f75ea03dbfceb602bcaeed11596f2840195cc206c89a",
+    "bytes": 291220
+  },
+  {
+    "file": "screenshots/R03-prepare-interview-evidence.png",
+    "sha256": "b236c49e7e46157ba3cf9a0ed0126640559f7cecc78c9f62877acbfe9acb8d48",
+    "bytes": 403842
+  },
+  {
+    "file": "screenshots/R05-learning-from-similar-pathways.png",
+    "sha256": "26ab99ed1f93001e850a2d526e46cc1c1adafdbb5dc5287fe1dade0ea27c9fec",
+    "bytes": 515029
+  },
+  {
+    "file": "screenshots/R11-medication-and-allergies.png",
+    "sha256": "5a8c8115bc7c81662327e464c3cc23d0a8821c8b5412d2e885a0c0029f745d8b",
+    "bytes": 422175
+  },
+  {
+    "file": "screenshots/R14b-pathway-comparison-chart.png",
+    "sha256": "812672c93af0a26cd9c96ab2d49e12487f432f569d8eb1a6e5891986e398e488",
+    "bytes": 396518
+  },
+  {
+    "file": "screenshots/R17-one-interview-many-histories.png",
+    "sha256": "fdeb7f64e8b8e63b72cdb6467a69eef90e1f8b916fbad038a9a1df6148e85307",
+    "bytes": 463475
+  },
+  {
+    "file": "screenshots/full-consultation/06-guided-first-question.png",
+    "sha256": "981b6d87af473c30e516fd3c51dc7bfba9930e17b336a2aa4ed038491a3b6eab",
+    "bytes": 523075
+  },
+  {
+    "file": "screenshots/full-consultation/07-likely-answers-and-last-report.png",
+    "sha256": "f431a18b8d34a9f68df68add04b5512f416a7ed8e6f08acf3b9de9c6a8550a20",
+    "bytes": 530484
+  },
+  {
+    "file": "screenshots/full-consultation/08-full-prom-history-inline.png",
+    "sha256": "e0f4697cb944695d3d6dae6c1aefa482306495ef5e4108b2b483b58b2d2669bb",
+    "bytes": 555852
+  },
+  {
+    "file": "screenshots/full-consultation/09-follow-up-question.png",
+    "sha256": "e175614dd8d3c0a9a898117d25d240ad2a273ae2311408d1c83102446a9de282",
+    "bytes": 524617
+  },
+  {
+    "file": "screenshots/full-consultation/11-body-map.png",
+    "sha256": "8a52246ff0010a9b08d84506b3329f217a4dd38654fce0836a95630c4d23d087",
+    "bytes": 534268
+  },
+  {
+    "file": "screenshots/full-consultation/13-review-and-confirm.png",
+    "sha256": "e333fd5e8c1922c8cf8b19f4c7f5f7a1852feee17c94c215ce32295b1bcc1139",
+    "bytes": 839730
+  },
+  {
+    "file": "screenshots/full-consultation/14-evidence-during-interview.png",
+    "sha256": "c10d64ea5b403b9259bcf3ea81bd1efc24535904501d3ba9cbbe8ae5a683de77",
+    "bytes": 427151
+  },
+  {
+    "file": "screenshots/full-consultation/15-interview-with-history-panel.png",
+    "sha256": "b51dd9129248236a357a67ddbaaad726ae7047e2deca2fc66c0b8452405f90a3",
+    "bytes": 591973
+  },
+  {
+    "file": "screenshots/full-consultation/18-clinical-record.png",
+    "sha256": "689cff97ed930f459e2966c28e30a56e3d437c12094cc14c2aed005522a1e4ff",
+    "bytes": 389999
+  },
+  {
+    "file": "screenshots/full-consultation/21-pathway-comparison.png",
+    "sha256": "d4b9a5f0b3bf9735e6d661bd6976bfde7bb3d5a6ec5f7204c3d9b6b322fe0356",
+    "bytes": 396536
+  },
+  {
+    "file": "screenshots/full-consultation/22-ontology-graph.png",
+    "sha256": "df47291f5efb04b4c66e0d053115b96235ce48e237a92004904500e7864a9664",
+    "bytes": 408348
+  },
+  {
+    "file": "screenshots/full-consultation/24-one-interview-many-histories.png",
+    "sha256": "efec5834e357dbe0488fb13ddff98589eeab4a30ccab3a7d97100d006dcdcb12",
+    "bytes": 463158
+  }
+]
