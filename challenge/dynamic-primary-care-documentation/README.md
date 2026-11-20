@@ -75,19 +75,18 @@ No real patient data are used.
 
 ### 1. Choose infection site
 
-01-choose-infection-site.png
+![01-choose-infection-site.PNG](01-choose-infection-site.PNG)
 
 ### 2. Refine clinical presentation
 
-02-refine-clinical-presentation.png
-
+![02-refine-clinical-presentation.PNG](02-refine-clinical-presentation.PNG)
 ### 3. Targeted ear examination
 
-03-targeted-ear-examination.png
+![03-targeted-ear-examination.PNG](03-targeted-ear-examination.PNG)
 
 ### 4. Clinical note and structured data
 
-04-clinical-note-and-structured-data.png
+![04-clinical-note-and-structured-data.PNG](04-clinical-note-and-structured-data.PNG)
 
 ## Running the prototype
 
