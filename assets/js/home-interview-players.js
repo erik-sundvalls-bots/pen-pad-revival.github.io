@@ -3,7 +3,7 @@
   cards.forEach(function (card) {
     var video = card.querySelector("video");
     if (!video || typeof video.play !== "function") return;
-    card.querySelectorAll("a.home-chapter[data-start]").forEach(function (link) {
+    card.querySelectorAll("a.home-chapter[data-start], a.home-thumb[data-start]").forEach(function (link) {
       link.addEventListener("click", function (event) {
         var start = Number(link.getAttribute("data-start"));
         if (!isFinite(start)) return;
