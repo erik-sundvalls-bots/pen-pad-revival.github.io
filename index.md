@@ -267,12 +267,11 @@ Clinergy was a structured data entry system for primary care built on the PEN&PA
 * Creation of pedagogical material from interviews and PEN&PAD-related papers (focused video snippets, transcriptions, summaries, tutorials etc.) in order to inspire a new generation of developers, clinicians and informaticians to revive the PEN & PAD approach using the tools available today.
 
 ## Challenge
-This can be suitable as student projects, hackathon challenges, personal learning projects etc. 
-* Use low/no-code tools and user centered design to recreate appraches from PEN&PAD... 
-* ...then fork this repository, and create a subdirectory of your own under the `challenge` subdirectory https://github.com/pen-pad-revival/pen-pad-revival.github.io/tree/main/challenge with a readme.md file including a description (and links to your project site if available) including ways to contact you.
-* Add other relevant description-related files (like screenshots) in your subdirectory.
-* Then edit the readme file in the `challenge` directory to include a describing title with a link to your subdirectory
-* Finally submit a pull request so that we can include your addition here.
+This can be suitable as student projects, hackathon challenges, personal learning projects etc. Use low/no-code tools and user centered design to recreate approaches from PEN&PAD, then share your work in the challenge folder.
 
-Ask a local GIT-nerd for help if the process above sounds too complicated.
+The detailed instructions, and the list of existing contributions, are in the challenge README.
+
+* [Challenge folder on GitHub](https://github.com/pen-pad-revival/pen-pad-revival.github.io/tree/main/challenge)
+* [Challenge instructions (README)](https://github.com/pen-pad-revival/pen-pad-revival.github.io/blob/main/challenge/README.md)
+* [Existing contributions](https://pen-pad-revival.github.io/challenge/) (the same README, also published on this site)
 
