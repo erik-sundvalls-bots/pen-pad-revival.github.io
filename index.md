@@ -43,6 +43,26 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
       </ol>
     </div>
   </div>
+  <ul class="home-film-thumbs">
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-1/#t=268" data-start="268">
+        <img src="/assets/interviews/part-1/thumbs/04m28-schwarzenegger-laptop.webp" width="320" height="180" alt="Alan Rector speaking, during the Arnold Schwarzenegger laptop anecdote">
+        <span class="home-thumb-caption"><span class="home-chapter-time">4:28</span> The &#x27;Arnold Schwarzenegger laptop&#x27;</span>
+      </a>
+    </li>
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-1/#t=750" data-start="750">
+        <img src="/assets/interviews/part-1/thumbs/12m30-homunculus-bodymap.webp" width="320" height="180" alt="Clinergy screen showing the body-map homunculus used to enter symptoms, with Alan Rector, Erik Sundvall and Daniel Karlsson in the video tiles">
+        <span class="home-thumb-caption"><span class="home-chapter-time">12:30</span> The homunculus — body-map drawings for entering symptoms</span>
+      </a>
+    </li>
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-1/#t=870" data-start="870">
+        <img src="/assets/interviews/part-1/thumbs/14m30-thumb-pain-form.webp" width="320" height="180" alt="Clinergy Thumb pain form, with large clickable fields, during the live PEN&amp;PAD demo">
+        <span class="home-thumb-caption"><span class="home-chapter-time">14:30</span> The Thumb pain form — large, easy-to-click fields</span>
+      </a>
+    </li>
+  </ul>
   <p class="home-film-also"><a href="https://youtu.be/PGEAmJJ4frU">Also on YouTube</a></p>
 </section>
 <section class="home-film" id="home-film-2">
@@ -73,6 +93,26 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
       </ol>
     </div>
   </div>
+  <ul class="home-film-thumbs">
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-2/#t=150" data-start="150">
+        <img src="/assets/interviews/part-2/thumbs/02m30-workshop-three-ring-circuses.webp" width="320" height="180" alt="Photograph from a PEN&amp;PAD user-centred design workshop, captioned as three-ring circuses, used with permission">
+        <span class="home-thumb-caption"><span class="home-chapter-time">2:30</span> Workshop photo: &#x27;three-ring circuses&#x27;</span>
+      </a>
+    </li>
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-2/#t=185" data-start="185">
+        <img src="/assets/interviews/part-2/thumbs/03m05-pie-menus-ruled-out.webp" width="320" height="180" alt="Graphic comparing circular pie menus, radio buttons, and the large PEN&amp;PAD buttons that worked">
+        <span class="home-thumb-caption"><span class="home-chapter-time">3:05</span> Pie menus and radio buttons — ruled out</span>
+      </a>
+    </li>
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-2/#t=270" data-start="270">
+        <img src="/assets/interviews/part-2/thumbs/04m30-smalltalk-vs-cpp.webp" width="320" height="180" alt="Graphic comparing the Smalltalk-80 and C++ development cycles: change a line of code, then what?">
+        <span class="home-thumb-caption"><span class="home-chapter-time">4:30</span> Change a line of code — then what? Smalltalk-80 vs C++</span>
+      </a>
+    </li>
+  </ul>
 </section>
 <section class="home-film" id="home-film-3">
   <h4 class="home-film-title"><a href="interviews/alan-rector-part-3/">3. Technical details, terminology systems, ontologies and logic</a> <a class="home-film-more" href="interviews/alan-rector-part-3/">[Click for other video formats, full transcript, links etc.]</a></h4>
@@ -102,6 +142,26 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
       </ol>
     </div>
   </div>
+  <ul class="home-film-thumbs">
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-3/#t=370" data-start="370">
+        <img src="/assets/interviews/part-3/thumbs/06m10-ontology-indexed-forms.webp" width="320" height="180" alt="Slide: Ontology Indexed reusable resources, an example of data collection forms for trials">
+        <span class="home-thumb-caption"><span class="home-chapter-time">6:10</span> Ontology-indexed data collection forms for trials</span>
+      </a>
+    </li>
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-3/#t=720" data-start="720">
+        <img src="/assets/interviews/part-3/thumbs/12m00-normalising-ontologies.webp" width="320" height="180" alt="Slide: Normalising (untangling) Ontologies, with separate Structure, Function and Part-whole trees">
+        <span class="home-thumb-caption"><span class="home-chapter-time">12:00</span> Normalising (untangling) ontologies</span>
+      </a>
+    </li>
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-3/#t=900" data-start="900">
+        <img src="/assets/interviews/part-3/thumbs/15m00-trees-to-dags.webp" width="320" height="180" alt="Slide: Normalisation from Trees to DAGs, showing a tree before classification and a DAG after">
+        <span class="home-thumb-caption"><span class="home-chapter-time">15:00</span> Normalisation: from trees to DAGs</span>
+      </a>
+    </li>
+  </ul>
 </section>
 <section class="home-film" id="home-film-4">
   <h4 class="home-film-title"><a href="interviews/alan-rector-part-4/">4. Lessons learned – how we’d do it today + some advice to those entering the health informatics space</a> <a class="home-film-more" href="interviews/alan-rector-part-4/">[Click for other video formats, full transcript, links etc.]</a></h4>
@@ -131,6 +191,26 @@ The transcripts on the part pages were machine-assisted and then proofread, and 
       </ol>
     </div>
   </div>
+  <ul class="home-film-thumbs">
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-4/#t=270" data-start="270">
+        <img src="/assets/interviews/part-4/thumbs/04m30-openehr-archetypes.webp" width="320" height="180" alt="Slide about openEHR archetypes: reusable clinician-designed models, templates and forms">
+        <span class="home-thumb-caption"><span class="home-chapter-time">4:30</span> openEHR archetypes</span>
+      </a>
+    </li>
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-4/#t=360" data-start="360">
+        <img src="/assets/interviews/part-4/thumbs/06m00-tnm-different-rulers.webp" width="320" height="180" alt="Graphic: Same TNM letters, different rulers, comparing breast cancer and melanoma staging">
+        <span class="home-thumb-caption"><span class="home-chapter-time">6:00</span> Same TNM letters — different rulers</span>
+      </a>
+    </li>
+    <li>
+      <a class="home-thumb" href="interviews/alan-rector-part-4/#t=415" data-start="415">
+        <img src="/assets/interviews/part-4/thumbs/06m55-snomed-ct-polyhierarchy.webp" width="320" height="180" alt="Slide: SNOMED CT as an example of a polyhierarchy, where a concept can have multiple parents">
+        <span class="home-thumb-caption"><span class="home-chapter-time">6:55</span> SNOMED CT as a polyhierarchy</span>
+      </a>
+    </li>
+  </ul>
 </section>
 <script src="/assets/js/home-interview-players.js"></script>
 
