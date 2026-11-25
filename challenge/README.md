@@ -1,10 +1,10 @@
-This page lists contributions from the brave folks that have accepted the revival challenge presented at [https://pen-pad-revival.github.io/](https://pen-pad-revival.github.io/) or been participants in Hackathons etc. One subdirectory i sused per project, linked from bullet list below.
+This page lists contributions from the brave folks that have accepted the revival challenge presented at [https://pen-pad-revival.github.io/](https://pen-pad-revival.github.io/) or been participants in Hackathons etc. One subdirectory is used per project, linked from bullet list below.
 
 # Challenge instructions
 
 The challenge can be suitable as student projects, hackathon challenges, personal learning projects etc. 
 * Apply user centered design to recreate appraches from PEN&PAD, feel free to also use AI agents and/or low/no-code tools in that process... 
-* ...then fork this repository, and create a subdirectory of your own under the `challenge` subdirectory https://github.com/pen-pad-revival/pen-pad-revival.github.io/tree/main/challenge with a README.md file including a description (and links to your project site if available) including ways to contact you.
+* ...then "fork" [this repository](https://github.com/pen-pad-revival/pen-pad-revival.github.io/) and create a subdirectory of your own under the `challenge` subdirectory [https://github.com/pen-pad-revival/pen-pad-revival.github.io/tree/main/challenge](https://github.com/pen-pad-revival/pen-pad-revival.github.io/tree/main/challenge) with a README.md file including a description (and links to your project site if available) including ways to contact you.
 * Add other relevant description-related files (like screenshots) in your subdirectory.
 * Then edit bullet list in this readme file (in the `challenge` directory) to include a describing title with a link to your subdirectory
 * Finally submit a GitHub "pull request" so that we can include your addition here.
@@ -20,6 +20,6 @@ The [Nordic hackathon main page](https://nordichackathon2026.blogs.dsv.su.se/) l
 * [Sendero: from clinical meaning to a confirmed record](./sendero/) — PEN&PAD-style assessment fragments, progressive refinement and a bounded openEHR composition example, by Francesc Mateu.
 
 # Long tail Hackathon followup - Online PEN&PAD bonus track
-If you did not have time to participate or found this later, then fell free to add late submissions here instead:
+If you did not have time to participate or found this later, then feel free to add late submissions here instead:
 
 * ...
